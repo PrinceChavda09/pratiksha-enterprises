@@ -1,4 +1,10 @@
 import "./globals.css";
+import Navbar from "@/components/navbar";
+
+export const metadata = {
+  title: "Pratiksha Earthing Solutions",
+  description: "Advanced earthing and lightning protection solutions.",
+};
 
 export default function RootLayout({
   children,
@@ -7,7 +13,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="min-h-screen bg-white text-gray-900 antialiased">
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }
