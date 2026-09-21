@@ -52,7 +52,6 @@ export default function HomeHeroSection() {
         rodBaseYPercent={rodBaseYPercent}
         wireDepthPercent={wireDepthPercent}
         isSurging={isSurging}
-        onSurgeChange={setIsSurging}
         onSurgeComplete={handleSurgeComplete}
       />
 
@@ -133,7 +132,7 @@ export default function HomeHeroSection() {
           </div>
 
           {/* Interactive Floating Product Badges */}
-          <div
+          {/* <div
             className="hidden xl:flex items-center space-x-2 absolute top-10 left-4 bg-[#0a1824]/85 backdrop-blur-md px-3 py-1.5 rounded-full border border-teal-500/40 shadow-xl cursor-pointer hover:border-cyan-400 transition-all"
             onMouseEnter={() => setActiveTooltip("compound")}
             onMouseLeave={() => setActiveTooltip(null)}
@@ -153,8 +152,8 @@ export default function HomeHeroSection() {
             <span className="text-[11px] font-semibold text-white tracking-wide">
               Copper Bonded Rods
             </span>
-          </div>
-
+          </div> */}
+{/* 
           {activeTooltip === "compound" && (
             <div className="absolute top-20 left-4 z-30 w-56 bg-[#0a1824]/95 backdrop-blur-lg p-3 rounded-xl border border-cyan-400/60 shadow-2xl text-xs text-gray-200 animate-fadeIn">
               <p className="font-bold text-cyan-300">SRIP Carbon Compound</p>
@@ -171,16 +170,16 @@ export default function HomeHeroSection() {
                 Molecularly bonded for 30+ years lifespan with ultra-low earth resistance.
               </p>
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
       {/* 5. MAIN HERO CONTENT (VERTICALLY CENTERED IN SKY ZONE ABOVE SOIL) */}
-      <div className="relative z-30 h-[58%] sm:h-[60%] lg:h-[62%] max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pointer-events-none">
+      <div className="relative z-30 h-[58%] sm:h-[60%] lg:h-[62%] container sm:px-6 lg:px-8 flex flex-col justify-center pointer-events-none">
         <div className="max-w-xl lg:max-w-2xl xl:max-w-3xl pointer-events-auto">
           {/* Main Hero Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[80px] font-extrabold tracking-tight leading-[1.06] text-white">
-            Make Your Premises <span className="text-[#00f0ff] glow-cyan-text">Secure</span>
+            Make Your Premises <span className="text-[var(--primary-color)]">Secure</span>
           </h1>
 
           {/* Subtitle */}
@@ -192,7 +191,7 @@ export default function HomeHeroSection() {
           <div className="mt-6 sm:mt-8 flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[#08758a] to-[#0d9488] hover:from-[#065e6f] hover:to-[#0f766e] rounded-xl transition-all shadow-[0_0_20px_rgba(8,117,138,0.4)] hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[var(--primary-color)] to-[#0d9488] hover:from-[#065e6f] hover:to-[#0f766e] rounded-xl transition-all shadow-[0_0_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] hover:scale-[1.02] active:scale-[0.98]"
             >
               Get a Quote
             </Link>

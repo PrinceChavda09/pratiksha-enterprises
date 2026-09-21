@@ -21,22 +21,9 @@ body {
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
-/* Electric Glow & Earthing Animations */
-@keyframes neonPulse {
-  0%, 100% {
-    filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.8)) drop-shadow(0 0 16px rgba(0, 240, 255, 0.4));
-    opacity: 0.9;
-  }
-  50% {
-    filter: drop-shadow(0 0 14px rgba(0, 255, 204, 1)) drop-shadow(0 0 28px rgba(0, 240, 255, 0.8));
-    opacity: 1;
-  }
-}
-
+/* Electric Ground Ripple Dissipation Animations */
 @keyframes groundRipple {
   0% {
     transform: scaleX(1) scaleY(0.4);
@@ -51,34 +38,6 @@ body {
   }
 }
 
-@keyframes surgePulse {
-  0% {
-    transform: scale(0.85);
-    opacity: 0.3;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.85);
-    opacity: 0.3;
-  }
-}
-
-@keyframes floatSlight {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.animate-neon-pulse {
-  animation: neonPulse 2.5s infinite ease-in-out;
-}
-
 .animate-ground-ripple-1 {
   animation: groundRipple 2.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
 }
@@ -91,14 +50,6 @@ body {
   animation: groundRipple 2.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1) 1.4s;
 }
 
-.animate-float-slight {
-  animation: floatSlight 4s ease-in-out infinite;
-}
-
 .glow-cyan-text {
   text-shadow: 0 0 12px rgba(0, 240, 255, 0.85), 0 0 25px rgba(0, 240, 255, 0.45);
-}
-
-.glow-cyan-box {
-  box-shadow: 0 0 20px rgba(0, 240, 255, 0.35), inset 0 0 15px rgba(0, 240, 255, 0.15);
 }

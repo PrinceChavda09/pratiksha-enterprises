@@ -31,8 +31,9 @@ export default function Navbar() {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="w-full bg-white border-t-[3px] fixed border-[#374151] border-b border-[#e5e7eb] top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <header className="w-full bg-white border-t-[3px] fixed border-[#374151] border-b border-[#e5e7eb] top-0 left-0 right-0 z-50">
+        <div className="container sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* 1. LOGO */}
           <div className="flex items-center shrink-0">
@@ -79,7 +80,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)]  rounded-[7px] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
             >
               Get a Quote
             </Link>
@@ -164,5 +165,8 @@ export default function Navbar() {
         </div>
       )}
     </header>
+      {/* Fixed navbar height placeholder: reserves 80px space in document flow so sections start below */}
+      <div className="h-20 w-full shrink-0" aria-hidden="true" />
+    </>
   );
 }
