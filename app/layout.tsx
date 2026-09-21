@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.className} min-h-screen bg-[#070e14] text-white antialiased`}>
+      <body className={`${poppins.className} min-h-screen text-white antialiased`}>
         <Navbar />
         {children}
         <Footer />
