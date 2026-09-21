@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={closeMenu}
-              className="flex items-center focus:outline-none focus:ring-2 focus:ring-[#08758a] focus:ring-offset-2 rounded"
+              className="flex items-center focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 rounded"
             >
               <Image
                 src="/images/pratiksha-logo.webp"
@@ -62,13 +62,13 @@ export default function Navbar() {
                   href={item.href}
                   className={`relative py-2 text-[15px] font-medium transition-colors ${
                     active
-                      ? "text-[#08758a]"
-                      : "text-[#4b5457] hover:text-[#08758a]"
+                      ? "text-[var(--primary-color)]"
+                      : "text-[#4b5457] hover:text-[var(--primary-color)]"
                   }`}
                 >
                   {item.name}
                   {active && (
-                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#08758a] rounded-full" />
+                    <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--primary-color)] rounded-full" />
                   )}
                 </Link>
               );
@@ -79,7 +79,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[#08758a] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[#08758a] focus:ring-offset-2"
+              className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
             >
               Get a Quote
             </Link>
@@ -92,7 +92,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
-              className="p-2 text-gray-700 hover:text-[#08758a] focus:outline-none focus:ring-2 focus:ring-[#08758a] rounded-md transition-colors"
+              className="p-2 text-gray-700 hover:text-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] rounded-md transition-colors"
             >
               {isMobileMenuOpen ? (
                 <svg
@@ -143,8 +143,8 @@ export default function Navbar() {
                   onClick={closeMenu}
                   className={`flex items-center px-3 py-2.5 rounded-md text-base font-medium transition-colors ${
                     active
-                      ? "text-[#08758a] bg-[#08758a]/10 font-semibold border-l-4 border-[#08758a]"
-                      : "text-gray-700 hover:text-[#08758a] hover:bg-gray-50"
+                      ? "text-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] font-semibold border-l-4 border-[var(--primary-color)]"
+                      : "text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-50"
                   }`}
                 >
                   {item.name}
@@ -156,7 +156,7 @@ export default function Navbar() {
             <Link
               href="/contact"
               onClick={closeMenu}
-              className="flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-white bg-[#08758a] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm"
+              className="flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm"
             >
               Get a Quote
             </Link>

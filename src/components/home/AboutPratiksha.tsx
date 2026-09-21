@@ -54,7 +54,7 @@ export default function AboutPratiksha() {
           {/* RIGHT SIDE — CONTENT */}
           <div className="flex flex-col justify-center">
             {/* Small eyebrow text */}
-            <span className="text-xs font-bold text-[#08758a] tracking-widest uppercase block mb-3">
+            <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
               ABOUT PRATIKSHA
             </span>
 
@@ -89,7 +89,7 @@ export default function AboutPratiksha() {
                 >
                   <div className="mb-3">
                     <svg
-                      className="w-5 h-5 text-[#08758a]"
+                      className="w-5 h-5 text-[var(--primary-color)]"
                       fill="none"
                       stroke="currentColor"
                       strokeWidth="2"
@@ -120,7 +120,7 @@ export default function AboutPratiksha() {
             <div>
               <Link
                 href="/about"
-                className="inline-flex items-center text-[15px] font-bold text-[#08758a] hover:text-[#065e6f] transition-colors group focus:outline-none focus:ring-2 focus:ring-[#08758a] focus:ring-offset-2 rounded"
+                className="inline-flex items-center text-[15px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 rounded"
               >
                 <span>Know More About Us</span>
                 <span
