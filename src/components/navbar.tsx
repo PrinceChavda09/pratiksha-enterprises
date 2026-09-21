@@ -31,7 +31,7 @@ export default function Navbar() {
   const closeMenu = () => setIsMobileMenuOpen(false);
 
   return (
-    <header className="w-full bg-white border-t-[3px] border-[#374151] border-b border-[#e5e7eb] sticky top-0 z-50">
+    <header className="w-full bg-white border-t-[3px] fixed border-[#374151] border-b border-[#e5e7eb] top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* 1. LOGO */}
