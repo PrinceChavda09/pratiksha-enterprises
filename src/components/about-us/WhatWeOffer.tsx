@@ -45,7 +45,7 @@ export default function WhatWeOffer() {
               What We Offer
             </h2>
           </div>
-          <p className="text-sm font-medium text-slate-500 uppercase tracking-wider mt-3 md:mt-0">
+          <p className="text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-3 md:mt-0">
             Engineering Catalogue Index
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function WhatWeOffer() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
                 {/* Index Number */}
                 <div className="lg:col-span-1">
-                  <span className="text-2xl sm:text-3xl font-extrabold text-slate-400 group-hover:text-[var(--primary-color)] transition-colors">
+                  <span className="text-2xl sm:text-3xl font-extrabold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors">
                     {item.number}
                   </span>
                 </div>
@@ -85,7 +85,7 @@ export default function WhatWeOffer() {
                   <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
+                  <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed max-w-2xl">
                     {item.desc}
                   </p>
                 </div>
@@ -94,7 +94,7 @@ export default function WhatWeOffer() {
                 <div className="lg:col-span-2 flex lg:justify-end">
                   <Link
                     href="/products"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-slate-700 group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus:underline"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus:underline"
                     aria-label={`View ${item.title}`}
                   >
                     <span>View Category</span>

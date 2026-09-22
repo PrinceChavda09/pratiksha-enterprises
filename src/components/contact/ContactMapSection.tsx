@@ -20,7 +20,7 @@ export default function ContactMapSection() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
                 Visit Our Rajkot Facility
               </h2>
-              <p className="mt-3 text-sm text-slate-600 leading-relaxed">
+              <p className="mt-3 text-sm text-[var(--gray-color)] leading-relaxed">
                 Located in the heart of Gujarat&apos;s industrial manufacturing capital, our central warehouse and corporate office coordinate dispatches nationwide.
               </p>
             </div>
@@ -36,13 +36,13 @@ export default function ContactMapSection() {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold text-[#0f172a]">Pratiksha Enterprises</h4>
-                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                  <p className="text-xs text-[var(--gray-color)] mt-1 leading-relaxed">
                     305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002, India.
                   </p>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-2 text-[11px] font-semibold text-slate-500">
+              <div className="pt-3 border-t border-slate-100 flex flex-wrap gap-2 text-[11px] font-semibold text-[var(--gray-color)]">
                 <span className="bg-slate-100 px-2.5 py-1 rounded-md">Near ST Bus Station</span>
                 <span className="bg-slate-100 px-2.5 py-1 rounded-md">Freight Corridor Access</span>
               </div>

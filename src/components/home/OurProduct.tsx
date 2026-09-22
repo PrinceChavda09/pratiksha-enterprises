@@ -79,7 +79,7 @@ export default function OurProduct() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight mb-4">
             Complete Earthing Solutions for Every Requirement
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed max-w-2xl mx-auto">
             Explore our range of earthing and electrical safety products
             engineered for heavy-duty industrial dissipation and zero-maintenance
             longevity.
@@ -115,7 +115,7 @@ export default function OurProduct() {
                   <h3 className="text-lg sm:text-[19px] font-bold text-[#0f172a] leading-snug mb-2.5">
                     {product.title}
                   </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                  <p className="text-sm text-[var(--gray-color)] leading-relaxed mb-4">
                     {product.description}
                   </p>
                 </div>

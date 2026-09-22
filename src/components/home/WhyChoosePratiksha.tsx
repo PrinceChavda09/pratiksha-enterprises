@@ -60,7 +60,7 @@ export default function WhyChoosePratiksha() {
             Engineering You Can Trust.
             <br className="hidden sm:inline" /> Protection That Lasts.
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed">
             Precision manufacturing, dependable earthing technology and
             dedicated engineering support come together to deliver reliable
             protection for demanding electrical environments.
@@ -123,7 +123,7 @@ export default function WhyChoosePratiksha() {
                         <h3 className="text-base sm:text-lg font-bold text-[#0f172a] uppercase tracking-wide">
                           {reason.title}
                         </h3>
-                        <p className="text-sm sm:text-[15px] text-slate-600 leading-relaxed mt-1">
+                        <p className="text-sm sm:text-[15px] text-[var(--gray-color)] leading-relaxed mt-1">
                           {reason.description}
                         </p>
                       </div>
@@ -141,7 +141,7 @@ export default function WhyChoosePratiksha() {
             <span className="text-2xl sm:text-3xl font-bold text-[#0f172a]">
               14+ Years
             </span>
-            <span className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+            <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Industrial Manufacturing Expertise
             </span>
           </div>
@@ -150,7 +150,7 @@ export default function WhyChoosePratiksha() {
             <span className="text-2xl sm:text-3xl font-bold text-[#0f172a]">
               CPRI & NABL Tested
             </span>
-            <span className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+            <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Rigorous Fault Current Verification
             </span>
           </div>
@@ -159,7 +159,7 @@ export default function WhyChoosePratiksha() {
             <span className="text-2xl sm:text-3xl font-bold text-[#0f172a]">
               Rajkot Engineering Hub
             </span>
-            <span className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+            <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Precision Foundry & Direct Dispatch
             </span>
           </div>

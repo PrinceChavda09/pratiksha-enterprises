@@ -101,7 +101,7 @@ export default function ContactChannels() {
               <h3 className="text-base font-bold text-[#0f172a] mb-1.5 group-hover:text-[var(--primary-color)] transition-colors">
                 {channel.title}
               </h3>
-              <p className="text-xs text-slate-500 leading-relaxed mb-4">
+              <p className="text-xs text-[var(--gray-color)] leading-relaxed mb-4">
                 {channel.subtitle}
               </p>
             </div>
@@ -135,7 +135,7 @@ export default function ContactChannels() {
               )}
 
               {channel.secondaryText && (
-                <span className="text-[11px] text-slate-400">
+                <span className="text-[11px] text-[var(--gray-color)]">
                   {channel.secondaryText}
                 </span>
               )}

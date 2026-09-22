@@ -21,7 +21,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-slate-700">
+    <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-[var(--gray-color)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. TOP COMPACT CTA STRIP */}
         <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
@@ -33,7 +33,7 @@ export default function Footer() {
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0f172a] leading-tight mb-2">
                 Let&apos;s Build a Safer Electrical Foundation.
               </h3>
-              <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
+              <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed">
                 Talk to our engineering team about your earthing and electrical
                 safety requirements.
               </p>
@@ -69,7 +69,7 @@ export default function Footer() {
                 className="h-11 sm:h-12 w-auto object-contain"
               />
             </Link>
-            <p className="text-sm text-slate-600 leading-relaxed mb-4 max-w-sm">
+            <p className="text-sm text-[var(--gray-color)] leading-relaxed mb-4 max-w-sm">
               Pratiksha Earthing Solutions delivers dependable earthing products
               and engineered electrical safety solutions for demanding
               industrial applications.
@@ -92,7 +92,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-slate-600 hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
+                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
                   >
                     {link.name}
                   </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-slate-600 hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
+                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
                   >
                     {item.name}
                   </Link>
@@ -151,7 +151,7 @@ export default function Footer() {
                   <p className="font-semibold text-[#0f172a]">
                     305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002.
                   </p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-[var(--gray-color)]">
                     Engineering & Manufacturing Hub
                   </p>
                 </div>
@@ -177,7 +177,7 @@ export default function Footer() {
                   <p className="font-semibold text-[#0f172a]">
                     Phone No. : +91 93138 88465.
                   </p>
-                  <p className="text-xs text-slate-500">
+                  <p className="text-xs text-[var(--gray-color)]">
                     Direct dispatch across Phone number
                   </p>
                 </div>
@@ -229,9 +229,9 @@ export default function Footer() {
         </div>
 
         {/* 3. BOTTOM COPYRIGHT BAR */}
-        <div className="border-t border-slate-200/90 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+        <div className="border-t border-slate-200/90 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--gray-color)]">
           <p>© {currentYear} Pratiksha Earthing Solutions. All Rights Reserved.</p>
-          <p className="text-slate-500">
+          <p className="text-[var(--gray-color)]">
             Precision Earthing & Electrical Safety Systems
           </p>
         </div>

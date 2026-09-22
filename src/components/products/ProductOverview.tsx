@@ -15,7 +15,7 @@ export default function ProductOverview() {
 
           {/* Right Column: Editorial Overview */}
           <div className="lg:col-span-9">
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed max-w-4xl font-normal">
+            <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed max-w-4xl font-normal">
               Our catalogue encompasses precision-engineered earthing solutions
               designed for dependable ground fault dissipation, system protection,
               and low soil resistivity across demanding industrial, commercial,

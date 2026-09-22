@@ -2,6 +2,8 @@
 
 :root {
   --primary-color: #08758a;
+  --gray-color: #475569;
+  --text-gray: #475569;
 }
 
 * {

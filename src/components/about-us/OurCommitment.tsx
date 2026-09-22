@@ -29,7 +29,7 @@ export default function OurCommitment() {
         </div>
 
         {/* Supporting Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14 pt-8 border-t border-slate-200 text-slate-600 text-base sm:text-lg leading-relaxed">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14 pt-8 border-t border-slate-200 text-[var(--gray-color)] text-base sm:text-lg leading-relaxed">
           <p>
             At Pratiksha, our goal is to provide practical earthing products that
             help customers address their electrical grounding requirements with

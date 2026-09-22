@@ -38,14 +38,14 @@ export default function WhyPratiksha() {
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-tight tracking-tight mb-6">
                 Why Pratiksha
               </h2>
-              <p className="text-base text-slate-600 leading-relaxed max-w-md">
+              <p className="text-base text-[var(--gray-color)] leading-relaxed max-w-md">
                 Dependable grounding solutions built around material quality,
                 practical engineering support, and reliable electrical protection.
               </p>
             </div>
 
             <div className="mt-8 pt-6 border-t border-slate-200 hidden lg:block">
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider block mb-1">
+              <span className="text-xs font-semibold text-[var(--gray-color)] uppercase tracking-wider block mb-1">
                 Headquarters
               </span>
               <p className="text-sm font-bold text-[#0f172a]">
@@ -62,7 +62,7 @@ export default function WhyPratiksha() {
                 className="py-6 sm:py-7 flex items-start gap-5 sm:gap-6 group"
               >
                 {/* Number */}
-                <span className="text-xl sm:text-2xl font-bold text-slate-400 group-hover:text-[var(--primary-color)] transition-colors shrink-0 mt-0.5">
+                <span className="text-xl sm:text-2xl font-bold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors shrink-0 mt-0.5">
                   {point.number}
                 </span>
 
@@ -71,7 +71,7 @@ export default function WhyPratiksha() {
                   <h3 className="text-base sm:text-lg font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors mb-1.5">
                     {point.title}
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
+                  <p className="text-sm text-[var(--gray-color)] leading-relaxed">
                     {point.desc}
                   </p>
                 </div>

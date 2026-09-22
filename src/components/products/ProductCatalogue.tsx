@@ -19,7 +19,7 @@ export default function ProductCatalogue() {
               Standard & Custom Earthing Specifications
             </h2>
           </div>
-          <p className="text-xs sm:text-sm font-bold text-slate-400 uppercase tracking-wider mt-2 sm:mt-0">
+          <p className="text-xs sm:text-sm font-bold text-[var(--gray-color)] uppercase tracking-wider mt-2 sm:mt-0">
             Showing all 06 products
           </p>
         </div>

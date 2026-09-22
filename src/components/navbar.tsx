@@ -64,7 +64,7 @@ export default function Navbar() {
                   className={`relative py-2 text-[15px] font-medium transition-colors ${
                     active
                       ? "text-[var(--primary-color)]"
-                      : "text-[#4b5457] hover:text-[var(--primary-color)]"
+                      : "text-[var(--gray-color)] hover:text-[var(--primary-color)]"
                   }`}
                 >
                   {item.name}
@@ -93,7 +93,7 @@ export default function Navbar() {
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Toggle navigation menu"
               aria-expanded={isMobileMenuOpen}
-              className="p-2 text-gray-700 hover:text-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] rounded-md transition-colors"
+              className="p-2 text-[var(--gray-color)] hover:text-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] rounded-md transition-colors"
             >
               {isMobileMenuOpen ? (
                 <svg
@@ -145,7 +145,7 @@ export default function Navbar() {
                   className={`flex items-center px-3 py-2.5 rounded-md text-base font-medium transition-colors ${
                     active
                       ? "text-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] font-semibold border-l-4 border-[var(--primary-color)]"
-                      : "text-gray-700 hover:text-[var(--primary-color)] hover:bg-gray-50"
+                      : "text-[var(--gray-color)] hover:text-[var(--primary-color)] hover:bg-gray-50"
                   }`}
                 >
                   {item.name}

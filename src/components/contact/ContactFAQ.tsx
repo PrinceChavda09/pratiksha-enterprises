@@ -46,7 +46,7 @@ export default function ContactFAQ() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-slate-600 max-w-xl mx-auto">
+          <p className="mt-3 text-sm sm:text-base text-[var(--gray-color)] max-w-xl mx-auto">
             Everything you need to know about our products, direct supply contracts, and engineering assistance.
           </p>
         </div>
@@ -72,14 +72,14 @@ export default function ContactFAQ() {
                     className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-sm font-semibold transition-transform duration-300 ${
                       isOpen
                         ? "bg-[var(--primary-color)] text-white rotate-180"
-                        : "bg-slate-100 text-slate-500"
+                        : "bg-slate-100 text-[var(--gray-color)]"
                     }`}
                   >
                     ↓
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[var(--gray-color)] leading-relaxed border-t border-slate-100">
                     {faq.a}
                   </div>
                 )}

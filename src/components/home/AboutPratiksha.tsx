@@ -64,7 +64,7 @@ export default function AboutPratiksha() {
             </h2>
 
             {/* Paragraphs */}
-            <div className="space-y-4 text-gray-600 text-[15px] sm:text-base leading-relaxed mb-8">
+            <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8">
               <p>
                 Pratiksha Earthing Solutions is focused on providing dependable
                 earthing products and solutions that support electrical safety,
@@ -108,7 +108,7 @@ export default function AboutPratiksha() {
                     <h4 className="text-sm sm:text-[15px] font-bold text-[#0f172a] mb-1">
                       {card.title}
                     </h4>
-                    <p className="text-xs text-gray-500 leading-normal">
+                    <p className="text-xs text-[var(--gray-color)] leading-normal">
                       {card.subtitle}
                     </p>
                   </div>

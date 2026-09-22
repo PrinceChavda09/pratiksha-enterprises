@@ -41,7 +41,7 @@ export default function ContactFormSection() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
             Send Us Your Project Requirements
           </h2>
-          <p className="mt-3 text-base text-slate-600">
+          <p className="mt-3 text-base text-[var(--gray-color)]">
             Whether you need bulk earthing electrodes for a solar park, substation grounding design, or custom copper bonded rods, our engineering team responds within 2 business hours.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function ContactFormSection() {
                 <h3 className="text-2xl font-bold text-[#0f172a] mb-2">
                   Thank You for Reaching Out!
                 </h3>
-                <p className="text-slate-600 max-w-md mx-auto mb-6 text-sm sm:text-base">
+                <p className="text-[var(--gray-color)] max-w-md mx-auto mb-6 text-sm sm:text-base">
                   Your inquiry has been received by our technical sales engineering team. We will review your requirements and send a customized quote shortly.
                 </p>
                 <button
@@ -276,7 +276,7 @@ export default function ContactFormSection() {
                   Urgent Project Requirement?
                 </h4>
               </div>
-              <p className="text-xs sm:text-sm text-slate-600 mb-4">
+              <p className="text-xs sm:text-sm text-[var(--gray-color)] mb-4">
                 Speak directly with our technical commercial director for same-day dispatch and proforma invoicing.
               </p>
               <div className="flex flex-col sm:flex-row gap-3">

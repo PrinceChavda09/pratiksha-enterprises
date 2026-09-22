@@ -31,7 +31,7 @@ export default function OurApproach() {
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight mb-5">
             Our Approach
           </h2>
-          <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed">
             We believe effective earthing is an important part of electrical
             safety. Our solutions are focused on providing reliable grounding
             performance, suitable material selection and practical solutions for
@@ -53,7 +53,7 @@ export default function OurApproach() {
                 <h3 className="text-lg font-bold text-[#0f172a] mb-2.5">
                   {pillar.title}
                 </h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
+                <p className="text-sm text-[var(--gray-color)] leading-relaxed">
                   {pillar.text}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function OurApproach() {
 
         {/* Bottom Editorial Quote Bar */}
         <div className="mt-12 sm:mt-16 bg-white p-6 sm:p-8 rounded-lg border border-slate-200/90 shadow-sm">
-          <p className="text-sm sm:text-base font-medium text-slate-700 leading-relaxed italic">
+          <p className="text-sm sm:text-base font-medium text-[var(--gray-color)] leading-relaxed italic">
             &ldquo;From individual earthing components to complete grounding
             requirements, we aim to provide products that are practical, durable
             and suitable for demanding electrical environments.&rdquo;

@@ -16,7 +16,7 @@ export default function AboutCompany() {
                 About Pratiksha
               </h2>
               <div className="w-12 h-[3px] bg-[var(--primary-color)] mb-6" />
-              <p className="text-sm font-medium text-slate-500 uppercase tracking-wide">
+              <p className="text-sm font-medium text-[var(--gray-color)] uppercase tracking-wide">
                 Grounding & Electrical Safety Engineering
               </p>
             </div>
@@ -43,14 +43,14 @@ export default function AboutCompany() {
             </p>
 
             {/* Supporting Content Paragraphs */}
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed pl-5">
+            <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed pl-5">
               With a focus on dependable grounding performance, our product
               range includes copper-bonded earthing electrodes, GI earthing
               electrodes, chemical earthing solutions, copper earthing products,
               earthing rods, strips and earthing accessories.
             </p>
 
-            <p className="text-sm sm:text-base text-slate-600 leading-relaxed pl-5">
+            <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed pl-5">
               Available listings for the Pratiksha brand show products in copper
               and galvanized iron, including copper-coated/copper-bonded rods and
               chemical earthing electrodes.

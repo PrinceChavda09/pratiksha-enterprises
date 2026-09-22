@@ -30,14 +30,14 @@ export default function ContactHero() {
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
         {/* TOP: BREADCRUMB */}
         <div>
-          <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs text-slate-500 font-medium">
+          <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
             <Link
               href="/"
               className="hover:text-[var(--primary-color)] transition-colors focus:outline-none"
             >
               Home
             </Link>
-            <span className="text-slate-400">/</span>
+            <span className="text-[var(--gray-color)]/70">/</span>
             <span className="text-[#0f172a] font-semibold">Contact Us</span>
           </nav>
         </div>
@@ -59,7 +59,7 @@ export default function ContactHero() {
           </h1>
 
           {/* Description */}
-          <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed max-w-lg">
+          <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg">
             Have a question or need a quote? Our team is here to help. Get in touch with Pratiksha Earthing Solutions.
           </p>
 
@@ -140,14 +140,14 @@ export default function ContactHero() {
         </div>
 
         {/* BOTTOM: SUBTLE LOCATION & SLOGAN ACCENT STRIP */}
-        <div className="pt-3 border-t border-slate-200/60 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-[11px] font-semibold text-slate-500 tracking-wider">
+        <div className="pt-3 border-t border-slate-200/60 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-[11px] font-semibold text-[var(--gray-color)] tracking-wider">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
-            <span className="uppercase text-slate-600">RAJKOT, GUJARAT</span>
-            <span className="text-slate-300 hidden sm:inline">—————</span>
+            <span className="uppercase text-[var(--gray-color)]">RAJKOT, GUJARAT</span>
+            <span className="text-[var(--gray-color)]/50 hidden sm:inline">—————</span>
           </div>
-          <div className="uppercase tracking-widest text-slate-400">
-            CONNECT <span className="mx-1 text-slate-300">/</span> COLLABORATE <span className="mx-1 text-slate-300">/</span> GROW
+          <div className="uppercase tracking-widest text-[var(--gray-color)]/80">
+            CONNECT <span className="mx-1 text-[var(--gray-color)]/40">/</span> COLLABORATE <span className="mx-1 text-[var(--gray-color)]/40">/</span> GROW
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ export default function AboutUsHero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8">
-          <ol className="flex items-center space-x-2 text-xs sm:text-sm text-slate-500">
+          <ol className="flex items-center space-x-2 text-xs sm:text-sm text-[var(--gray-color)]">
             <li>
               <Link
                 href="/"
@@ -16,7 +16,7 @@ export default function AboutUsHero() {
                 Home
               </Link>
             </li>
-            <li className="text-slate-400" aria-hidden="true">
+            <li className="text-[var(--gray-color)]/70" aria-hidden="true">
               /
             </li>
             <li className="text-[#0f172a] font-semibold" aria-current="page">
@@ -43,7 +43,7 @@ export default function AboutUsHero() {
             </h1>
 
             {/* Supporting Content */}
-            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed max-w-2xl">
               Pratiksha Earthing Solutions is a Rajkot-based business focused on
               earthing and electrical safety products designed for residential,
               commercial and industrial applications.
@@ -63,7 +63,7 @@ export default function AboutUsHero() {
                   className="object-cover object-center"
                 />
               </div>
-              <div className="mt-2.5 px-1 flex items-center justify-between text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+              <div className="mt-2.5 px-1 flex items-center justify-between text-[11px] font-semibold text-[var(--gray-color)] uppercase tracking-wider">
                 <span>Rajkot, Gujarat</span>
                 <span className="text-[var(--primary-color)]">
                   Grounding Systems

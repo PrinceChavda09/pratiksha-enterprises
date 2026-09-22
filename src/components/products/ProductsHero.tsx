@@ -32,7 +32,7 @@ export default function ProductsHero() {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb Navigation */}
         <nav aria-label="Breadcrumb" className="mb-6 sm:mb-8">
-          <ol className="flex items-center space-x-2 text-xs sm:text-sm text-slate-400">
+          <ol className="flex items-center space-x-2 text-xs sm:text-sm text-[var(--gray-color)]">
             <li>
               <Link
                 href="/"
@@ -41,7 +41,7 @@ export default function ProductsHero() {
                 Home
               </Link>
             </li>
-            <li className="text-slate-600" aria-hidden="true">
+            <li className="text-[var(--gray-color)]/70" aria-hidden="true">
               /
             </li>
             <li className="text-white font-medium" aria-current="page">
@@ -95,7 +95,7 @@ export default function ProductsHero() {
 
         {/* Quick-Jump Catalogue Navigation Bar */}
         <div className="mt-8 pt-2">
-          <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3.5">
+          <p className="text-xs font-bold text-[var(--gray-color)] uppercase tracking-widest mb-3.5">
             Quick Jump to Specification (06 Products):
           </p>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
@@ -105,7 +105,7 @@ export default function ProductsHero() {
                 href={`#${product.id}`}
                 className="group px-3 py-2.5 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-[var(--primary-color)] hover:bg-slate-800/90 transition-all flex flex-col justify-between focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)]"
               >
-                <span className="text-[10px] font-bold text-slate-500 group-hover:text-[var(--primary-color)] transition-colors">
+                <span className="text-[10px] font-bold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors">
                   0{idx + 1}
                 </span>
                 <span className="text-xs font-semibold text-slate-200 group-hover:text-white transition-colors line-clamp-1 mt-1">
