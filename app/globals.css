@@ -24,34 +24,3 @@ body {
   padding-left: 16px;
   padding-right: 16px;
 }
-
-/* Electric Ground Ripple Dissipation Animations */
-@keyframes groundRipple {
-  0% {
-    transform: scaleX(1) scaleY(0.4);
-    opacity: 0.9;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    transform: scaleX(2.8) scaleY(1.1);
-    opacity: 0;
-  }
-}
-
-.animate-ground-ripple-1 {
-  animation: groundRipple 2.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
-}
-
-.animate-ground-ripple-2 {
-  animation: groundRipple 2.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1) 0.7s;
-}
-
-.animate-ground-ripple-3 {
-  animation: groundRipple 2.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1) 1.4s;
-}
-
-.glow-cyan-text {
-  text-shadow: 0 0 12px rgba(0, 240, 255, 0.85), 0 0 25px rgba(0, 240, 255, 0.45);
-}
