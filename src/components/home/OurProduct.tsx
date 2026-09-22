@@ -145,20 +145,6 @@ export default function OurProduct() {
             className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-colors shadow-sm gap-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
           >
             <span>View All Products & Request Catalog</span>
-            <svg
-              className="w-4 h-4 shrink-0"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              aria-hidden="true"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-              />
-            </svg>
           </Link>
         </div>
       </div>
