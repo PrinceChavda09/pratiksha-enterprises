@@ -71,7 +71,7 @@ export default function HomeHeroSection() {
           <div className="absolute -bottom-2 inset-x-4 h-6 bg-black/90 blur-md rounded-full transform scale-y-50" />
 
           {/* Product Lineup Image */}
-          <div className="relative w-[300px] sm:w-[420px] md:w-[520px] lg:w-[650px] xl:w-[720px] h-[220px] sm:h-[290px] md:h-[360px] lg:h-[430px] xl:h-[470px] transition-transform duration-500 ease-out group-hover:scale-[1.015]">
+          <div className="relative w-[300px] sm:w-[420px] md:w-[520px] lg:w-[650px] xl:w-[900px] h-[220px] sm:h-[290px] md:h-[360px] lg:h-[430px] xl:h-[470px] transition-transform duration-500 ease-out">
             <Image
               src="/home/pratiksha-enterprises-product.png"
               alt="Pratiksha Enterprise SRIP Compound Bags, Copper Bonded Rods, Chemical Earthing Electrodes"
@@ -89,19 +89,21 @@ export default function HomeHeroSection() {
         <div className="lg:max-w-2xl xl:max-w-3xl pointer-events-auto">
           {/* Main Hero Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[80px] font-extrabold tracking-tight leading-[1.06] text-white">
-            Make Your Premises <span className="text-[var(--primary-color)]">Secure</span>
+            Make Your Premises{" "}
+            <span className="text-[var(--primary-color)]">Secure</span>
           </h1>
 
           {/* Subtitle */}
           <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-gray-200/95 font-normal leading-relaxed max-w-md lg:max-w-lg drop-shadow-md">
-            Safeguard your industrial infrastructure, transmission grids, and commercial assets.
+            Safeguard your industrial infrastructure, transmission grids, and
+            commercial assets.
           </p>
 
           {/* Action CTA Button */}
           <div className="mt-6 sm:mt-8 flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-[var(--primary-color)] to-[#0d9488] hover:from-[#065e6f] hover:to-[#0f766e] rounded-xl transition-all shadow-[0_0_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:shadow-[0_0_30px_rgba(0,240,255,0.5)] hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
             >
               Get a Quote
             </Link>
@@ -111,4 +113,3 @@ export default function HomeHeroSection() {
     </section>
   );
 }
-

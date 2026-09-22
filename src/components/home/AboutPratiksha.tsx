@@ -119,7 +119,7 @@ export default function AboutPratiksha() {
             {/* Bottom CTA */}
             <div>
               <Link
-                href="/about"
+                href="/about-us"
                 className="inline-flex items-center text-[15px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 rounded"
               >
                 <span>Know More About Us</span>
