@@ -17,7 +17,7 @@ export default function ProductsHero() {
 
         {/* 2. SOFT WHITE SHADOW / GRADIENT OVERLAY (LIKE CONTACT HERO) */}
         {/* Left-to-right soft white shadow / gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-42% sm:via-white/85 sm:via-50% md:via-white/60 md:via-58% to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/95 via-45% sm:via-white/80 sm:via-45% md:via-white/60 to-transparent z-1 pointer-events-none" />
 
         {/* Ambient soft glow on left text content area */}
         <div className="absolute inset-y-0 left-0 w-[60%] sm:w-[50%] bg-gradient-to-r from-white/80 via-white/50 to-transparent z-1 pointer-events-none" />
@@ -31,7 +31,7 @@ export default function ProductsHero() {
 
       {/* 3. HERO CONTENT CONTAINER (HALF-SCREEN COMPACT PROPORTIONS) */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
-        {/* TOP BAR: BREADCRUMB (LEFT) & RELIABLE EARTHING TAGLINE (RIGHT) */}
+        {/* TOP BAR: BREADCRUMB */}
         <div className="flex items-center justify-between w-full">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb">
@@ -52,15 +52,6 @@ export default function ProductsHero() {
               </li>
             </ol>
           </nav>
-
-          {/* Top Right Tagline matching reference */}
-          <div className="hidden sm:flex items-center gap-2.5 text-right">
-            <span className="w-6 lg:w-8 h-[2px] bg-[var(--primary-color)] sm:bg-white/80 rounded-full" />
-            <div className="text-[10px] sm:text-[11px] lg:text-xs font-bold text-slate-800 sm:text-white uppercase tracking-widest drop-shadow-sm leading-tight text-left">
-              <div>Reliable Earthing</div>
-              <div className="text-[var(--primary-color)] sm:text-slate-200">Stronger Infrastructure</div>
-            </div>
-          </div>
         </div>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
@@ -75,8 +66,7 @@ export default function ProductsHero() {
 
           {/* Main Hero Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
-            Complete Earthing <br />
-            Solutions for a{" "}
+            Complete Earthing Solutions for a{" "}
             <span className="text-[var(--primary-color)]">Safer Tomorrow</span>
           </h1>
 
@@ -106,9 +96,7 @@ export default function ProductsHero() {
                 </svg>
               </div>
               <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
-                Trusted
-                <br />
-                Quality
+                Trusted Quality
               </div>
             </div>
 
@@ -135,9 +123,7 @@ export default function ProductsHero() {
                 </svg>
               </div>
               <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
-                Wide
-                <br />
-                Range
+                Wide Range
               </div>
             </div>
 
@@ -159,9 +145,7 @@ export default function ProductsHero() {
                 </svg>
               </div>
               <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
-                Built for
-                <br />
-                Safety
+                Built for Safety
               </div>
             </div>
           </div>
@@ -196,8 +180,8 @@ export default function ProductsHero() {
           <div className="flex items-center gap-2">
             <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full" />
             <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider">
-              GROUNDING TODAY <br className="sm:hidden" />
-              <span className="text-[#0f172a]">FOR A SAFER TOMORROW</span>
+              GROUNDING TODAY
+              <span className="text-[#0f172a]"> FOR A SAFER TOMORROW</span>
             </div>
           </div>
 

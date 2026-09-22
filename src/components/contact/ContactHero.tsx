@@ -17,7 +17,7 @@ export default function ContactHero() {
 
         {/* 2. SOFT ATMOSPHERIC GRADIENTS TO ENSURE TEXT LEGIBILITY */}
         {/* Left-to-right gradient overlay matching mockup */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 via-45% sm:via-white/80 sm:via-50% md:via-white/70 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/95 via-45% sm:via-white/80 sm:via-45% md:via-white/70 to-transparent z-1 pointer-events-none" />
 
         {/* Mobile readability protection */}
         <div className="absolute inset-0 bg-white/60 sm:bg-transparent z-1 pointer-events-none" />
@@ -27,21 +27,27 @@ export default function ContactHero() {
       </div>
 
       {/* 3. HERO CONTENT CONTAINER (COMPACT HALF-SCREEN PROPORTIONS) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
-        {/* TOP: BREADCRUMB */}
-        <div>
-          <nav
-            aria-label="Breadcrumb"
-            className="flex items-center space-x-2 text-xs text-slate-500 font-medium"
-          >
-            <Link
-              href="/"
-              className="hover:text-[var(--primary-color)] transition-colors focus:outline-none"
-            >
-              Home
-            </Link>
-            <span className="text-[var(--gray-color)]/70">/</span>
-            <span className="text-[#0f172a] font-semibold">Contact Us</span>
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
+        {/* TOP BAR: BREADCRUMB */}
+        <div className="flex items-center justify-between w-full">
+          {/* Breadcrumb Navigation */}
+          <nav aria-label="Breadcrumb">
+            <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
+              <li>
+                <Link
+                  href="/"
+                  className="hover:text-[var(--primary-color)] transition-colors focus:outline-none"
+                >
+                  Home
+                </Link>
+              </li>
+              <li className="text-[var(--gray-color)]/60" aria-hidden="true">
+                /
+              </li>
+              <li className="text-[#0f172a] font-semibold" aria-current="page">
+                Contact Us
+              </li>
+            </ol>
           </nav>
         </div>
 
@@ -57,8 +63,8 @@ export default function ContactHero() {
 
           {/* Main Title */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[48px] font-black text-[#0f172a] tracking-tight leading-[1.1]">
-            Let&apos;s Build <br className="hidden sm:inline" />
-            <span className="text-[var(--primary-color)]">A Safer</span>{" "}
+            Let&apos;s Build
+            <span className="text-[var(--primary-color)]"> A Safer</span>{" "}
             Tomorrow
           </h1>
 

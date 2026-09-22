@@ -57,8 +57,7 @@ export default function WhyChoosePratiksha() {
             WHY CHOOSE PRATIKSHA
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-[1.15] mb-4">
-            Engineering You Can Trust.
-            <br className="hidden sm:inline" /> Protection That Lasts.
+            Engineering You Can Trust. Protection That Lasts.
           </h2>
           <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed">
             Precision manufacturing, dependable earthing technology and

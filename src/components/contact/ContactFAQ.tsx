@@ -69,13 +69,26 @@ export default function ContactFAQ() {
                     {faq.q}
                   </span>
                   <span
-                    className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-sm font-semibold transition-transform duration-300 ${
+                    className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-all duration-300 ${
                       isOpen
-                        ? "bg-[var(--primary-color)] text-white rotate-180"
-                        : "bg-slate-100 text-[var(--gray-color)]"
+                        ? "bg-[var(--primary-color)] text-white rotate-45 shadow-sm"
+                        : "bg-slate-100 text-[var(--gray-color)] hover:bg-slate-200"
                     }`}
+                    aria-hidden="true"
                   >
-                    ↓
+                    <svg
+                      className="w-4 h-4"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2.5"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M12 4.5v15m7.5-7.5h-15"
+                      />
+                    </svg>
                   </span>
                 </button>
                 {isOpen && (
