@@ -56,7 +56,7 @@ export default function ContactHero() {
           {/* Eyebrow / Tagline */}
           <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
             <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <span className="text-[11px] sm:text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
               GET IN TOUCH
             </span>
           </div>

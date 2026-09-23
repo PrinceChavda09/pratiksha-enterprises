@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, productIcons } from "@/components/icon";
@@ -66,48 +68,6 @@ const cardThemes: Record<
     arrowBorder:
       "border-[#C1E8CE] group-hover:border-[#15803D] group-hover:bg-[#15803D]",
     arrowColor: "text-[#15803D] group-hover:text-white",
-  },
-  "commercial-earth-busbars-distribution": {
-    icon: productIcons.commercialBusbars,
-    categoryBadge: "COMMERCIAL SAFETY",
-    cardBg: "bg-[#FAF9FC]",
-    iconBg: "bg-[#EDE9FE]",
-    iconColor: "text-[#6366F1]",
-    badgeBg: "bg-[#EEF2FF]",
-    badgeColor: "text-[#4F46E5]",
-    glowBg:
-      "radial-gradient(circle, rgba(99, 102, 241, 0.14) 0%, rgba(99, 102, 241, 0) 70%)",
-    arrowBorder:
-      "border-[#DDD6FE] group-hover:border-[#4F46E5] group-hover:bg-[#4F46E5]",
-    arrowColor: "text-[#4F46E5] group-hover:text-white",
-  },
-  "solar-pv-plant-grounding-systems": {
-    icon: productIcons.solarGrounding,
-    categoryBadge: "RENEWABLE SIZING",
-    cardBg: "bg-[#FCFBF6]",
-    iconBg: "bg-[#FEF3C7]",
-    iconColor: "text-[#D97706]",
-    badgeBg: "bg-[#FEF3C7]",
-    badgeColor: "text-[#B45309]",
-    glowBg:
-      "radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%)",
-    arrowBorder:
-      "border-[#FDE68A] group-hover:border-[#D97706] group-hover:bg-[#D97706]",
-    arrowColor: "text-[#D97706] group-hover:text-white",
-  },
-  "advanced-maintenance-free-backfill": {
-    icon: productIcons.backfillCompound,
-    categoryBadge: "BACKFILL MATERIAL",
-    cardBg: "bg-[#F6FAF9]",
-    iconBg: "bg-[#CCFBF1]",
-    iconColor: "text-[#0F766E]",
-    badgeBg: "bg-[#CCFBF1]",
-    badgeColor: "text-[#0F766E]",
-    glowBg:
-      "radial-gradient(circle, rgba(20, 184, 166, 0.16) 0%, rgba(20, 184, 166, 0) 70%)",
-    arrowBorder:
-      "border-[#99F6E4] group-hover:border-[#0F766E] group-hover:bg-[#0F766E]",
-    arrowColor: "text-[#0F766E] group-hover:text-white",
   },
 };
 

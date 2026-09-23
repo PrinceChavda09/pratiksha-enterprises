@@ -38,7 +38,7 @@ export default function ContactFAQ() {
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 mb-3">
             <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
-            <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
               GOT QUESTIONS?
             </span>
             <span className="w-5 h-[2px] bg-[var(--primary-color)]" />

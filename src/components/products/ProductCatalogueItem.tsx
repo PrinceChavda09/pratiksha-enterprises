@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Product } from "./productData";
+import { ArrowRightIcon } from "../icon";
 
 interface ProductCatalogueItemProps {
   product: Product;
@@ -75,19 +76,14 @@ export default function ProductCatalogueItem({
           </p>
 
           {/* Product Action */}
-          <div>
+          <div className="pt-2">
             <Link
               href="/contact"
-              className="inline-flex items-center text-sm sm:text-base font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors gap-2.5 pb-1 border-b-2 border-slate-300 group-hover:border-[var(--primary-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] rounded"
+              className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] sm:rounded-xl transition-all duration-300 shadow-sm hover:shadow-md gap-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 hover:scale-[1.02] active:scale-[0.98] group/btn"
               aria-label={`Enquire about ${product.title}`}
             >
-              <span>Enquire Now</span>
-              <span
-                className="transition-transform duration-200 group-hover:translate-x-1.5"
-                aria-hidden="true"
-              >
-                →
-              </span>
+              <span>Enquiry Now</span>
+              <ArrowRightIcon className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 shrink-0" />
             </Link>
           </div>
         </div>

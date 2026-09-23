@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Icon, productIcons, ArrowRightIcon } from "@/components/icon";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -27,7 +28,7 @@ export default function Footer() {
         <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
           <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
+              <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
                 READY TO GET STARTED?
               </span>
               <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0f172a] leading-tight mb-2">
@@ -83,7 +84,7 @@ export default function Footer() {
 
           {/* COLUMN 2 — COMPANY */}
           <div className="lg:col-span-2">
-            <h4 className="text-xs font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
               Company
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -102,7 +103,7 @@ export default function Footer() {
 
           {/* COLUMN 3 — SOLUTIONS */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
               Solutions
             </h4>
             <ul className="space-y-2.5 text-sm">
@@ -121,7 +122,7 @@ export default function Footer() {
 
           {/* COLUMN 4 — GET IN TOUCH */}
           <div className="lg:col-span-3">
-            <h4 className="text-xs font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
               Get In Touch
             </h4>
             <div className="space-y-4 text-sm">
@@ -148,7 +149,8 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[#0f172a]">
-                    305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002.
+                    305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk,
+                    Rajkot, Gujarat 360002.
                   </p>
                   <p className="text-xs text-[var(--gray-color)]">
                     Engineering & Manufacturing Hub
@@ -219,7 +221,7 @@ export default function Footer() {
                     className="ml-1.5 transition-transform duration-200 group-hover:translate-x-1"
                     aria-hidden="true"
                   >
-                    →
+                    <ArrowRightIcon />
                   </span>
                 </Link>
               </div>
@@ -229,7 +231,9 @@ export default function Footer() {
 
         {/* 3. BOTTOM COPYRIGHT BAR */}
         <div className="border-t border-slate-200/90 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--gray-color)]">
-          <p>© {currentYear} Pratiksha Earthing Solutions. All Rights Reserved.</p>
+          <p>
+            © {currentYear} Pratiksha Earthing Solutions. All Rights Reserved.
+          </p>
           <p className="text-[var(--gray-color)]">
             Precision Earthing & Electrical Safety Systems
           </p>
