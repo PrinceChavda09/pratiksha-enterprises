@@ -1,15 +1,43 @@
 "use client";
 
-import React from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function HomeHeroSection() {
-  // Electrode positioning calibration (Rod is located horizontally at ~28%)
-  const rodXPercent = 28;
+  const sectionRef = useRef<HTMLElement>(null);
+  const [rodPosition, setRodPosition] = useState({ left: "28%" });
+
+  useEffect(() => {
+    const updatePosition = () => {
+      if (!sectionRef.current) return;
+      const cW = sectionRef.current.clientWidth;
+      const cH = sectionRef.current.clientHeight;
+      if (!cW || !cH) return;
+
+      const nW = 960;
+      const nH = 480;
+      const scale = Math.max(cW / nW, cH / nH);
+      const rW = nW * scale;
+      const offsetX = (cW - rW) * 0.5;
+
+      // In electron-pass.gif natural coords (960x480), wire junction starts at X = 274
+      // Center rod is placed slightly to the left (X = 268) so the wire connects to the rod's right sleeve
+      const targetX = offsetX + 268 * scale;
+      const leftPct = (targetX / cW) * 100;
+      setRodPosition({ left: `${leftPct.toFixed(2)}%` });
+    };
+
+    updatePosition();
+    window.addEventListener("resize", updatePosition);
+    return () => window.removeEventListener("resize", updatePosition);
+  }, []);
 
   return (
-    <section className="relative w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden select-none">
+    <section
+      ref={sectionRef}
+      className="relative w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden select-none"
+    >
       {/* 1. PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -21,89 +49,88 @@ export default function HomeHeroSection() {
           className="object-cover object-center w-full h-full"
         />
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/30 to-transparent z-1 pointer-events-none" />
         {/* Sky atmospheric gradient */}
-        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/50 to-transparent z-1 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/10 to-transparent z-1 pointer-events-none" />
       </div>
 
-      {/* 2. SUBTERRANEAN ELECTRICITY ANIMATION */}
-      <img
-        src="/electron-pass.gif"
-        alt="Underground Subterranean Electricity Earthing Animation"
-        className="absolute inset-0 w-full h-full pointer-events-none z-20 object-cover object-center select-none"
-        loading="eager"
-      />
+      {/* 2. SUBTERRANEAN LAYER: GIF ANIMATION + COPPER ELECTRODE (COMBINED IN ONE DIV) */}
+      <div className="absolute inset-0 z-20 pointer-events-none select-none">
+        {/* Subterranean Electricity Animation: Hidden on mobile view (< 640px) */}
+        <div className="hidden sm:block absolute inset-0 w-full h-full translate-y-1 sm:translate-y-2 lg:translate-y-2.5 xl:translate-y-4 2xl:translate-y-5 transition-transform duration-300">
+          <Image
+            src="/electron-pass.gif"
+            alt="Underground Subterranean Electricity Earthing Animation"
+            fill
+            unoptimized
+            priority
+            sizes="100vw"
+            className="w-full h-full object-cover object-[center_85%] pointer-events-none"
+          />
+        </div>
 
-      {/* 3. SUBTERRANEAN COPPER EARTHING ELECTRODE */}
-      <div
-        className="absolute z-25 pointer-events-auto group"
-        style={{
-          left: `${rodXPercent}%`,
-          top: `56.5%`,
-          transform: "translateX(-50%)",
-        }}
-      >
-        {/* Rod Assembly Container */}
-        <div className="relative flex flex-col items-center">
-          {/* Real Copper Earthing Electrode Product Image */}
-          <div className="relative w-28 sm:w-32 md:w-36 lg:w-40 h-[280px] sm:h-[320px] md:h-[360px] lg:h-[390px] select-none">
-            <Image
-              src="/home/Copper-Earthing-Electrode-without-bg.png"
-              alt="Copper Earthing Electrode"
-              fill
-              priority
-              sizes="(max-width: 768px) 120px, 160px"
-              className="object-contain object-top drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]"
-            />
-          </div>
-
-          {/* Interactive Tooltip on Hover */}
-          <div className="absolute -bottom-14 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap bg-black/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-cyan-400/60 text-[11px] text-cyan-300 font-medium shadow-[0_0_15px_rgba(0,240,255,0.4)] z-30">
-            ⚡ Copper Earthing Electrode (Active Grounding)
+        {/* Copper Earthing Electrode */}
+        <div
+          className="absolute pointer-events-auto group top-[52%] sm:top-[53%] lg:top-[53%] xl:top-[54%] -translate-x-1/2 transition-[left] duration-150"
+          style={{ left: rodPosition.left }}
+        >
+          {/* Rod Assembly Container */}
+          <div className="relative flex flex-col items-center origin-top scale-105 sm:scale-110 md:scale-115 lg:scale-115 xl:scale-120 transition-transform duration-300">
+            {/* Real Copper Earthing Electrode Product Image */}
+            <div className="relative w-32 sm:w-36 md:w-38 lg:w-40 xl:w-44 h-[300px] sm:h-[320px] md:h-[340px] lg:h-[360px] xl:h-[380px] select-none">
+              <Image
+                src="/home/herosection-road.png"
+                alt="Copper Earthing Electrode"
+                fill
+                priority
+                sizes="(max-width: 768px) 140px, 180px"
+                className="object-contain object-top drop-shadow-[0_4px_16px_rgba(0,0,0,0.8)]"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      {/* 4. PRODUCT LINEUP ON RIGHT */}
-      <div className="absolute bottom-[26.5%] sm:bottom-[27%] md:bottom-[27.5%] lg:bottom-[28%] xl:bottom-[31%] right-0 sm:right-4 md:right-8 lg:right-14 z-20 pointer-events-auto">
+      {/* 3. PRODUCT LINEUP ON RIGHT */}
+      <div className="absolute bottom-[24%] sm:bottom-[25%] md:bottom-[25%] lg:bottom-[35%] xl:bottom-[28%] 2xl:bottom-[30%] right-0 sm:right-2 md:right-3 lg:right-3 xl:right-10 2xl:right-14 z-20 pointer-events-auto">
         <div className="relative group">
           {/* Ground Contact Shadow */}
           <div className="absolute -bottom-2 inset-x-4 h-6 bg-black/90 blur-md rounded-full transform scale-y-50" />
 
           {/* Product Lineup Image */}
-          <div className="relative w-[300px] sm:w-[420px] md:w-[520px] lg:w-[650px] xl:w-[900px] h-[220px] sm:h-[290px] md:h-[360px] lg:h-[430px] xl:h-[470px] transition-transform duration-500 ease-out">
+          <div className="relative w-[280px] sm:w-[360px] md:w-[420px] lg:w-[540px] xl:w-[720px] 2xl:w-[860px] h-[200px] sm:h-[260px] md:h-[300px] lg:h-[385px] xl:h-[430px] 2xl:h-[470px] transition-transform duration-500 ease-out">
             <Image
               src="/home/pratiksha-enterprises-product.png"
               alt="Pratiksha Enterprise SRIP Compound Bags, Copper Bonded Rods, Chemical Earthing Electrodes"
               fill
               priority
-              sizes="(max-width: 768px) 300px, (max-width: 1200px) 520px, 720px"
+              sizes="(max-width: 768px) 300px, (max-width: 1200px) 540px, 860px"
               className="object-contain object-bottom drop-shadow-[0_12px_28px_rgba(0,0,0,0.65)]"
             />
           </div>
         </div>
       </div>
 
-      {/* 5. MAIN HERO CONTENT */}
-      <div className="relative z-30 h-[60%] sm:h-[62%] lg:h-[63%] xl:h-[63.5%] container sm:px-6 lg:px-8 flex flex-col justify-end pointer-events-none">
-        <div className="lg:max-w-2xl xl:max-w-3xl pointer-events-auto">
+      {/* 4. MAIN HERO CONTENT (LEFT HEADLINE & CTA) */}
+      <div className="relative z-30 h-[58%] sm:h-[60%] lg:h-[62%] xl:h-[63.5%] container px-4 sm:px-6 lg:px-8 flex flex-col justify-end pointer-events-none">
+        <div className="max-w-[340px] sm:max-w-md md:max-w-lg lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto">
           {/* Main Hero Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[76px] xl:text-[80px] font-extrabold tracking-tight leading-[1.06] text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-white">
             Make Your Premises{" "}
             <span className="text-[var(--primary-color)]">Secure</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-4 sm:mt-5 text-base sm:text-lg md:text-xl text-gray-200/95 font-normal leading-relaxed max-w-md lg:max-w-lg drop-shadow-md">
+          <p className="mt-3 sm:mt-4 md:mt-5 text-sm sm:text-base md:text-lg lg:text-base xl:text-xl text-gray-200/95 font-normal leading-relaxed max-w-sm lg:max-w-[380px] xl:max-w-lg drop-shadow-md">
             Safeguard your industrial infrastructure, transmission grids, and
             commercial assets.
           </p>
 
           {/* Action CTA Button */}
-          <div className="mt-6 sm:mt-8 flex items-center">
+          <div className="mt-5 sm:mt-6 md:mt-8 flex items-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-7 sm:px-8 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30"
             >
               Get a Quote
             </Link>
