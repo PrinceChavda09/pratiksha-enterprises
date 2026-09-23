@@ -77,7 +77,7 @@ export default function HomeHeroSection() {
           {/* Rod Assembly Container */}
           <div className="relative flex flex-col items-center origin-top scale-105 sm:scale-110 md:scale-115 lg:scale-115 xl:scale-120 transition-transform duration-300">
             {/* Real Copper Earthing Electrode Product Image */}
-            <div className="relative w-32 sm:w-36 md:w-35 lg:w-38 xl:w- 2xl:w-44 h-[300px] sm:h-[320px] md:h-[300px] lg:h-[360px] xl:h-[200px] 2xl:h-[400px] select-none">
+            <div className="relative w-32 sm:w-36 md:w-36 lg:w-38 xl:w-40 2xl:w-44 h-[300px] sm:h-[320px] md:h-[300px] lg:h-[360px] xl:h-[200px] 2xl:h-[400px] select-none">
               <Image
                 src="/home/herosection-road.png"
                 alt="Copper Earthing Electrode"
@@ -92,7 +92,7 @@ export default function HomeHeroSection() {
       </div>
 
       {/* 3. PRODUCT LINEUP (CENTERED ON MOBILE, RIGHT-ALIGNED ON TABLET/DESKTOP) */}
-      <div className="absolute bottom-[15%] sm:bottom-[26%] md:bottom-[30%] lg:bottom-[34%] xl:bottom-[28%] 2xl:bottom-[30%] left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-2 md:right-2 lg:right-3 xl:right-10 2xl:right-14 z-20 pointer-events-auto">
+      <div className="absolute bottom-[15%] sm:bottom-[26%] md:bottom-[30%] lg:bottom-[34%] xl:bottom-[28%] 2xl:bottom-[35%] left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-2 md:right-2 lg:right-3 xl:right-10 2xl:right-14 z-20 pointer-events-auto">
         <div className="relative group">
           {/* Ground Contact Shadow */}
           <div className="absolute -bottom-2 inset-x-4 h-6 bg-black/90 blur-md rounded-full transform scale-y-50" />
@@ -112,7 +112,7 @@ export default function HomeHeroSection() {
       </div>
 
       {/* 4. MAIN HERO CONTENT (CENTERED ON MOBILE, LEFT-ALIGNED ON TABLET/DESKTOP) */}
-      <div className="relative z-30 h-auto sm:h-auto md:h-auto lg:h-[62%] xl:h-[63.5%] container px-4 sm:px-6 lg:px-8 flex flex-col items-center sm:items-start justify-start lg:justify-end pt-25 sm:pt-10 md:pt-12 lg:pt-0 pointer-events-none">
+      <div className="relative z-30 h-auto container px-4 sm:px-6 lg:px-8 flex flex-col items-center sm:items-start justify-start pt-8 sm:pt-10 md:pt-12 lg:pt-12 xl:pt-14 2xl:pt-30 pointer-events-none">
         <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-center sm:text-left flex flex-col items-center sm:items-start">
           {/* Main Hero Headline */}
           <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-white">
