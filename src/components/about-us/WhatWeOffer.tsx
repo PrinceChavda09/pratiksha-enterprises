@@ -54,23 +54,23 @@ export default function WhatWeOffer() {
               key={item.number}
               className="py-8 sm:py-10 transition-colors duration-200 hover:bg-slate-50/70 group"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+              <div className="grid grid-cols-[auto_1fr] lg:grid-cols-12 gap-x-4 sm:gap-x-6 lg:gap-x-6 gap-y-3 sm:gap-y-4 lg:gap-y-0 items-start lg:items-center">
                 {/* Index Number */}
-                <div className="lg:col-span-1">
+                <div className="col-span-2 lg:col-span-1">
                   <span className="text-2xl sm:text-3xl font-extrabold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors">
                     {item.number}
                   </span>
                 </div>
 
                 {/* Product Thumbnail (Contained, non-distorted) */}
-                <div className="lg:col-span-2">
-                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 bg-white border border-slate-200 rounded-lg p-2 flex items-center justify-center">
+                <div className="col-span-1 lg:col-span-2">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white border border-slate-200 rounded-lg p-2 flex items-center justify-center shrink-0">
                     <div className="relative w-full h-full">
                       <Image
                         src={item.image}
                         alt={item.title}
                         fill
-                        sizes="120px"
+                        sizes="(max-width: 640px) 80px, (max-width: 1024px) 112px, 120px"
                         className="object-contain"
                       />
                     </div>
@@ -78,20 +78,20 @@ export default function WhatWeOffer() {
                 </div>
 
                 {/* Category Title & Description */}
-                <div className="lg:col-span-7">
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors mb-2">
+                <div className="col-span-1 lg:col-span-7 min-w-0">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors mb-1.5 sm:mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed max-w-2xl">
+                  <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] leading-relaxed max-w-2xl">
                     {item.desc}
                   </p>
                 </div>
 
                 {/* Arrow Action */}
-                <div className="lg:col-span-2 flex lg:justify-end">
+                <div className="col-start-2 col-span-1 lg:col-span-2 flex lg:justify-end mt-1 sm:mt-2 lg:mt-0">
                   <Link
                     href="/products"
-                    className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus:underline"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus:underline"
                     aria-label={`View ${item.title}`}
                   >
                     <span>View Category</span>
