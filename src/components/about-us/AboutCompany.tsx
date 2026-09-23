@@ -9,13 +9,13 @@ export default function AboutCompany() {
           {/* Left Column: Side Heading & Visual Statement */}
           <div className="lg:col-span-4 flex flex-col justify-between">
             <div>
-              <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
+              <div className="flex items-center gap-2 text-base font-bold text-[var(--primary-color)] tracking-widest uppercase mb-3">
+                <span className="block w-6 h-[2px] bg-[var(--primary-color)]" />
                 COMPANY OVERVIEW
-              </span>
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight mb-4">
                 About Pratiksha
               </h2>
-              <div className="w-12 h-[3px] bg-[var(--primary-color)] mb-6" />
               <p className="text-sm font-medium text-[var(--gray-color)] uppercase tracking-wide">
                 Grounding & Electrical Safety Engineering
               </p>
@@ -52,8 +52,8 @@ export default function AboutCompany() {
 
             <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed pl-5">
               Available listings for the Pratiksha brand show products in copper
-              and galvanized iron, including copper-coated/copper-bonded rods and
-              chemical earthing electrodes.
+              and galvanized iron, including copper-coated/copper-bonded rods
+              and chemical earthing electrodes.
             </p>
 
             {/* Mobile Visual */}

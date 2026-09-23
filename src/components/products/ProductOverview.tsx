@@ -6,7 +6,6 @@ export default function ProductOverview() {
           {/* Left Column: Small Label */}
           <div className="lg:col-span-3">
             <div className="flex items-center gap-2.5">
-              <span className="w-2.5 h-2.5 rounded-full bg-[var(--primary-color)]" />
               <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 PRODUCT RANGE
               </span>

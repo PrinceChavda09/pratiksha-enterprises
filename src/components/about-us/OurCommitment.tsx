@@ -16,7 +16,7 @@ export default function OurCommitment() {
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-6">
           <span className="w-8 h-[2px] bg-[var(--primary-color)]" />
-          <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+          <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
             OUR COMMITMENT
           </span>
         </div>

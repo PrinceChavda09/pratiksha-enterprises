@@ -31,13 +31,10 @@ export default function WhyPratiksha() {
             <div>
               <div className="flex items-center gap-3 mb-4">
                 <span className="w-8 h-[2px] bg-[var(--primary-color)]" />
-                <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   WHY PRATIKSHA
                 </span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-tight tracking-tight mb-6">
-                Why Pratiksha
-              </h2>
               <p className="text-base text-[var(--gray-color)] leading-relaxed max-w-md">
                 Dependable grounding solutions built around material quality,
                 practical engineering support, and reliable electrical protection.

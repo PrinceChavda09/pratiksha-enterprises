@@ -37,13 +37,10 @@ export default function WhatWeOffer() {
           <div>
             <div className="flex items-center gap-3 mb-3">
               <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-              <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 WHAT WE OFFER
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight">
-              What We Offer
-            </h2>
           </div>
           <p className="text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-3 md:mt-0">
             Engineering Catalogue Index

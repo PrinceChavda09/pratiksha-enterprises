@@ -24,13 +24,10 @@ export default function OurApproach() {
         <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="flex items-center gap-3 mb-3">
             <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-            <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
               OUR APPROACH
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight mb-5">
-            Our Approach
-          </h2>
           <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed">
             We believe effective earthing is an important part of electrical
             safety. Our solutions are focused on providing reliable grounding
@@ -48,7 +45,6 @@ export default function OurApproach() {
                   <span className="text-2xl sm:text-3xl font-extrabold text-[var(--primary-color)]">
                     {pillar.number}
                   </span>
-                  <span className="w-2 h-2 rounded-full bg-[var(--primary-color)]" />
                 </div>
                 <h3 className="text-lg font-bold text-[#0f172a] mb-2.5">
                   {pillar.title}

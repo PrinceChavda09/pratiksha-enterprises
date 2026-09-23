@@ -52,15 +52,17 @@ export default function AboutUsHero() {
           {/* Eyebrow with Brand Accent Bar */}
           <div className="flex items-center gap-2 mb-2">
             <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <span className="text-[11px] sm:text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
               ABOUT PRATIKSHA
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
-            Reliable Earthing Solutions {" "}
-            <span className="text-[var(--primary-color)]">For Safer Systems</span>
+            Reliable Earthing Solutions{" "}
+            <span className="text-[var(--primary-color)]">
+              For Safer Systems
+            </span>
           </h1>
 
           {/* Supporting Content */}
@@ -169,7 +171,7 @@ export default function AboutUsHero() {
         </div>
 
         {/* BOTTOM ROW: LEFT MOTTO & RAJKOT GUJARAT ACCENT STRIP */}
-        <div className="pt-2.5 sm:pt-3 border-t border-slate-200/80 sm:border-slate-300/60 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <div className="pt-2.5 sm:pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div className="flex items-center gap-2">
             <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full" />
             <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider">
@@ -177,9 +179,6 @@ export default function AboutUsHero() {
               <span className="text-slate-300 mx-1">/</span>{" "}
               <span className="text-[#0f172a]">GROUNDING & SAFETY</span>
             </div>
-          </div>
-          <div className="text-[10px] sm:text-[11px] font-semibold text-[var(--gray-color)] tracking-wider uppercase">
-            RAJKOT, GUJARAT — INDIA
           </div>
         </div>
       </div>

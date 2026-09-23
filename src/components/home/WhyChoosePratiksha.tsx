@@ -53,7 +53,7 @@ export default function WhyChoosePratiksha() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 lg:mb-16">
-          <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
+          <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
             WHY CHOOSE PRATIKSHA
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0f172a] leading-[1.15] mb-4">

@@ -54,7 +54,7 @@ export default function AboutPratiksha() {
           {/* RIGHT SIDE — CONTENT */}
           <div className="flex flex-col justify-center">
             {/* Small eyebrow text */}
-            <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
               ABOUT PRATIKSHA
             </span>
 

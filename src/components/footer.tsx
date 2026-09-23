@@ -75,7 +75,6 @@ export default function Footer() {
               industrial applications.
             </p>
             <div className="flex items-center gap-2 pt-1">
-              <span className="w-2 h-2 rounded-full bg-[var(--primary-color)]" />
               <span className="text-xs font-semibold text-[var(--primary-color)] tracking-wider uppercase">
                 Engineering safety. Protecting what matters.
               </span>
