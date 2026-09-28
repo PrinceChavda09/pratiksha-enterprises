@@ -3,14 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Icon, productIcons } from "@/components/icon";
-import { products, type Product } from "@/components/products/productData";
-
-export { products };
-export type { Product };
+import { products } from "@/components/products/productData";
 
 /**
- * Visual styling theme per product to replicate the premium reference design
- * while maintaining brand consistency.
+ * Visual styling theme per product to replicate the premium design
+ * across all 6 products.
  */
 const cardThemes: Record<
   string,
@@ -69,55 +66,80 @@ const cardThemes: Record<
       "border-[#C1E8CE] group-hover:border-[#15803D] group-hover:bg-[#15803D]",
     arrowColor: "text-[#15803D] group-hover:text-white",
   },
+  "commercial-earth-busbars-distribution": {
+    icon: "lucide:layout-grid",
+    categoryBadge: "COMMERCIAL SAFETY",
+    cardBg: "bg-[#FDFBF7]",
+    iconBg: "bg-[#FEF3C7]",
+    iconColor: "text-[#D97706]",
+    badgeBg: "bg-[#FEF3C7]",
+    badgeColor: "text-[#B45309]",
+    glowBg:
+      "radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%)",
+    arrowBorder:
+      "border-[#FDE68A] group-hover:border-[#D97706] group-hover:bg-[#D97706]",
+    arrowColor: "text-[#D97706] group-hover:text-white",
+  },
+  "solar-pv-plant-grounding-systems": {
+    icon: "lucide:sun",
+    categoryBadge: "SOLAR & RENEWABLES",
+    cardBg: "bg-[#F8FAFC]",
+    iconBg: "bg-[#EFF6FF]",
+    iconColor: "text-[#2563EB]",
+    badgeBg: "bg-[#DBEAFE]",
+    badgeColor: "text-[#1D4ED8]",
+    glowBg:
+      "radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(37, 99, 235, 0) 70%)",
+    arrowBorder:
+      "border-[#BFDBFE] group-hover:border-[#2563EB] group-hover:bg-[#2563EB]",
+    arrowColor: "text-[#2563EB] group-hover:text-white",
+  },
+  "advanced-maintenance-free-backfill": {
+    icon: "lucide:flask-conical",
+    categoryBadge: "BACKFILL COMPOUND",
+    cardBg: "bg-[#FAF7FD]",
+    iconBg: "bg-[#F3E8FF]",
+    iconColor: "text-[#7C3AED]",
+    badgeBg: "bg-[#EDE9FE]",
+    badgeColor: "text-[#6D28D9]",
+    glowBg:
+      "radial-gradient(circle, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%)",
+    arrowBorder:
+      "border-[#DDD6FE] group-hover:border-[#7C3AED] group-hover:bg-[#7C3AED]",
+    arrowColor: "text-[#7C3AED] group-hover:text-white",
+  },
 };
 
-export default function OurProduct() {
+export default function ProductsGrid() {
   return (
     <section
-      id="products"
-      className="w-full py-16 md:py-20 lg:py-24 scroll-mt-20 border-b border-slate-100"
+      id="product-grid"
+      className="w-full bg-[#FAFCFD] py-14 sm:py-16 md:py-20 lg:py-24 border-b border-slate-100"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header: Left-Aligned Text & Right-Aligned Explore More Button */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
-          {/* Left Side: Eyebrow + Heading */}
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
-                OUR PRODUCTS
-              </span>
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] leading-tight tracking-tight">
-              Complete Earthing Solutions <br className="hidden sm:inline" />
-              for{" "}
-              <span className="text-[var(--primary-color)]">
-                Every Requirement
-              </span>
-            </h2>
+        {/* Section Header: Centered on Mobile, Left-Aligned on Desktop, NO EXPLORE MORE BUTTON */}
+        <div className="mb-12 sm:mb-16">
+          <div className="flex items-center gap-3 mb-3">
+            <span className="text-base font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
+              OUR PRODUCTS
+            </span>
           </div>
 
-          {/* Right Side: Explore More Button */}
-          <div className="shrink-0 pb-1">
-            <Link
-              href="/products"
-              className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] transition-all duration-300 shadow-sm hover:shadow gap-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 group"
-            >
-              <span>Explore More</span>
-              <Icon
-                icon={productIcons.arrowRight}
-                className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
-          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] leading-tight tracking-tight">
+            Complete Earthing Solutions <br className="hidden sm:inline" />
+            for{" "}
+            <span className="text-[var(--primary-color)]">
+              Every Requirement
+            </span>
+          </h2>
         </div>
 
-        {/* Product Cards Grid: 3 cols desktop, 2 cols tablet, 1 col mobile */}
+        {/* 6 Product Cards Grid: 3 cols desktop, 2 cols tablet, 1 col mobile */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {products.slice(0, 3).map((product) => {
+          {products.map((product) => {
             const theme = cardThemes[product.id] || {
               icon: productIcons.copperBonded,
-              categoryBadge: product.category,
+              categoryBadge: product.badge || product.category,
               cardBg: "bg-white",
               iconBg: "bg-slate-100",
               iconColor: "text-[var(--primary-color)]",
@@ -133,8 +155,8 @@ export default function OurProduct() {
             return (
               <Link
                 key={product.id}
-                href={`/products#${product.id}`}
-                aria-label={`View details for ${product.title}`}
+                href={`/products/${product.id}`}
+                aria-label={`View detailed specifications for ${product.title}`}
                 className={`group relative ${theme.cardBg} rounded-[28px] sm:rounded-[32px] border border-slate-200/70 p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_-4px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.08)] hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2`}
               >
                 {/* Top Row: Icon on Left, Category Badge on Right */}
@@ -163,7 +185,7 @@ export default function OurProduct() {
                     aria-hidden="true"
                   />
 
-                  {/* Uncropped, Non-Distorted Product Image */}
+                  {/* Uncropped Product Image */}
                   <div className="relative w-full h-full p-2">
                     <Image
                       src={product.image}
@@ -185,7 +207,7 @@ export default function OurProduct() {
                     </h3>
                   </div>
 
-                  {/* Circular Arrow Button */}
+                  {/* Circular Arrow Button (Opens Detail Page) */}
                   <div
                     className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full border ${theme.arrowBorder} ${theme.arrowColor} flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm`}
                     aria-hidden="true"

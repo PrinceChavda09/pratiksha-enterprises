@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import ProductsHero from "@/components/products/ProductsHero";
-import ProductOverview from "@/components/products/ProductOverview";
-import ProductCatalogue from "@/components/products/ProductCatalogue";
+import ProductsGrid from "@/components/products/ProductsGrid";
 
 export const metadata: Metadata = {
   title: "Products | Pratiksha Earthing Solutions",
@@ -15,11 +14,8 @@ export default function ProductsPage() {
       {/* 1. Products Hero */}
       <ProductsHero />
 
-      {/* 2. Product Overview */}
-      <ProductOverview />
-
-      {/* 3. Main Product Catalogue (Alternating Large Rows for All 6 Products) */}
-      <ProductCatalogue />
+      {/* 2. All 6 Product Cards Grid */}
+      <ProductsGrid />
     </main>
   );
 }

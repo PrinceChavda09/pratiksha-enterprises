@@ -17,10 +17,10 @@ export default function ProductsHero() {
 
         {/* 2. SOFT WHITE SHADOW / GRADIENT OVERLAY (LIKE CONTACT HERO) */}
         {/* Left-to-right soft white shadow / gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/95 via-45% sm:via-white/80 sm:via-45% md:via-white/60 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/30 via-white/95 via-45% sm:via-white/80 sm:via-45% md:via-white/60 to-transparent z-1 pointer-events-none" />
 
         {/* Ambient soft glow on left text content area */}
-        <div className="absolute inset-y-0 left-0 w-[60%] sm:w-[50%] bg-gradient-to-r from-white/80 via-white/50 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-y-0 left-0 w-[60%] sm:w-[50%] bg-gradient-to-r from-white/50 via-white/20 to-transparent z-1 pointer-events-none" />
 
         {/* Mobile readability protection */}
         <div className="absolute inset-0 bg-white/65 sm:bg-transparent z-1 pointer-events-none" />

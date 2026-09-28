@@ -44,6 +44,9 @@ try {
       "arrow-right": {
         body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7l7 7l-7 7"/>',
       },
+      "arrow-up-right": {
+        body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7m0 0H7m10 0v10"/>',
+      },
       "layout-grid": {
         body: '<rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/>',
       },
@@ -83,6 +86,9 @@ export const productIcons = {
 
   // Action arrow icon for circular buttons, links, and footer
   arrowRight: "lucide:arrow-right",
+
+  // Right-side cross / diagonal up-right arrow (↗)
+  arrowUpRight: "lucide:arrow-up-right",
 } as const;
 
 export type ProductIconName = (typeof productIcons)[keyof typeof productIcons];
@@ -97,6 +103,22 @@ export function ArrowRightIcon({
   return (
     <Icon
       icon={productIcons.arrowRight}
+      className={className}
+      {...props}
+    />
+  );
+}
+
+/**
+ * Right-side cross / diagonal arrow icon component (↗).
+ */
+export function ArrowUpRightIcon({
+  className = "w-4 h-4",
+  ...props
+}: Omit<IconProps, "icon">) {
+  return (
+    <Icon
+      icon={productIcons.arrowUpRight}
       className={className}
       {...props}
     />

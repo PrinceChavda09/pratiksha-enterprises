@@ -1,135 +1,128 @@
 import Link from "next/link";
 import Image from "next/image";
 
-interface FeatureCard {
-  title: string;
-  subtitle: string;
+interface StatItem {
+  value: string;
+  label: string;
 }
 
-const featureCards: FeatureCard[] = [
-  {
-    title: "Quality Certified",
-    subtitle: "CPRI & NABL Tested",
-  },
-  {
-    title: "High Reliability",
-    subtitle: "15+ Year Lifespan",
-  },
-  {
-    title: "Dedicated Support",
-    subtitle: "On-Site Assistance",
-  },
+const stats: StatItem[] = [
+  { value: "17+", label: "YEARS IN INDUSTRY" },
+  { value: "500+", label: "PROJECTS COMPLETED" },
+  { value: "28+", label: "STATES COVERED" },
+  { value: "10K+", label: "DISTRIBUTORS" },
 ];
 
 export default function AboutPratiksha() {
   return (
-    <section className="w-full bg-[#eaf7fb] py-16 md:py-20 lg:py-24">
+    <section className="w-full py-16 sm:py-20 lg:py-24 overflow-hidden relative border-b border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-center">
-          {/* LEFT SIDE — IMAGE */}
-          <div className="relative w-full rounded-[16px] overflow-hidden shadow-lg aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] bg-slate-900 group">
-            <Image
-              src="/images/about-factory.webp"
-              alt="Pratiksha Earthing Solutions precision engineering and industrial earthing installation"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-              priority
-            />
-
-            {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
-
-            {/* Bottom-left overlay text */}
-            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-7 z-10">
-              <p className="text-xs font-bold text-[#00c5cb] tracking-wider uppercase">
-                RAJKOT ENGINEERING HERITAGE
-              </p>
-              <h3 className="text-lg sm:text-xl font-bold text-white mt-1 leading-snug">
-                Manufacturing Precision for Over 14 Years
-              </h3>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* LEFT COLUMN: EDITORIAL HEADLINE & STATS */}
+          <div className="lg:col-span-7 flex flex-col justify-center">
+            {/* Primary accent eyebrow */}
+            <div className="flex items-center gap-3 mb-4 sm:mb-5">
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+              <span className="text-xs sm:text-[13px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
+                ABOUT US
+              </span>
             </div>
-          </div>
 
-          {/* RIGHT SIDE — CONTENT */}
-          <div className="flex flex-col justify-center">
-            {/* Small eyebrow text */}
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
-              ABOUT PRATIKSHA
-            </span>
-
-            {/* Main heading */}
-            <h2 className="text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#0f172a] leading-tight mb-5">
-              Building Safer Electrical Foundations
+            {/* Main Headline (All caps, bold industrial typography) */}
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#0f172a] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6">
+              SETTING THE STANDARD<br className="hidden sm:inline" /> IN ELECTRICAL SAFETY.
             </h2>
 
-            {/* Paragraphs */}
-            <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8">
-              <p>
-                Pratiksha Earthing Solutions is focused on providing dependable
-                earthing products and solutions that support electrical safety,
-                system reliability, and long-term performance across demanding
-                power networks.
-              </p>
-              <p>
-                Based in Rajkot, Gujarat — one of India’s premier engineering and
-                foundry hubs — we combine precision manufacturing with rigorous
-                electrical engineering standards to protect lives, machinery,
-                and sensitive infrastructure from hazardous fault currents and
-                lightning surges.
-              </p>
-            </div>
+            {/* Overview Paragraph using --gray-color */}
+            <p className="text-[var(--gray-color)] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-2xl">
+              Since 2008, Pratiksha Earthing has manufactured and installed over
+              500+ earthing systems for substations, data centres, railways, and
+              industrial plants. Our manufacturing facilities produce CPRI-certified
+              electrodes, IS 3043-compliant compounds, and ESE lightning arresters
+              backed by 1000-hour salt-spray testing.
+            </p>
 
-            {/* Feature cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 sm:gap-4 mb-8">
-              {featureCards.map((card) => (
+            {/* 2x2 Stats Grid with primary-color vertical indicator bars */}
+            <div className="grid grid-cols-2 gap-y-7 gap-x-8 sm:gap-x-12 mb-9 sm:mb-11">
+              {stats.map((stat) => (
                 <div
-                  key={card.title}
-                  className="bg-white rounded-[10px] p-4 sm:p-5 shadow-sm border border-slate-100 flex flex-col justify-between transition-shadow hover:shadow-md"
+                  key={stat.label}
+                  className="border-l-2 border-[var(--primary-color)] pl-3.5 sm:pl-4"
                 >
-                  <div className="mb-3">
-                    <svg
-                      className="w-5 h-5 text-[var(--primary-color)]"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      viewBox="0 0 24 24"
-                      aria-hidden="true"
-                    >
-                      <circle cx="12" cy="12" r="9" />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 12l2 2 4-4"
-                      />
-                    </svg>
+                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight leading-none">
+                    {stat.value}
                   </div>
-                  <div>
-                    <h4 className="text-sm sm:text-[15px] font-bold text-[#0f172a] mb-1">
-                      {card.title}
-                    </h4>
-                    <p className="text-xs text-[var(--gray-color)] leading-normal">
-                      {card.subtitle}
-                    </p>
+                  <div className="text-[11px] sm:text-xs font-semibold text-[var(--gray-color)] tracking-wider uppercase mt-1.5">
+                    {stat.label}
                   </div>
                 </div>
               ))}
             </div>
 
-            {/* Bottom CTA */}
+            {/* CTA Button / Link */}
             <div>
               <Link
                 href="/about-us"
-                className="inline-flex items-center text-[15px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 rounded"
+                className="inline-flex items-center gap-2.5 text-xs sm:text-[13px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] uppercase tracking-[0.18em] transition-all duration-300"
               >
-                <span>Know More About Us</span>
+                <span>LEARN MORE ABOUT US</span>
                 <span
-                  className="ml-2 transition-transform duration-200 group-hover:translate-x-1"
+                  className="transition-transform duration-300 group-hover:translate-x-1.5"
                   aria-hidden="true"
                 >
                   →
                 </span>
               </Link>
+            </div>
+          </div>
+
+          {/* RIGHT COLUMN: SUBSTATION IMAGE WITH FLOATING BADGE */}
+          <div className="lg:col-span-5 relative mt-6 lg:mt-0">
+            {/* Top-Right Decorative Circular Wireframe Accent */}
+            <div
+              aria-hidden="true"
+              className="absolute -top-5 -right-5 sm:-top-7 sm:-right-7 w-28 h-28 sm:w-36 sm:h-36 rounded-full border border-[var(--primary-color)]/25 pointer-events-none z-0"
+            />
+
+            {/* Main Rounded Image Container */}
+            <div className="relative z-10 w-full aspect-[4/3] sm:aspect-[16/12] lg:aspect-[4/3] rounded-[24px] sm:rounded-[28px] overflow-hidden shadow-[0_16px_36px_-8px_rgba(15,23,42,0.12)] border border-slate-200/80 bg-slate-100 group">
+              <Image
+                src="/about-us/hero-section.png"
+                alt="High-voltage electrical substation transformer and gantry towers at sunset"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 550px"
+                className="object-cover object-right sm:object-center"
+              />
+            </div>
+
+            {/* Floating Quality Badge Card on Bottom-Left (Light Theme) */}
+            <div className="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-7 sm:-left-8 sm:max-w-[340px] lg:-bottom-8 lg:-left-10 lg:max-w-[350px] bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-5 sm:p-5.5 shadow-[0_20px_40px_-10px_rgba(15,23,42,0.12)] z-20">
+              <div className="flex items-center gap-3 mb-2">
+                {/* Shield icon with primary color */}
+                <div className="w-8 h-8 rounded-full bg-[#e8f6f8] flex items-center justify-center text-[var(--primary-color)] shrink-0">
+                  <svg
+                    className="w-4 h-4 text-[var(--primary-color)]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 3.75c-3.75 0-6.75 1.5-6.75 1.5v6.75c0 5.25 4.5 9 6.75 9.75 2.25-.75 6.75-4.5 6.75-9.75v-6.75s-3-1.5-6.75-1.5z"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-sm sm:text-[15px] font-bold text-[#0f172a] tracking-tight">
+                  Uncompromised Quality
+                </h3>
+              </div>
+              <p className="text-xs text-[var(--gray-color)] leading-relaxed font-normal">
+                IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant. Every batch
+                salt-spray tested for 1000+ hours.
+              </p>
             </div>
           </div>
         </div>
