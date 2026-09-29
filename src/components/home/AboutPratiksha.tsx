@@ -7,7 +7,7 @@ interface StatItem {
 }
 
 const stats: StatItem[] = [
-  { value: "17+", label: "YEARS IN INDUSTRY" },
+  { value: "14+", label: "YEARS IN INDUSTRY" },
   { value: "500+", label: "PROJECTS COMPLETED" },
   { value: "28+", label: "STATES COVERED" },
   { value: "10K+", label: "DISTRIBUTORS" },
