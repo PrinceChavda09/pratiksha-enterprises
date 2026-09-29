@@ -1,7 +1,7 @@
 export default function ProductOverview() {
   return (
     <section className="w-full bg-white py-12 sm:py-16 border-b border-slate-200/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-baseline">
           {/* Left Column: Small Label */}
           <div className="lg:col-span-3">

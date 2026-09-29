@@ -56,6 +56,35 @@ try {
       "flask-conical": {
         body: '<path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/>',
       },
+      "star": {
+        body: '<polygon fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+      },
+      "star-fill": {
+        body: '<polygon fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+      },
+      "chevron-left": {
+        body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 18-6-6 6-6"/>',
+      },
+      "chevron-right": {
+        body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18 6-6-6-6"/>',
+      },
+      "badge-check": {
+        body: '<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 12 2 2 4-4"/>',
+      },
+      "quote": {
+        body: '<path fill="currentColor" d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1zm12 0c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/>',
+      },
+    },
+  });
+
+  addCollection({
+    prefix: "logos",
+    width: 24,
+    height: 24,
+    icons: {
+      "google-icon": {
+        body: '<path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.94 0 12s.45 3.84 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>',
+      },
     },
   });
 } catch {
@@ -124,3 +153,100 @@ export function ArrowUpRightIcon({
     />
   );
 }
+
+/**
+ * Reusable review and testimonial icon identifiers backed by Iconify.
+ */
+export const reviewIcons = {
+  star: "lucide:star",
+  starFill: "lucide:star-fill",
+  google: "logos:google-icon",
+  chevronLeft: "lucide:chevron-left",
+  chevronRight: "lucide:chevron-right",
+  badgeCheck: "lucide:badge-check",
+  quote: "lucide:quote",
+} as const;
+
+export type ReviewIconName = (typeof reviewIcons)[keyof typeof reviewIcons];
+
+/**
+ * High-performance Star Icon for reviews.
+ */
+export function StarIcon({
+  className = "w-4 h-4",
+  filled = true,
+  ...props
+}: Omit<IconProps, "icon"> & { filled?: boolean }) {
+  return (
+    <Icon
+      icon={filled ? reviewIcons.starFill : reviewIcons.star}
+      className={className}
+      {...props}
+    />
+  );
+}
+
+/**
+ * Official multi-color Google branding icon.
+ */
+export function GoogleIcon({
+  className = "w-4 h-4",
+  ...props
+}: Omit<IconProps, "icon">) {
+  return (
+    <Icon
+      icon={reviewIcons.google}
+      className={className}
+      {...props}
+    />
+  );
+}
+
+/**
+ * Left navigation arrow for reviews slider.
+ */
+export function ChevronLeftIcon({
+  className = "w-5 h-5",
+  ...props
+}: Omit<IconProps, "icon">) {
+  return (
+    <Icon
+      icon={reviewIcons.chevronLeft}
+      className={className}
+      {...props}
+    />
+  );
+}
+
+/**
+ * Right navigation arrow for reviews slider.
+ */
+export function ChevronRightIcon({
+  className = "w-5 h-5",
+  ...props
+}: Omit<IconProps, "icon">) {
+  return (
+    <Icon
+      icon={reviewIcons.chevronRight}
+      className={className}
+      {...props}
+    />
+  );
+}
+
+/**
+ * Verified reviewer badge check icon.
+ */
+export function BadgeCheckIcon({
+  className = "w-4 h-4",
+  ...props
+}: Omit<IconProps, "icon">) {
+  return (
+    <Icon
+      icon={reviewIcons.badgeCheck}
+      className={className}
+      {...props}
+    />
+  );
+}
+

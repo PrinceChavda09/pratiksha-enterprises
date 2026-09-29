@@ -46,7 +46,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
   return (
     <main className="w-full min-h-screen bg-[#FAFCFD] py-8 sm:py-12 lg:py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* BREADCRUMB & BACK LINK */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8 sm:mb-12">
           <nav aria-label="Breadcrumb">

@@ -14,7 +14,7 @@ export default function WhyPratiksha() {
         aria-hidden="true"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
           <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">

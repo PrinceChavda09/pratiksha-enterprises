@@ -18,7 +18,7 @@ export default function ContactMapSection() {
       id="map-section"
       className="py-16 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* LEFT: LOCATION DETAILS & DIRECTIONS (5 Cols) */}
           <div className="lg:col-span-5 space-y-6">

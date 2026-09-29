@@ -30,7 +30,7 @@ export default function ProductsHero() {
       </div>
 
       {/* 3. HERO CONTENT CONTAINER (HALF-SCREEN COMPACT PROPORTIONS) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
+      <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
         {/* TOP BAR: BREADCRUMB */}
         <div className="flex items-center justify-between w-full">
           {/* Breadcrumb Navigation */}

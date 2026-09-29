@@ -32,7 +32,7 @@ export default function ContactFormSection() {
       id="contact-form"
       className="py-16 sm:py-20 lg:py-24 bg-white relative scroll-mt-20"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-3xl mb-12 sm:mb-16">
           <div className="flex items-center gap-2 mb-3">

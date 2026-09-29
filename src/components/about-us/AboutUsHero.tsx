@@ -24,7 +24,7 @@ export default function AboutUsHero() {
       </div>
 
       {/* 3. HERO CONTENT CONTAINER (RESPONSIVE PROPORTIONS) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-7 flex flex-col justify-between min-h-0 sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] gap-5 sm:gap-4">
+      <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-7 flex flex-col justify-between min-h-0 sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] gap-5 sm:gap-4">
         {/* TOP BAR: BREADCRUMB */}
         <div className="flex items-center justify-between w-full">
           {/* Breadcrumb Navigation */}
