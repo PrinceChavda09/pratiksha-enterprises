@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutCompany() {
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 border-b border-slate-200/80">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-24 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
           <div className="lg:col-span-5">
