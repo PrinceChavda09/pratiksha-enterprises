@@ -75,9 +75,9 @@ export default function OurProduct() {
   return (
     <section
       id="products"
-      className="w-full py-16 md:py-20 lg:py-24 scroll-mt-20 border-b border-slate-100"
+      className="w-full py-16 md:py-20 scroll-mt-20 border-b border-slate-100"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header: Left-Aligned Text & Right-Aligned Explore More Button */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
           {/* Left Side: Eyebrow + Heading */}

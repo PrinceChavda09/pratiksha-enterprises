@@ -30,19 +30,19 @@ export default function WhatWeOffer() {
   ];
 
   return (
-    <section className="w-full bg-white py-16 sm:py-20 lg:py-24 border-b border-slate-200/80">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-24 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 pb-6 border-b border-slate-200">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+              <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 WHAT WE OFFER
               </span>
             </div>
           </div>
-          <p className="text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-3 md:mt-0">
+          <p className="text-xs sm:text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-1 md:mt-0">
             Engineering Catalogue Index
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function WhatWeOffer() {
           {categories.map((item) => (
             <div
               key={item.number}
-              className="py-8 sm:py-10 transition-colors duration-200 hover:bg-slate-50/70 group"
+              className="py-6 sm:py-8 lg:py-10 transition-colors duration-200 hover:bg-slate-50/70 group"
             >
               <div className="grid grid-cols-[auto_1fr] lg:grid-cols-12 gap-x-4 sm:gap-x-6 lg:gap-x-6 gap-y-3 sm:gap-y-4 lg:gap-y-0 items-start lg:items-center">
                 {/* Index Number */}

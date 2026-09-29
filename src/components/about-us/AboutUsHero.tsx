@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AboutUsHero() {
   return (
-    <section className="relative w-full min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] flex items-center overflow-hidden border-b border-slate-200/90 bg-[#eef5f8]">
+    <section className="relative w-full min-h-0 sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] flex items-center overflow-hidden border-b border-slate-200/90 bg-[#eef5f8]">
       {/* 1. HERO BACKGROUND IMAGE */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -16,15 +16,16 @@ export default function AboutUsHero() {
         />
 
         {/* 2. GRADIENT OVERLAYS FOR CRISP TEXT LEGIBILITY */}
-        {/* Horizontal gradient: ensures high contrast for editorial text on left while showcasing products on right */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/60 to-white/0 md:via-white/70 md:to-transparent z-1 pointer-events-none" />
+        {/* Mobile: Enhanced contrast scrim ensures high text readability across small screens */}
+        {/* Desktop (md+): Smooth directional fade preserves focus on right-side industrial products */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/70 sm:from-white/90 sm:via-white/70 sm:to-transparent z-1 pointer-events-none" />
         {/* Subtle vertical gradient for atmospheric depth */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/30 to-white/0 z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/40 via-transparent to-white/20 z-1 pointer-events-none" />
       </div>
 
-      {/* 3. HERO CONTENT CONTAINER (COMPACT HALF-SCREEN PROPORTIONS) */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
-        {/* TOP BAR: BREADCRUMB*/}
+      {/* 3. HERO CONTENT CONTAINER (RESPONSIVE PROPORTIONS) */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-7 flex flex-col justify-between min-h-0 sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] gap-5 sm:gap-4">
+        {/* TOP BAR: BREADCRUMB */}
         <div className="flex items-center justify-between w-full">
           {/* Breadcrumb Navigation */}
           <nav aria-label="Breadcrumb">
@@ -48,41 +49,42 @@ export default function AboutUsHero() {
         </div>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
-        <div className="max-w-xl lg:max-w-2xl py-2 sm:py-3">
+        <div className="max-w-xl lg:max-w-2xl py-1 sm:py-3">
           {/* Eyebrow with Brand Accent Bar */}
-          <div className="flex items-center gap-2 mb-2">
-            <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+          <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
+            <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+            <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
               ABOUT PRATIKSHA
             </span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
+          <h1 className="text-[22px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-2.5 sm:mb-3">
             Reliable Earthing Solutions{" "}
-            <span className="text-[var(--primary-color)]">
+            <span className="text-[var(--primary-color)] block sm:inline mt-0.5 sm:mt-0">
               For Safer Systems
             </span>
           </h1>
 
           {/* Supporting Content */}
-          <p className="text-xs sm:text-sm md:text-base text-black font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
+          <p className="text-xs sm:text-sm md:text-base text-slate-800 sm:text-black font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
             Pratiksha Earthing Solutions is a Rajkot-based business focused on
             earthing and electrical safety products designed for residential,
             commercial and industrial applications.
           </p>
 
           {/* 3 Feature Highlights (Quality Certified | 14+ Years | Rajkot Hub) */}
-          <div className="flex flex-wrap items-center gap-3.5 sm:gap-5 lg:gap-6 mb-3.5 sm:mb-4">
+          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 lg:gap-6 mb-4 sm:mb-5">
             {/* Feature 1: Quality Certified */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   strokeWidth="2.2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -97,14 +99,15 @@ export default function AboutUsHero() {
             </div>
 
             {/* Feature 2: 14+ Years */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   strokeWidth="2.2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -119,14 +122,15 @@ export default function AboutUsHero() {
             </div>
 
             {/* Feature 3: Rajkot Hub */}
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
+            <div className="flex items-center gap-2 shrink-0">
+              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
-                  className="w-4 h-4"
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                   strokeWidth="2.2"
+                  aria-hidden="true"
                 >
                   <path
                     strokeLinecap="round"
@@ -150,7 +154,7 @@ export default function AboutUsHero() {
           <div>
             <a
               href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group w-auto max-w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
             >
               <span>Explore Our Company</span>
               <svg
@@ -159,6 +163,7 @@ export default function AboutUsHero() {
                 stroke="currentColor"
                 viewBox="0 0 24 24"
                 strokeWidth="2.5"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -171,14 +176,12 @@ export default function AboutUsHero() {
         </div>
 
         {/* BOTTOM ROW: LEFT MOTTO & RAJKOT GUJARAT ACCENT STRIP */}
-        <div className="pt-2.5 sm:pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-          <div className="flex items-center gap-2">
-            <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider">
-              ENGINEERING PRECISION{" "}
-              <span className="text-slate-300 mx-1">/</span>{" "}
-              <span className="text-[#0f172a]">GROUNDING & SAFETY</span>
-            </div>
+        <div className="pt-2 sm:pt-3 flex items-start sm:items-center gap-2">
+          <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0 mt-1 sm:mt-0" />
+          <div className="text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider leading-relaxed flex flex-wrap items-center gap-x-1.5">
+            <span>ENGINEERING PRECISION</span>
+            <span className="text-slate-300" aria-hidden="true">/</span>
+            <span className="text-[#0f172a]">GROUNDING & SAFETY</span>
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ const stats: StatItem[] = [
 export default function AboutPratiksha() {
   return (
     <section className="w-full py-16 sm:py-20 lg:py-24 overflow-hidden relative border-b border-slate-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* LEFT COLUMN: EDITORIAL HEADLINE & STATS */}
           <div className="lg:col-span-7 flex flex-col justify-center">
@@ -30,7 +30,7 @@ export default function AboutPratiksha() {
 
             {/* Main Headline (All caps, bold industrial typography) */}
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[#0f172a] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6">
-              SETTING THE STANDARD<br className="hidden sm:inline" /> IN ELECTRICAL SAFETY.
+              SETTING THE STANDARD IN ELECTRICAL SAFETY.
             </h2>
 
             {/* Overview Paragraph using --gray-color */}
