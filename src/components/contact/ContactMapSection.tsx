@@ -1,4 +1,5 @@
 import React from "react";
+import { Reveal } from "@/components/animations";
 
 export default function ContactMapSection() {
   const address =
@@ -16,12 +17,12 @@ export default function ContactMapSection() {
   return (
     <section
       id="map-section"
-      className="py-16 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20"
+      className="py-16 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* LEFT: LOCATION DETAILS & DIRECTIONS (5 Cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <Reveal direction="up" delay={0.1} duration={0.65} className="lg:col-span-5 space-y-6">
             <div>
               <div className="flex items-center gap-2 mb-2">
                 <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
@@ -29,7 +30,7 @@ export default function ContactMapSection() {
                   HEADQUARTERS & MANUFACTURING
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0f172a] tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)] tracking-tight">
                 Visit Our Rajkot Facility
               </h2>
               <p className="mt-3 text-sm text-[var(--gray-color)] leading-relaxed">
@@ -64,7 +65,7 @@ export default function ContactMapSection() {
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-sm font-bold text-[#0f172a]">
+                  <h4 className="text-sm font-bold text-[var(--text-heading)]">
                     Pratiksha Enterprises
                   </h4>
                   <p className="text-xs text-[var(--gray-color)] mt-1 leading-relaxed">
@@ -98,10 +99,15 @@ export default function ContactMapSection() {
                 <span aria-hidden="true">↗</span>
               </a>
             </div>
-          </div>
+          </Reveal>
 
           {/* RIGHT: INTERACTIVE MAP (7 Cols) */}
-          <div className="lg:col-span-7 h-[380px] sm:h-[460px] rounded-3xl overflow-hidden shadow-lg border border-slate-200/90 relative bg-slate-100">
+          <Reveal
+            direction="up"
+            delay={0.2}
+            duration={0.7}
+            className="lg:col-span-7 h-[380px] sm:h-[460px] rounded-3xl overflow-hidden shadow-lg border border-slate-200/90 relative bg-slate-100"
+          >
             <iframe
               title="Pratiksha Enterprises - 305, Royal Complex, Bhutkhana Chowk, Dhebar Rd, Rajkot"
               src={mapEmbedUrl}
@@ -113,7 +119,7 @@ export default function ContactMapSection() {
               referrerPolicy="no-referrer-when-downgrade"
               className="w-full h-full"
             />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

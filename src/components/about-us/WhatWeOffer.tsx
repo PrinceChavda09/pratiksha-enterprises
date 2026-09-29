@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function WhatWeOffer() {
   const categories = [
@@ -30,28 +31,36 @@ export default function WhatWeOffer() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 sm:py-16 lg:py-24 border-b border-slate-200/80">
+    <section className="w-full bg-white py-12 sm:py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
-          <div>
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
-              <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
-                WHAT WE OFFER
-              </span>
+        <Reveal direction="up" delay={0.1} duration={0.65}>
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
+            <div>
+              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
+                <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                  WHAT WE OFFER
+                </span>
+              </div>
             </div>
+            <p className="text-xs sm:text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-1 md:mt-0">
+              Engineering Catalogue Index
+            </p>
           </div>
-          <p className="text-xs sm:text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-1 md:mt-0">
-            Engineering Catalogue Index
-          </p>
-        </div>
+        </Reveal>
 
         {/* Engineering Catalogue Index Rows */}
-        <div className="divide-y divide-slate-200 border-b border-slate-200">
-          {categories.map((item) => (
-            <div
+        <StaggerContainer
+          staggerDelay={0.08}
+          delay={0.15}
+          className="divide-y divide-slate-200 border-b border-slate-200"
+        >
+          {categories.map((item, index) => (
+            <StaggerItem
               key={item.number}
+              index={index}
+              direction="up"
               className="py-6 sm:py-8 lg:py-10 transition-colors duration-200 hover:bg-slate-50/70 group"
             >
               <div className="grid grid-cols-[auto_1fr] lg:grid-cols-12 gap-x-4 sm:gap-x-6 lg:gap-x-6 gap-y-3 sm:gap-y-4 lg:gap-y-0 items-start lg:items-center">
@@ -64,7 +73,7 @@ export default function WhatWeOffer() {
 
                 {/* Product Thumbnail (Contained, non-distorted) */}
                 <div className="col-span-1 lg:col-span-2">
-                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white border border-slate-200 rounded-lg p-2 flex items-center justify-center shrink-0">
+                  <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 bg-white border border-slate-200 rounded-lg p-2 flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-[1.03]">
                     <div className="relative w-full h-full">
                       <Image
                         src={item.image}
@@ -79,7 +88,7 @@ export default function WhatWeOffer() {
 
                 {/* Category Title & Description */}
                 <div className="col-span-1 lg:col-span-7 min-w-0">
-                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors mb-1.5 sm:mb-2">
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold text-[var(--text-heading)] group-hover:text-[var(--primary-color)] transition-colors mb-1.5 sm:mb-2">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] leading-relaxed max-w-2xl">
@@ -104,9 +113,9 @@ export default function WhatWeOffer() {
                   </Link>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

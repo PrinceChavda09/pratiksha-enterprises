@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function ContactFAQ() {
   const faqs = [
@@ -33,32 +34,40 @@ export default function ContactFAQ() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3">
-            <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
-              GOT QUESTIONS?
-            </span>
-            <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
+        <Reveal direction="up" delay={0.1} duration={0.65}>
+          <div className="text-center mb-12 sm:mb-16">
+            <div className="inline-flex items-center gap-2 mb-3">
+              <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
+              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                GOT QUESTIONS?
+              </span>
+              <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
+              Frequently Asked Questions
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-[var(--gray-color)] max-w-xl mx-auto">
+              Everything you need to know about our products, direct supply
+              contracts, and engineering assistance.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-3 text-sm sm:text-base text-[var(--gray-color)] max-w-xl mx-auto">
-            Everything you need to know about our products, direct supply
-            contracts, and engineering assistance.
-          </p>
-        </div>
+        </Reveal>
 
         {/* Accordion */}
-        <div className="space-y-4">
+        <StaggerContainer
+          staggerDelay={0.06}
+          delay={0.15}
+          className="space-y-4"
+        >
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
-              <div
+              <StaggerItem
                 key={idx}
+                index={idx}
+                direction="up"
                 className="border border-slate-200 rounded-2xl overflow-hidden transition-all duration-200 bg-white"
               >
                 <button
@@ -67,7 +76,7 @@ export default function ContactFAQ() {
                   aria-expanded={isOpen}
                   className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-inset cursor-pointer hover:bg-slate-50/75 transition-colors"
                 >
-                  <span className="text-sm sm:text-base font-bold text-[#0f172a]">
+                  <span className="text-sm sm:text-base font-bold text-[var(--text-heading)]">
                     {faq.q}
                   </span>
                   <span
@@ -94,14 +103,14 @@ export default function ContactFAQ() {
                   </span>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[var(--gray-color)] leading-relaxed border-t border-slate-100">
+                  <div className="px-6 pb-6 pt-1 text-xs sm:text-sm text-[var(--gray-color)] leading-relaxed border-t border-slate-100 animate-in fade-in duration-200">
                     {faq.a}
                   </div>
                 )}
-              </div>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

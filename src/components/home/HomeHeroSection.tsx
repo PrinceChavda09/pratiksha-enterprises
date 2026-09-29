@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal } from "@/components/animations";
 
 export default function HomeHeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -49,9 +50,9 @@ export default function HomeHeroSection() {
           className="object-cover object-center w-full h-full"
         />
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/30 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/25 via-[var(--bg-dark)]/35 to-transparent z-1 pointer-events-none" />
         {/* Sky atmospheric gradient */}
-        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-black/10 to-transparent z-1 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[var(--bg-dark)]/15 to-transparent z-1 pointer-events-none" />
       </div>
 
       {/* 2. SUBTERRANEAN LAYER: GIF ANIMATION + COPPER ELECTRODE (COMBINED IN ONE DIV) */}
@@ -93,48 +94,56 @@ export default function HomeHeroSection() {
 
       {/* 3. PRODUCT LINEUP (CENTERED ON MOBILE, RIGHT-ALIGNED ON TABLET/DESKTOP) */}
       <div className="absolute bottom-[15%] sm:bottom-[26%] md:bottom-[30%] lg:bottom-[34%] xl:bottom-[28%] 2xl:bottom-[35%] left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-2 md:right-2 lg:right-3 xl:right-10 2xl:right-14 z-20 pointer-events-auto">
-        <div className="relative group">
-          {/* Ground Contact Shadow */}
-          <div className="absolute -bottom-2 inset-x-4 h-6 bg-black/90 blur-md rounded-full transform scale-y-50" />
+        <Reveal direction="scale" delay={0.25} duration={0.8}>
+          <div className="relative group">
+            {/* Ground Contact Shadow */}
+            <div className="absolute -bottom-2 inset-x-4 h-6 bg-[var(--bg-dark)]/75 blur-md rounded-full transform scale-y-50" />
 
-          {/* Product Lineup Image */}
-          <div className="relative w-[380px] sm:w-[380px] md:w-[430px] lg:w-[540px] xl:w-[720px] 2xl:w-[860px] h-[245px] sm:h-[270px] md:h-[300px] lg:h-[385px] xl:h-[430px] 2xl:h-[470px] transition-transform duration-500 ease-out">
-            <Image
-              src="/home/pratiksha-enterprises-product.png"
-              alt="Pratiksha Enterprise SRIP Compound Bags, Copper Bonded Rods, Chemical Earthing Electrodes"
-              fill
-              priority
-              sizes="(max-width: 640px) 340px, (max-width: 768px) 430px, (max-width: 1200px) 540px, 860px"
-              className="object-contain object-bottom drop-shadow-[0_12px_28px_rgba(0,0,0,0.65)]"
-            />
+            {/* Product Lineup Image */}
+            <div className="relative w-[380px] sm:w-[380px] md:w-[430px] lg:w-[540px] xl:w-[720px] 2xl:w-[860px] h-[245px] sm:h-[270px] md:h-[300px] lg:h-[385px] xl:h-[430px] 2xl:h-[470px] transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+              <Image
+                src="/home/pratiksha-enterprises-product.png"
+                alt="Pratiksha Enterprise SRIP Compound Bags, Copper Bonded Rods, Chemical Earthing Electrodes"
+                fill
+                priority
+                sizes="(max-width: 640px) 340px, (max-width: 768px) 430px, (max-width: 1200px) 540px, 860px"
+                className="object-contain object-bottom drop-shadow-[0_12px_28px_rgba(0,0,0,0.65)]"
+              />
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
 
       {/* 4. MAIN HERO CONTENT (CENTERED ON MOBILE, LEFT-ALIGNED ON TABLET/DESKTOP) */}
       <div className="relative z-30 h-auto container px-4 sm:px-6 lg:px-8 flex flex-col items-center sm:items-start justify-start pt-8 sm:pt-10 md:pt-12 lg:pt-12 xl:pt-14 2xl:pt-30 pointer-events-none">
         <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-center sm:text-left flex flex-col items-center sm:items-start">
           {/* Main Hero Headline */}
-          <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-white">
-            Make Your Premises{" "}
-            <span className="text-[var(--primary-color)]">Secure</span>
-          </h1>
+          <Reveal direction="up" delay={0.1} duration={0.7}>
+            <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-white">
+              Make Your Premises{" "}
+              <span className="text-[var(--primary-color)]">Secure</span>
+            </h1>
+          </Reveal>
 
           {/* Subtitle */}
-          <p className="mt-3 sm:mt-3.5 md:mt-3.5 text-xs sm:text-sm md:text-sm lg:text-base xl:text-xl text-gray-200/95 font-normal leading-relaxed max-w-[300px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-lg drop-shadow-md">
-            Safeguard your industrial infrastructure, transmission grids, and
-            commercial assets.
-          </p>
+          <Reveal direction="up" delay={0.25} duration={0.7}>
+            <p className="mt-3 sm:mt-3.5 md:mt-3.5 text-xs sm:text-sm md:text-sm lg:text-base xl:text-xl text-gray-200/95 font-normal leading-relaxed max-w-[300px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-lg drop-shadow-md">
+              Safeguard your industrial infrastructure, transmission grids, and
+              commercial assets.
+            </p>
+          </Reveal>
 
           {/* Action CTA Button */}
-          <div className="mt-4 sm:mt-5 md:mt-5 flex items-center justify-center sm:justify-start">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3 text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-            >
-              Get a Quote
-            </Link>
-          </div>
+          <Reveal direction="up" delay={0.4} duration={0.7}>
+            <div className="mt-4 sm:mt-5 md:mt-5 flex items-center justify-center sm:justify-start">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3 text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 hover:shadow-xl"
+              >
+                Get a Quote
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </div>
     </section>

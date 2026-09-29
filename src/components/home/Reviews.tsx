@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef, useEffect, useCallback } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import {
   StarIcon,
   GoogleIcon,
@@ -12,8 +12,8 @@ import {
 import {
   reviews,
   googleReviewSummary,
-  type Review,
 } from "@/components/home/reviewData";
+import { Reveal } from "@/components/animations";
 
 export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +84,7 @@ export default function Reviews() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start">
           {/* ================= LEFT COLUMN: EDITORIAL HEADER & GOOGLE RATING ================= */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
+          <Reveal direction="up" delay={0.1} className="lg:col-span-5 flex flex-col justify-between">
             <div>
               {/* Eyebrow */}
               <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
@@ -94,14 +94,15 @@ export default function Reviews() {
               {/* Heading */}
               <h2
                 id="reviews-heading"
-                className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0f172a] leading-[1.2] mb-4"
+                className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[var(--text-heading)] leading-[1.2] mb-4"
               >
                 What Our Customers Say
               </h2>
 
               {/* Supporting Text */}
               <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed mb-8 max-w-xl">
-                Real experiences from customers who have worked with Pratiksha Enterprise.
+                Real experiences from customers who have worked with Pratiksha
+                Enterprise.
               </p>
 
               {/* Google Rating Summary Card */}
@@ -115,7 +116,7 @@ export default function Reviews() {
                       <span className="text-xs font-semibold uppercase tracking-wider text-slate-500 block">
                         Verified Platform
                       </span>
-                      <span className="text-sm font-bold text-[#0f172a]">
+                      <span className="text-sm font-bold text-[var(--text-heading)]">
                         {googleReviewSummary.sourceName}
                       </span>
                     </div>
@@ -124,10 +125,12 @@ export default function Reviews() {
                   {/* Rating Badge */}
                   <div className="text-right">
                     <div className="flex items-center gap-1.5 justify-end">
-                      <span className="text-2xl font-black text-[#0f172a] leading-none">
+                      <span className="text-2xl font-black text-[var(--text-heading)] leading-none">
                         {googleReviewSummary.rating.toFixed(1)}
                       </span>
-                      <span className="text-xs font-bold text-slate-400">/ 5.0</span>
+                      <span className="text-xs font-bold text-slate-400">
+                        / 5.0
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -165,9 +168,14 @@ export default function Reviews() {
               {/* Counter / Pagination Indicators */}
               <div className="flex items-center gap-3">
                 <span className="text-xs font-bold text-slate-400 tracking-wider">
-                  {String(currentIndex + 1).padStart(2, "0")} / {String(totalReviews).padStart(2, "0")}
+                  {String(currentIndex + 1).padStart(2, "0")} /{" "}
+                  {String(totalReviews).padStart(2, "0")}
                 </span>
-                <div className="flex items-center gap-1.5" role="tablist" aria-label="Review selection tabs">
+                <div
+                  className="flex items-center gap-1.5"
+                  role="tablist"
+                  aria-label="Review selection tabs"
+                >
                   {reviews.map((r, idx) => (
                     <button
                       key={r.id}
@@ -205,10 +213,13 @@ export default function Reviews() {
                 </button>
               </div>
             </div>
-          </div>
+          </Reveal>
 
           {/* ================= RIGHT COLUMN: PREMIUM EDITORIAL REVIEW CARD ================= */}
-          <div
+          <Reveal
+            direction="up"
+            delay={0.2}
+            duration={0.7}
             className="lg:col-span-7 flex flex-col justify-center min-w-0"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
@@ -241,7 +252,7 @@ export default function Reviews() {
 
               {/* Review Text */}
               <div className="mb-8">
-                <p className="text-slate-700 text-base sm:text-lg leading-relaxed whitespace-pre-line font-normal">
+                <p className="text-[var(--text-secondary)] text-base sm:text-lg leading-relaxed whitespace-pre-line font-normal">
                   {activeReview.text}
                 </p>
               </div>
@@ -258,7 +269,7 @@ export default function Reviews() {
                   </div>
 
                   <div className="min-w-0">
-                    <h3 className="text-base sm:text-lg font-bold text-[#0f172a] truncate">
+                    <h3 className="text-base sm:text-lg font-bold text-[var(--text-heading)] truncate">
                       {activeReview.name}
                     </h3>
                     <div className="flex items-center gap-2 text-xs text-[var(--gray-color)]">
@@ -300,15 +311,19 @@ export default function Reviews() {
                       <div className="flex text-[var(--primary-color)]">
                         <StarIcon className="w-3 h-3" filled={true} />
                       </div>
-                      <span className="text-[10px] font-bold text-slate-500">5.0</span>
+                      <span className="text-[10px] font-bold text-slate-500">
+                        5.0
+                      </span>
                     </div>
-                    <p className="text-xs font-bold text-[#0f172a] truncate">{rev.name}</p>
+                    <p className="text-xs font-bold text-[var(--text-heading)] truncate">
+                      {rev.name}
+                    </p>
                     <p className="text-[10px] text-slate-400">{rev.date}</p>
                   </button>
                 );
               })}
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

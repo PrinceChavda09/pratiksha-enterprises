@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function WhyPratiksha() {
   return (
@@ -16,28 +17,38 @@ export default function WhyPratiksha() {
 
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
-          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
-            <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
-            <span className="text-xs sm:text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
-              WHY PRATIKSHA ENTERPRISES
-            </span>
+        <Reveal direction="up" delay={0.1} duration={0.65}>
+          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
+            <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
+              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
+              <span className="text-xs sm:text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                WHY PRATIKSHA ENTERPRISES
+              </span>
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-[1.2] mb-3 sm:mb-4">
+              Engineered for Dependability. Built for Complete Electrical Safety.
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed">
+              From precision metallurgical selection to direct Rajkot
+              manufacturing support, here is why contractors, utilities, and
+              industrial facilities partner with us for reliable grounding
+              solutions.
+            </p>
           </div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight leading-[1.2] mb-3 sm:mb-4">
-            Engineered for Dependability. Built for Complete Electrical Safety.
-          </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed">
-            From precision metallurgical selection to direct Rajkot
-            manufacturing support, here is why contractors, utilities, and
-            industrial facilities partner with us for reliable grounding
-            solutions.
-          </p>
-        </div>
+        </Reveal>
 
         {/* Bento Grid Architecture */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8">
+        <StaggerContainer
+          staggerDelay={0.08}
+          delay={0.15}
+          className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8"
+        >
           {/* Bento Card 1: Quality-Focused Metallurgy (Span 7) */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <StaggerItem
+            index={0}
+            direction="up"
+            className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+          >
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -66,7 +77,7 @@ export default function WhyPratiksha() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-heading)] group-hover:text-[var(--primary-color)] transition-colors">
                     Quality-Focused Products
                   </h3>
                   <p className="text-xs sm:text-sm text-[var(--gray-color)] mt-0.5">
@@ -87,27 +98,31 @@ export default function WhyPratiksha() {
 
             {/* Feature Pills */}
             <div className="pt-6 border-t border-slate-100 flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0f172a] bg-slate-100 px-3 py-1.5 rounded-lg">
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
                 Electrolytic Copper (99.9%)
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0f172a] bg-slate-100 px-3 py-1.5 rounded-lg">
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
                 Hot-Dip Galvanized Steel
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0f172a] bg-slate-100 px-3 py-1.5 rounded-lg">
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
                 Corrosion-Resistant Bonding
               </span>
-              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[#0f172a] bg-slate-100 px-3 py-1.5 rounded-lg">
+              <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
                 Low Soil Resistivity Interfacing
               </span>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Bento Card 2: Complete Grounding Solutions (Span 5) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <StaggerItem
+            index={1}
+            direction="up"
+            className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+          >
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -136,7 +151,7 @@ export default function WhyPratiksha() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-heading)] group-hover:text-[var(--primary-color)] transition-colors">
                     Reliable Solutions
                   </h3>
                   <p className="text-xs sm:text-sm text-[var(--gray-color)] mt-0.5">
@@ -157,7 +172,7 @@ export default function WhyPratiksha() {
             <div className="pt-6 border-t border-slate-100 space-y-2">
               <Link
                 href="/products"
-                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[#0f172a] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
+                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>Copper-Bonded Electrodes & Rods</span>
                 <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
@@ -166,7 +181,7 @@ export default function WhyPratiksha() {
               </Link>
               <Link
                 href="/products"
-                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[#0f172a] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
+                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>Chemical Earthing & Compound</span>
                 <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
@@ -175,7 +190,7 @@ export default function WhyPratiksha() {
               </Link>
               <Link
                 href="/products"
-                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[#0f172a] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
+                className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>GI Earthing Solutions & Clamps</span>
                 <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
@@ -183,10 +198,14 @@ export default function WhyPratiksha() {
                 </span>
               </Link>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Bento Card 3: Application-Focused Approach (Span 5) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <StaggerItem
+            index={2}
+            direction="up"
+            className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
+          >
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -215,7 +234,7 @@ export default function WhyPratiksha() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-heading)] group-hover:text-[var(--primary-color)] transition-colors">
                     Application-Focused Approach
                   </h3>
                   <p className="text-xs sm:text-sm text-[var(--gray-color)] mt-0.5">
@@ -233,27 +252,31 @@ export default function WhyPratiksha() {
 
             {/* Application Grid Badges */}
             <div className="pt-6 border-t border-slate-100 grid grid-cols-2 gap-2.5">
-              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[#0f172a] flex items-center gap-2">
+              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[var(--text-dark)] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0" />
                 <span>Industrial Plants</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[#0f172a] flex items-center gap-2">
+              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[var(--text-dark)] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-amber-500 shrink-0" />
                 <span>Solar & Wind Parks</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[#0f172a] flex items-center gap-2">
+              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[var(--text-dark)] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-cyan-500 shrink-0" />
                 <span>Commercial Sites</span>
               </div>
-              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[#0f172a] flex items-center gap-2">
+              <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-xs font-semibold text-[var(--text-dark)] flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-[var(--primary-color)] shrink-0" />
                 <span>Substation Grids</span>
               </div>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* Bento Card 4: Rajkot Hub & Direct Contact CTA (Span 7) - USER HIGHLIGHT REQUEST */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-white via-white to-teal-50/50 rounded-2xl p-5 sm:p-8 lg:p-10 border-2 border-[var(--primary-color)]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+          <StaggerItem
+            index={3}
+            direction="up"
+            className="lg:col-span-7 bg-gradient-to-br from-white via-white to-teal-50/50 rounded-2xl p-5 sm:p-8 lg:p-10 border-2 border-[var(--primary-color)]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+          >
             {/* Top Right Decorative Background Accent */}
             <div className="absolute top-0 right-0 translate-x-8 -translate-y-8 w-48 h-48 bg-[var(--primary-color)]/5 rounded-full pointer-events-none" />
 
@@ -290,7 +313,7 @@ export default function WhyPratiksha() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0f172a] group-hover:text-[var(--primary-color)] transition-colors">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text-heading)] group-hover:text-[var(--primary-color)] transition-colors">
                     Rajkot-Based Support & Direct Dispatch
                   </h3>
                   <p className="text-xs sm:text-sm font-semibold text-[var(--primary-color)] mt-0.5">
@@ -309,7 +332,7 @@ export default function WhyPratiksha() {
                     <span className="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-1">
                       Registered Address
                     </span>
-                    <p className="text-xs sm:text-sm font-bold text-[#0f172a] leading-snug">
+                    <p className="text-xs sm:text-sm font-bold text-[var(--text-heading)] leading-snug">
                       305, Royal Complex, Bhutkhana Chowk, South Dhebar Road,
                       Rajkot – 360002, Gujarat, India.
                     </p>
@@ -340,7 +363,7 @@ export default function WhyPratiksha() {
 
               <a
                 href="tel:+919313888465"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white hover:bg-slate-50 text-[#0f172a] text-sm font-bold rounded-lg border border-slate-200 shadow-2xs hover:border-slate-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)]"
+                className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white hover:bg-slate-50 text-[var(--text-heading)] text-sm font-bold rounded-lg border border-slate-200 shadow-2xs hover:border-slate-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)]"
               >
                 <svg
                   className="w-4 h-4 text-[var(--primary-color)]"
@@ -359,44 +382,48 @@ export default function WhyPratiksha() {
                 <span>+91 93138 88465</span>
               </a>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* Bottom Trust & Metric Strip */}
-        <div className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <div className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">
+        <StaggerContainer
+          staggerDelay={0.06}
+          delay={0.2}
+          className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+        >
+          <StaggerItem index={0} direction="up" className="flex flex-col">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               14+ Years
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Earthing & Safety Experience
             </span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">
+          </StaggerItem>
+          <StaggerItem index={1} direction="up" className="flex flex-col">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               100% Tested
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Conductivity & Soil Durability
             </span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">
+          </StaggerItem>
+          <StaggerItem index={2} direction="up" className="flex flex-col">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               India
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Direct Supply & Freight Network
             </span>
-          </div>
-          <div className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">
+          </StaggerItem>
+          <StaggerItem index={3} direction="up" className="flex flex-col">
+            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               Custom Sizing
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
               Project-Specific Engineering
             </span>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
       </div>
     </section>
   );

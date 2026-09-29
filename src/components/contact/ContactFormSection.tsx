@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -30,31 +31,34 @@ export default function ContactFormSection() {
   return (
     <section
       id="contact-form"
-      className="py-16 sm:py-20 lg:py-24 bg-white relative scroll-mt-20"
+      className="py-16 sm:py-20 lg:py-24 bg-white relative scroll-mt-20 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
-              TECHNICAL INQUIRY & QUOTES
-            </span>
+        <Reveal direction="up" delay={0.1} duration={0.65}>
+          <div className="max-w-3xl mb-12 sm:mb-16">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
+              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                TECHNICAL INQUIRY & QUOTES
+              </span>
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
+              Send Us Your Project Requirements
+            </h2>
+            <p className="mt-3 text-base text-[var(--gray-color)]">
+              Whether you need bulk earthing electrodes for a solar park,
+              substation grounding design, or custom copper bonded rods, our
+              engineering team responds within 2 business hours.
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0f172a] tracking-tight">
-            Send Us Your Project Requirements
-          </h2>
-          <p className="mt-3 text-base text-[var(--gray-color)]">
-            Whether you need bulk earthing electrodes for a solar park,
-            substation grounding design, or custom copper bonded rods, our
-            engineering team responds within 2 business hours.
-          </p>
-        </div>
+        </Reveal>
 
         {/* Form & Assurance Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT: INTERACTIVE FORM (7 Cols) */}
-          <div className="lg:col-span-7 bg-[#F8FAFC] border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm relative">
+          <Reveal direction="up" delay={0.15} duration={0.65} className="lg:col-span-7">
+            <div className="bg-[#F8FAFC] border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm relative">
             {submitted ? (
               <div className="py-12 text-center">
                 <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -72,7 +76,7 @@ export default function ContactFormSection() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold text-[#0f172a] mb-2">
+                <h3 className="text-2xl font-bold text-[var(--text-heading)] mb-2">
                   Thank You for Reaching Out!
                 </h3>
                 <p className="text-[var(--gray-color)] max-w-md mx-auto mb-6 text-sm sm:text-base">
@@ -104,7 +108,7 @@ export default function ContactFormSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Full Name */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Full Name <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -115,13 +119,13 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, name: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     />
                   </div>
 
                   {/* Company Name */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Company / Organization
                     </label>
                     <input
@@ -131,7 +135,7 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, company: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -139,7 +143,7 @@ export default function ContactFormSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Email */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Email Address <span className="text-red-500">*</span>
                     </label>
                     <input
@@ -150,13 +154,13 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, email: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     />
                   </div>
 
                   {/* Phone Number */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Phone / WhatsApp Number{" "}
                       <span className="text-red-500">*</span>
                     </label>
@@ -168,7 +172,7 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, phone: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
@@ -176,7 +180,7 @@ export default function ContactFormSection() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                   {/* Product of Interest */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Product / Solution
                     </label>
                     <select
@@ -184,7 +188,7 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, product: e.target.value })
                       }
-                      className="w-full px-2 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-2 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     >
                       <option>Pure Copper Earthing Electrodes</option>
                       <option>SRIP Advanced Backfill Compound</option>
@@ -197,7 +201,7 @@ export default function ContactFormSection() {
 
                   {/* Estimated Quantity */}
                   <div>
-                    <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                       Approximate Quantity
                     </label>
                     <input
@@ -207,14 +211,14 @@ export default function ContactFormSection() {
                       onChange={(e) =>
                         setFormData({ ...formData, quantity: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="block text-xs font-semibold text-[#0f172a] uppercase tracking-wider mb-2">
+                  <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                     Project Requirements / Specifications
                   </label>
                   <textarea
@@ -224,7 +228,7 @@ export default function ContactFormSection() {
                     onChange={(e) =>
                       setFormData({ ...formData, message: e.target.value })
                     }
-                    className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all resize-none"
+                    className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all resize-none"
                   />
                 </div>
 
@@ -266,101 +270,110 @@ export default function ContactFormSection() {
                 </button>
               </form>
             )}
-          </div>
+            </div>
+          </Reveal>
 
           {/* RIGHT: FACTORY ASSURANCE & DIRECT DESK (5 Cols) */}
-          <div className="lg:col-span-5 space-y-6">
+          <StaggerContainer
+            staggerDelay={0.1}
+            delay={0.2}
+            className="lg:col-span-5 space-y-6"
+          >
             {/* Direct Factory Assurance Card */}
-            <div className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white rounded-3xl p-6 sm:p-8 shadow-xl">
-              <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
-                DIRECT MANUFACTURER ADVANTAGE
-              </span>
-              <h3 className="text-xl font-bold mb-3">
-                Why Procure Direct From Pratiksha?
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
-                Avoid middleman markups and delayed lead times. We engineer,
-                test, and ship directly from our Rajkot manufacturing facilities
-                with full compliance certificates.
-              </p>
+            <StaggerItem index={0} direction="up">
+              <div className="bg-gradient-to-br from-[var(--bg-dark)] to-[#334155] text-white rounded-3xl p-6 sm:p-8 shadow-xl">
+                <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
+                  DIRECT MANUFACTURER ADVANTAGE
+                </span>
+                <h3 className="text-xl font-bold mb-3">
+                  Why Procure Direct From Pratiksha?
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  Avoid middleman markups and delayed lead times. We engineer,
+                  test, and ship directly from our Rajkot manufacturing facilities
+                  with full compliance certificates.
+                </p>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                    ✓
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                      ✓
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        NABL & CPRI Tested Compliance
+                      </h4>
+                      <p className="text-xs text-slate-400">
+                        Manufactured strictly to IS 3043 and IEEE 80 standards.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">
-                      NABL & CPRI Tested Compliance
-                    </h4>
-                    <p className="text-xs text-slate-400">
-                      Manufactured strictly to IS 3043 and IEEE 80 standards.
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                    ✓
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                      ✓
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        Direct-From-Plant Pricing
+                      </h4>
+                      <p className="text-xs text-slate-400">
+                        Competitive bulk rates for contractors and infrastructure
+                        projects.
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">
-                      Direct-From-Plant Pricing
-                    </h4>
-                    <p className="text-xs text-slate-400">
-                      Competitive bulk rates for contractors and infrastructure
-                      projects.
-                    </p>
-                  </div>
-                </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
-                    ✓
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-semibold text-white">
-                      Pan-India Freight Logistics
-                    </h4>
-                    <p className="text-xs text-slate-400">
-                      Dependable transit tie-ups ensuring timely site delivery.
-                    </p>
+                  <div className="flex items-start gap-3">
+                    <div className="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                      ✓
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-semibold text-white">
+                        Pan-India Freight Logistics
+                      </h4>
+                      <p className="text-xs text-slate-400">
+                        Dependable transit tie-ups ensuring timely site delivery.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Need Urgent Dispatch? */}
-            <div className="bg-[#F4FAFC] border border-[color-mix(in_srgb,var(--primary-color)_25%,transparent)] rounded-2xl p-6 sm:p-7">
-              <div className="flex items-center gap-3 mb-2">
-                <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-wider">
-                  Urgent Project Requirement?
-                </h4>
+            <StaggerItem index={1} direction="up">
+              <div className="bg-[#F4FAFC] border border-[color-mix(in_srgb,var(--primary-color)_25%,transparent)] rounded-2xl p-6 sm:p-7">
+                <div className="flex items-center gap-3 mb-2">
+                  <h4 className="text-sm font-bold text-[var(--text-heading)] uppercase tracking-wider">
+                    Urgent Project Requirement?
+                  </h4>
+                </div>
+                <p className="text-xs sm:text-sm text-[var(--gray-color)] mb-4">
+                  Speak directly with our technical commercial director for
+                  same-day dispatch and proforma invoicing.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="tel:+919313888465"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                  >
+                    <span>📞</span>
+                    <span>Call +91 93138 88465</span>
+                  </a>
+                  <a
+                    href="https://wa.me/919313888465?text=Hello%20Pratiksha%20Enterprises,%20I%20have%20an%20urgent%20earthing%20quote%20request."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                  >
+                    <span>💬</span>
+                    <span>WhatsApp Priority</span>
+                  </a>
+                </div>
               </div>
-              <p className="text-xs sm:text-sm text-[var(--gray-color)] mb-4">
-                Speak directly with our technical commercial director for
-                same-day dispatch and proforma invoicing.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3">
-                <a
-                  href="tel:+919313888465"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-                >
-                  <span>📞</span>
-                  <span>Call +91 93138 88465</span>
-                </a>
-                <a
-                  href="https://wa.me/919313888465?text=Hello%20Pratiksha%20Enterprises,%20I%20have%20an%20urgent%20earthing%20quote%20request."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-                >
-                  <span>💬</span>
-                  <span>WhatsApp Priority</span>
-                </a>
-              </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </div>
     </section>

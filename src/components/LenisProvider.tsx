@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { ReactLenis, useLenis } from "lenis/react";
+import { usePrefersReducedMotion } from "@/components/animations/usePrefersReducedMotion";
 import "lenis/dist/lenis.css";
 
 // Re-export useLenis for centralized usage across the application
@@ -45,22 +46,7 @@ function LenisRouteHandler() {
 }
 
 export default function LenisProvider({ children }: LenisProviderProps) {
-  // Check user preference for reduced motion
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
-
-    const handleChange = (e: MediaQueryListEvent) => {
-      setPrefersReducedMotion(e.matches);
-    };
-
-    mediaQuery.addEventListener("change", handleChange);
-    return () => mediaQuery.removeEventListener("change", handleChange);
-  }, []);
+  const prefersReducedMotion = usePrefersReducedMotion();
 
   return (
     <ReactLenis

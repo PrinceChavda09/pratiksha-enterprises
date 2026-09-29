@@ -124,7 +124,7 @@ export default function ContactChannels() {
               </div>
 
               {/* Title & Subtitle */}
-              <h3 className="text-base font-bold text-[#0f172a] mb-1.5 group-hover:text-[var(--primary-color)] transition-colors">
+              <h3 className="text-base font-bold text-[var(--text-heading)] mb-1.5 group-hover:text-[var(--primary-color)] transition-colors">
                 {channel.title}
               </h3>
               <p className="text-xs text-[var(--gray-color)] leading-relaxed mb-4">
@@ -147,7 +147,7 @@ export default function ContactChannels() {
                   </span>
                 </a>
               ) : (
-                <div className="text-sm font-semibold text-[#0f172a]">
+                <div className="text-sm font-semibold text-[var(--text-heading)]">
                   {channel.primaryText}
                 </div>
               )}

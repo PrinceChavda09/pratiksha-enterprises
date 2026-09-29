@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Product } from "./productData";
 import { ArrowRightIcon } from "../icon";
+import { Reveal } from "@/components/animations";
 
 interface ProductCatalogueItemProps {
   product: Product;
@@ -18,11 +19,14 @@ export default function ProductCatalogueItem({
   return (
     <div
       id={product.id}
-      className="scroll-mt-24 py-16 sm:py-20 lg:py-24 border-b border-slate-200/90 last:border-b-0 group"
+      className="scroll-mt-24 py-16 sm:py-20 lg:py-24 border-b border-slate-200/90 last:border-b-0 group overflow-hidden"
     >
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
         {/* PRODUCT IMAGE CONTAINER */}
-        <div
+        <Reveal
+          direction="up"
+          delay={0.1}
+          duration={0.65}
           className={`lg:col-span-6 ${isEven ? "lg:order-2" : "lg:order-1"}`}
         >
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-8 lg:p-10 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-[var(--primary-color)] group-hover:shadow-sm">
@@ -42,10 +46,13 @@ export default function ProductCatalogueItem({
               />
             </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* PRODUCT INFORMATION */}
-        <div
+        <Reveal
+          direction="up"
+          delay={0.18}
+          duration={0.65}
           className={`lg:col-span-6 flex flex-col justify-center ${
             isEven ? "lg:order-1" : "lg:order-2"
           }`}
@@ -64,7 +71,7 @@ export default function ProductCatalogueItem({
           </span>
 
           {/* Product Name */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#0f172a] leading-tight tracking-tight mb-4 group-hover:text-[var(--primary-color)] transition-colors duration-300">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-4 group-hover:text-[var(--primary-color)] transition-colors duration-300">
             {product.title}
           </h2>
 
@@ -84,7 +91,7 @@ export default function ProductCatalogueItem({
               <ArrowRightIcon className="w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-1 shrink-0" />
             </Link>
           </div>
-        </div>
+        </Reveal>
       </div>
     </div>
   );

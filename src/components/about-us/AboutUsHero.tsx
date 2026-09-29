@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function AboutUsHero() {
   return (
@@ -26,57 +27,69 @@ export default function AboutUsHero() {
       {/* 3. HERO CONTENT CONTAINER (RESPONSIVE PROPORTIONS) */}
       <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-6 lg:py-7 flex flex-col justify-between min-h-0 sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px] gap-5 sm:gap-4">
         {/* TOP BAR: BREADCRUMB */}
-        <div className="flex items-center justify-between w-full">
-          {/* Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="text-[var(--gray-color)]/60" aria-hidden="true">
-                /
-              </li>
-              <li className="text-[#0f172a] font-semibold" aria-current="page">
-                About Us
-              </li>
-            </ol>
-          </nav>
-        </div>
+        <Reveal direction="fade" delay={0.05} duration={0.5}>
+          <div className="flex items-center justify-between w-full">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
+                <li>
+                  <Link
+                    href="/"
+                    className="hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="text-[var(--gray-color)]/60" aria-hidden="true">
+                  /
+                </li>
+                <li className="text-[var(--text-heading)] font-semibold" aria-current="page">
+                  About Us
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </Reveal>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
         <div className="max-w-xl lg:max-w-2xl py-1 sm:py-3">
           {/* Eyebrow with Brand Accent Bar */}
-          <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
-            <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
-            <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
-              ABOUT PRATIKSHA
-            </span>
-          </div>
+          <Reveal direction="up" delay={0.08} duration={0.55}>
+            <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
+              <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+              <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                ABOUT PRATIKSHA
+              </span>
+            </div>
+          </Reveal>
 
           {/* Main Heading */}
-          <h1 className="text-[22px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-2.5 sm:mb-3">
-            Reliable Earthing Solutions{" "}
-            <span className="text-[var(--primary-color)] block sm:inline mt-0.5 sm:mt-0">
-              For Safer Systems
-            </span>
-          </h1>
+          <Reveal direction="up" delay={0.14} duration={0.65}>
+            <h1 className="text-[22px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-2.5 sm:mb-3">
+              Reliable Earthing Solutions{" "}
+              <span className="text-[var(--primary-color)] block sm:inline mt-0.5 sm:mt-0">
+                For Safer Systems
+              </span>
+            </h1>
+          </Reveal>
 
           {/* Supporting Content */}
-          <p className="text-xs sm:text-sm md:text-base text-slate-800 sm:text-black font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
-            Pratiksha Earthing Solutions is a Rajkot-based business focused on
-            earthing and electrical safety products designed for residential,
-            commercial and industrial applications.
-          </p>
+          <Reveal direction="up" delay={0.2} duration={0.65}>
+            <p className="text-xs sm:text-sm md:text-base text-[var(--text-secondary)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
+              Pratiksha Earthing Solutions is a Rajkot-based business focused on
+              earthing and electrical safety products designed for residential,
+              commercial and industrial applications.
+            </p>
+          </Reveal>
 
           {/* 3 Feature Highlights (Quality Certified | 14+ Years | Rajkot Hub) */}
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-4 lg:gap-6 mb-4 sm:mb-5">
+          <StaggerContainer
+            staggerDelay={0.08}
+            delay={0.25}
+            className="flex flex-wrap items-center gap-2.5 sm:gap-4 lg:gap-6 mb-4 sm:mb-5"
+          >
             {/* Feature 1: Quality Certified */}
-            <div className="flex items-center gap-2 shrink-0">
+            <StaggerItem index={0} direction="up" className="flex items-center gap-2 shrink-0">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -93,13 +106,13 @@ export default function AboutUsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 Quality Certified
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Feature 2: 14+ Years */}
-            <div className="flex items-center gap-2 shrink-0">
+            <StaggerItem index={1} direction="up" className="flex items-center gap-2 shrink-0">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -116,13 +129,13 @@ export default function AboutUsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 14+ Years Heritage
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Feature 3: Rajkot Hub */}
-            <div className="flex items-center gap-2 shrink-0">
+            <StaggerItem index={2} direction="up" className="flex items-center gap-2 shrink-0">
               <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4"
@@ -144,46 +157,50 @@ export default function AboutUsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 Rajkot Hub
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
 
           {/* Action CTA Button */}
-          <div>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group w-auto max-w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-            >
-              <span>Explore Our Company</span>
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                strokeWidth="2.5"
-                aria-hidden="true"
+          <Reveal direction="up" delay={0.32} duration={0.6}>
+            <div>
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group w-auto max-w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
+                <span>Explore Our Company</span>
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2.5"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </Reveal>
         </div>
 
         {/* BOTTOM ROW: LEFT MOTTO & RAJKOT GUJARAT ACCENT STRIP */}
-        <div className="pt-2 sm:pt-3 flex items-start sm:items-center gap-2">
-          <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0 mt-1 sm:mt-0" />
-          <div className="text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider leading-relaxed flex flex-wrap items-center gap-x-1.5">
-            <span>ENGINEERING PRECISION</span>
-            <span className="text-slate-300" aria-hidden="true">/</span>
-            <span className="text-[#0f172a]">GROUNDING & SAFETY</span>
+        <Reveal direction="fade" delay={0.35} duration={0.6}>
+          <div className="pt-2 sm:pt-3 flex items-start sm:items-center gap-2">
+            <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0 mt-1 sm:mt-0" />
+            <div className="text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider leading-relaxed flex flex-wrap items-center gap-x-1.5">
+              <span>ENGINEERING PRECISION</span>
+              <span className="text-slate-300" aria-hidden="true">/</span>
+              <span className="text-[var(--text-heading)]">GROUNDING & SAFETY</span>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

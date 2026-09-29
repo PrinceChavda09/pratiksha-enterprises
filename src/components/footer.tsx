@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@/components/icon";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,42 +23,47 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-[var(--gray-color)]">
+    <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-[var(--gray-color)] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. TOP COMPACT CTA STRIP */}
-        <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
-          <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div>
-              <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
-                READY TO GET STARTED?
-              </span>
-              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0f172a] leading-tight mb-2">
-                Let&apos;s Build a Safer Electrical Foundation.
-              </h3>
-              <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed">
-                Talk to our engineering team about your earthing and electrical
-                safety requirements.
-              </p>
-            </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-all duration-200 shadow-sm hover:shadow gap-2 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-            >
-              <span>Get a Quote</span>
-              <span
-                className="transition-transform duration-200 group-hover:translate-x-1"
-                aria-hidden="true"
+        <Reveal direction="up" delay={0.1}>
+          <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
+            <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6 transition-all duration-300 hover:shadow-md">
+              <div>
+                <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
+                  READY TO GET STARTED?
+                </span>
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[var(--text-heading)] leading-tight mb-2">
+                  Let&apos;s Build a Safer Electrical Foundation.
+                </h3>
+                <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed">
+                  Talk to our engineering team about your earthing and electrical
+                  safety requirements.
+                </p>
+              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow gap-2 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
-                →
-              </span>
-            </Link>
+                <span>Get a Quote</span>
+                <span
+                  className="transition-transform duration-200 group-hover:translate-x-1"
+                  aria-hidden="true"
+                >
+                  →
+                </span>
+              </Link>
+            </div>
           </div>
-        </div>
+        </Reveal>
 
         {/* 2. MAIN FOOTER CONTENT (4 COLUMNS) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-12 sm:py-16">
+        <StaggerContainer
+          staggerDelay={0.08}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-12 sm:py-16"
+        >
           {/* COLUMN 1 — BRAND */}
-          <div className="lg:col-span-4">
+          <StaggerItem index={0} direction="up" className="lg:col-span-4">
             <Link
               href="/"
               className="inline-block mb-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
@@ -80,13 +86,17 @@ export default function Footer() {
                 Engineering safety. Protecting what matters.
               </span>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* COLUMN 2 & 3 — COMPANY & SOLUTIONS */}
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 lg:col-span-5">
+          <StaggerItem
+            index={1}
+            direction="up"
+            className="grid grid-cols-2 sm:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 lg:col-span-5"
+          >
             {/* COLUMN 2 — COMPANY */}
             <div className="sm:col-span-2">
-              <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+              <h4 className="text-sm font-bold text-[var(--text-heading)] uppercase tracking-widest mb-4 sm:mb-5">
                 Company
               </h4>
               <ul className="space-y-2.5 text-sm">
@@ -105,7 +115,7 @@ export default function Footer() {
 
             {/* COLUMN 3 — SOLUTIONS */}
             <div className="sm:col-span-3">
-              <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+              <h4 className="text-sm font-bold text-[var(--text-heading)] uppercase tracking-widest mb-4 sm:mb-5">
                 Solutions
               </h4>
               <ul className="space-y-2.5 text-sm">
@@ -121,11 +131,11 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
+          </StaggerItem>
 
           {/* COLUMN 4 — GET IN TOUCH */}
-          <div className="lg:col-span-3">
-            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+          <StaggerItem index={2} direction="up" className="lg:col-span-3">
+            <h4 className="text-sm font-bold text-[var(--text-heading)] uppercase tracking-widest mb-4 sm:mb-5">
               Get In Touch
             </h4>
             <div className="space-y-4 text-sm">
@@ -151,7 +161,7 @@ export default function Footer() {
                   />
                 </svg>
                 <div>
-                  <p className="font-semibold text-[#0f172a]">
+                  <p className="font-semibold text-[var(--text-heading)]">
                     305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk,
                     Rajkot, Gujarat 360002.
                   </p>
@@ -178,7 +188,7 @@ export default function Footer() {
                   />
                 </svg>
                 <div>
-                  <p className="font-semibold text-[#0f172a]">
+                  <p className="font-semibold text-[var(--text-heading)]">
                     Phone No. : +91 93138 88465.
                   </p>
                   <p className="text-xs text-[var(--gray-color)]">
@@ -206,7 +216,7 @@ export default function Footer() {
                 <div>
                   <a
                     href="mailto:pratikshaenterprises.sales@gmail.com"
-                    className="font-semibold text-[#0f172a] hover:text-[var(--primary-color)] transition-colors break-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                    className="font-semibold text-[var(--text-heading)] hover:text-[var(--primary-color)] transition-colors break-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                   >
                     pratikshaenterprises.sales@gmail.com
                   </a>
@@ -229,18 +239,20 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
+          </StaggerItem>
+        </StaggerContainer>
 
         {/* 3. BOTTOM COPYRIGHT BAR */}
-        <div className="border-t border-slate-200/90 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--gray-color)]">
-          <p>
-            © {currentYear} Pratiksha Earthing Solutions. All Rights Reserved.
-          </p>
-          <p className="text-[var(--gray-color)]">
-            Precision Earthing & Electrical Safety Systems
-          </p>
-        </div>
+        <Reveal direction="none" delay={0.15}>
+          <div className="border-t border-slate-200/90 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[var(--gray-color)]">
+            <p>
+              © {currentYear} Pratiksha Earthing Solutions. All Rights Reserved.
+            </p>
+            <p className="text-[var(--gray-color)]">
+              Precision Earthing & Electrical Safety Systems
+            </p>
+          </div>
+        </Reveal>
       </div>
     </footer>
   );

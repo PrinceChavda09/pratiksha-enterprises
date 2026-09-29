@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function ProductsHero() {
   return (
@@ -32,54 +33,66 @@ export default function ProductsHero() {
       {/* 3. HERO CONTENT CONTAINER (HALF-SCREEN COMPACT PROPORTIONS) */}
       <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
         {/* TOP BAR: BREADCRUMB */}
-        <div className="flex items-center justify-between w-full">
-          {/* Breadcrumb Navigation */}
-          <nav aria-label="Breadcrumb">
-            <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
-              <li>
-                <Link
-                  href="/"
-                  className="hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="text-[var(--gray-color)]/60" aria-hidden="true">
-                /
-              </li>
-              <li className="text-[#0f172a] font-semibold" aria-current="page">
-                Products
-              </li>
-            </ol>
-          </nav>
-        </div>
+        <Reveal direction="fade" delay={0.05} duration={0.5}>
+          <div className="flex items-center justify-between w-full">
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
+                <li>
+                  <Link
+                    href="/"
+                    className="hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="text-[var(--gray-color)]/60" aria-hidden="true">
+                  /
+                </li>
+                <li className="text-[var(--text-heading)] font-semibold" aria-current="page">
+                  Products
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </Reveal>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
         <div className="max-w-xl lg:max-w-2xl py-2 sm:py-3">
           {/* Eyebrow / Category Tag */}
-          <div className="flex items-center gap-2 mb-2">
-            <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
-              OUR PRODUCTS
-            </span>
-          </div>
+          <Reveal direction="up" delay={0.08} duration={0.55}>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                OUR PRODUCTS
+              </span>
+            </div>
+          </Reveal>
 
           {/* Main Hero Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[#0f172a] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
-            Complete Earthing Solutions for a{" "}
-            <span className="text-[var(--primary-color)]">Safer Tomorrow</span>
-          </h1>
+          <Reveal direction="up" delay={0.14} duration={0.65}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
+              Complete Earthing Solutions for a{" "}
+              <span className="text-[var(--primary-color)]">Safer Tomorrow</span>
+            </h1>
+          </Reveal>
 
           {/* Subtitle */}
-          <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
-            High-quality earthing and electrical safety products designed for
-            reliable protection in every environment.
-          </p>
+          <Reveal direction="up" delay={0.2} duration={0.65}>
+            <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
+              High-quality earthing and electrical safety products designed for
+              reliable protection in every environment.
+            </p>
+          </Reveal>
 
           {/* 3 Feature Highlights (Trusted Quality | Wide Range | Built for Safety) */}
-          <div className="flex flex-wrap items-center gap-3.5 sm:gap-5 lg:gap-6 mb-3.5 sm:mb-4">
+          <StaggerContainer
+            staggerDelay={0.08}
+            delay={0.25}
+            className="flex flex-wrap items-center gap-3.5 sm:gap-5 lg:gap-6 mb-3.5 sm:mb-4"
+          >
             {/* Feature 1: Trusted Quality */}
-            <div className="flex items-center gap-2">
+            <StaggerItem index={0} direction="up" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-4 h-4"
@@ -95,13 +108,13 @@ export default function ProductsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 Trusted Quality
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Feature 2: Wide Range */}
-            <div className="flex items-center gap-2">
+            <StaggerItem index={1} direction="up" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-4 h-4"
@@ -122,13 +135,13 @@ export default function ProductsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 Wide Range
               </div>
-            </div>
+            </StaggerItem>
 
             {/* Feature 3: Built for Safety */}
-            <div className="flex items-center gap-2">
+            <StaggerItem index={2} direction="up" className="flex items-center gap-2">
               <div className="w-8 h-8 rounded-full bg-[#E0F2F6] text-[var(--primary-color)] flex items-center justify-center shrink-0">
                 <svg
                   className="w-4 h-4"
@@ -144,44 +157,47 @@ export default function ProductsHero() {
                   />
                 </svg>
               </div>
-              <div className="text-[11px] sm:text-xs font-bold text-[#0f172a] leading-tight">
+              <div className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
                 Built for Safety
               </div>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
 
           {/* Action CTA Button */}
-          <div>
-            <a
-              href="#catalogue"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-            >
-              <span>Explore Our Products</span>
-              <svg
-                className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                strokeWidth="2.5"
+          <Reveal direction="up" delay={0.32} duration={0.6}>
+            <div>
+              <a
+                href="#catalogue"
+                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                />
-              </svg>
-            </a>
-          </div>
+                <span>Explore Our Products</span>
+                <svg
+                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2.5"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </a>
+            </div>
+          </Reveal>
         </div>
 
         {/* BOTTOM ROW: LEFT TAGLINE & RIGHT SECTOR CATEGORIES STRIP */}
-        <div className="pt-2.5 sm:pt-3 border-t border-slate-200/80 sm:border-slate-300/60 flex flex-col md:flex-row md:items-center justify-between gap-3">
+        <Reveal direction="fade" delay={0.35} duration={0.6}>
+          <div className="pt-2.5 sm:pt-3 border-t border-slate-200/80 sm:border-slate-300/60 flex flex-col md:flex-row md:items-center justify-between gap-3">
           {/* Bottom Left Motto matching reference */}
           <div className="flex items-center gap-2">
             <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full" />
             <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider">
               GROUNDING TODAY
-              <span className="text-[#0f172a]"> FOR A SAFER TOMORROW</span>
+              <span className="text-[var(--text-heading)]"> FOR A SAFER TOMORROW</span>
             </div>
           </div>
 
@@ -202,7 +218,7 @@ export default function ProductsHero() {
                   d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                 />
               </svg>
-              <span className="text-xs font-semibold text-[#0f172a]">
+              <span className="text-xs font-semibold text-[var(--text-heading)]">
                 Residential
               </span>
             </div>
@@ -229,7 +245,7 @@ export default function ProductsHero() {
                   d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21"
                 />
               </svg>
-              <span className="text-xs font-semibold text-[#0f172a]">
+              <span className="text-xs font-semibold text-[var(--text-heading)]">
                 Commercial
               </span>
             </div>
@@ -256,7 +272,7 @@ export default function ProductsHero() {
                   d="M3.75 21h16.5M4.5 3h3.75l2.25 4.5V21M10.5 7.5l2.25 4.5V21M15 12l2.25 4.5V21"
                 />
               </svg>
-              <span className="text-xs font-semibold text-[#0f172a]">
+              <span className="text-xs font-semibold text-[var(--text-heading)]">
                 Industrial
               </span>
             </div>
@@ -283,13 +299,14 @@ export default function ProductsHero() {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <span className="text-xs font-semibold text-[#0f172a]">
+              <span className="text-xs font-semibold text-[var(--text-heading)]">
                 Utilities
               </span>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Reveal>
+    </div>
+  </section>
   );
 }

@@ -32,7 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="w-full bg-white border-t-[3px] fixed border-[#374151] border-b border-[#e5e7eb] top-0 left-0 right-0 z-50">
+      <header className="w-full bg-white border-t-[3px] fixed border-[var(--border-dark)] border-b border-[#e5e7eb] top-0 left-0 right-0 z-50">
         <div className="container sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* 1. LOGO */}
@@ -61,16 +61,20 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`relative py-2 px-1 text-[15px] font-medium transition-colors rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
+                    className={`group relative py-2 px-1 text-[15px] font-medium transition-colors duration-200 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
                       active
                         ? "text-[var(--primary-color)]"
                         : "text-[var(--gray-color)] hover:text-[var(--primary-color)]"
                     }`}
                   >
                     {item.name}
-                    {active && (
-                      <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--primary-color)] rounded-full" />
-                    )}
+                    <span
+                      className={`absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--primary-color)] rounded-full transition-all duration-300 origin-left ${
+                        active
+                          ? "opacity-100 scale-x-100"
+                          : "opacity-0 scale-x-0 group-hover:opacity-50 group-hover:scale-x-100"
+                      }`}
+                    />
                   </Link>
                 );
               })}
@@ -80,7 +84,7 @@ export default function Navbar() {
             <div className="hidden md:flex items-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] rounded-[7px] transition-colors shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
                 Get a Quote
               </Link>
@@ -97,7 +101,7 @@ export default function Navbar() {
               >
                 {isMobileMenuOpen ? (
                   <svg
-                    className="w-6 h-6"
+                    className="w-6 h-6 transition-transform duration-200 rotate-90"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -112,7 +116,7 @@ export default function Navbar() {
                   </svg>
                 ) : (
                   <svg
-                    className="w-6 h-6"
+                    className="w-6 h-6 transition-transform duration-200"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -131,9 +135,9 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* 5. MOBILE MENU DROPDOWN */}
+        {/* 5. MOBILE MENU DROPDOWN WITH SMOOTH TRANSITION */}
         {isMobileMenuOpen && (
-          <div className="md:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg">
+          <div className="md:hidden border-t border-gray-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-lg animate-in fade-in slide-in-from-top-2 duration-200">
             <div className="flex flex-col space-y-2">
               {navItems.map((item) => {
                 const active = isActive(item.href);
@@ -142,7 +146,7 @@ export default function Navbar() {
                     key={item.name}
                     href={item.href}
                     onClick={closeMenu}
-                    className={`flex items-center px-3 py-2.5 rounded-md text-base font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
+                    className={`flex items-center px-3 py-2.5 rounded-md text-base font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
                       active
                         ? "text-[var(--primary-color)] bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] font-semibold border-l-4 border-[var(--primary-color)]"
                         : "text-[var(--gray-color)] hover:text-[var(--primary-color)] hover:bg-gray-50"
@@ -157,7 +161,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-colors shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                className="flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
                 Get a Quote
               </Link>
