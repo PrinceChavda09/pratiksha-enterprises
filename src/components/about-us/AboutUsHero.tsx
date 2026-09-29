@@ -66,7 +66,7 @@ export default function AboutUsHero() {
           </h1>
 
           {/* Supporting Content */}
-          <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
+          <p className="text-xs sm:text-sm md:text-base text-black font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
             Pratiksha Earthing Solutions is a Rajkot-based business focused on
             earthing and electrical safety products designed for residential,
             commercial and industrial applications.

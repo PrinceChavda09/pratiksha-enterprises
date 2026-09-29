@@ -82,42 +82,45 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* COLUMN 2 — COMPANY */}
-          <div className="lg:col-span-2">
-            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
-              Company
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* COLUMN 2 & 3 — COMPANY & SOLUTIONS */}
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 lg:col-span-5">
+            {/* COLUMN 2 — COMPANY */}
+            <div className="sm:col-span-2">
+              <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+                Company
+              </h4>
+              <ul className="space-y-2.5 text-sm">
+                {companyLinks.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* COLUMN 3 — SOLUTIONS */}
-          <div className="lg:col-span-3">
-            <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
-              Solutions
-            </h4>
-            <ul className="space-y-2.5 text-sm">
-              {solutions.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* COLUMN 3 — SOLUTIONS */}
+            <div className="sm:col-span-3">
+              <h4 className="text-sm font-bold text-[#0f172a] uppercase tracking-widest mb-4 sm:mb-5">
+                Solutions
+              </h4>
+              <ul className="space-y-2.5 text-sm">
+                {solutions.map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* COLUMN 4 — GET IN TOUCH */}
