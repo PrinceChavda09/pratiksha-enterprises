@@ -91,7 +91,7 @@ export default function WhatWeOffer() {
                 <div className="col-start-2 col-span-1 lg:col-span-2 flex lg:justify-end mt-1 sm:mt-2 lg:mt-0">
                   <Link
                     href="/products"
-                    className="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus:underline"
+                    className="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm font-semibold text-[var(--gray-color)] group-hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-md px-1 py-0.5"
                     aria-label={`View ${item.title}`}
                   >
                     <span>View Category</span>

@@ -5,12 +5,12 @@ export default function ContactMapSection() {
     "305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002.";
 
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    "Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002, India"
+    "Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002, India",
   )}`;
 
   // Precise Google Maps embed query pointing directly to Royal Complex, Dhebar Road, Rajkot
   const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(
-    "Royal Complex, Dhebar Rd, Millpara, Rajkot, Gujarat 360002"
+    "Royal Complex, Dhebar Rd, Millpara, Rajkot, Gujarat 360002",
   )}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (
@@ -92,7 +92,7 @@ export default function ContactMapSection() {
                 href={directionsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--primary-color)] hover:bg-[#065e6f] text-white text-sm font-semibold rounded-xl transition-all shadow-sm hover:shadow focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--primary-color)] hover:bg-[#065e6f] text-white text-sm font-semibold rounded-xl transition-all shadow-sm hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
                 <span>Get Directions on Google Maps</span>
                 <span aria-hidden="true">↗</span>

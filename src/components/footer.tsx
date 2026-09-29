@@ -24,13 +24,43 @@ export default function Footer() {
   return (
     <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-[var(--gray-color)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* 1. TOP COMPACT CTA STRIP */}
+        <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
+          <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div>
+              <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
+                READY TO GET STARTED?
+              </span>
+              <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#0f172a] leading-tight mb-2">
+                Let&apos;s Build a Safer Electrical Foundation.
+              </h3>
+              <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed">
+                Talk to our engineering team about your earthing and electrical
+                safety requirements.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-all duration-200 shadow-sm hover:shadow gap-2 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+            >
+              <span>Get a Quote</span>
+              <span
+                className="transition-transform duration-200 group-hover:translate-x-1"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </Link>
+          </div>
+        </div>
+
         {/* 2. MAIN FOOTER CONTENT (4 COLUMNS) */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-12 sm:py-16">
           {/* COLUMN 1 — BRAND */}
           <div className="lg:col-span-4">
             <Link
               href="/"
-              className="inline-block mb-5 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] rounded"
+              className="inline-block mb-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
             >
               <Image
                 src="/images/pratiksha-logo.webp"
@@ -62,7 +92,7 @@ export default function Footer() {
                 <li key={link.name}>
                   <Link
                     href={link.href}
-                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
+                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                   >
                     {link.name}
                   </Link>
@@ -81,7 +111,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus:underline"
+                    className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                   >
                     {item.name}
                   </Link>
@@ -173,7 +203,7 @@ export default function Footer() {
                 <div>
                   <a
                     href="mailto:pratikshaenterprises.sales@gmail.com"
-                    className="font-semibold text-[#0f172a] hover:text-[var(--primary-color)] transition-colors break-all"
+                    className="font-semibold text-[#0f172a] hover:text-[var(--primary-color)] transition-colors break-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                   >
                     pratikshaenterprises.sales@gmail.com
                   </a>
@@ -184,7 +214,7 @@ export default function Footer() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group"
+                  className="inline-flex items-center text-sm font-semibold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                 >
                   <span>Submit Technical Inquiry</span>
                   <span

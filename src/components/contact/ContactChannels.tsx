@@ -9,10 +9,17 @@ export default function ContactChannels() {
       primaryText: "+91 93138 88465",
       primaryHref: "tel:+919313888465",
       actionText: "Call Now",
-      whatsappHref: "https://wa.me/919313888465?text=Hello%20Pratiksha%20Enterprises,%20I%20would%20like%20to%20inquire%20about%20your%20earthing%20solutions.",
+      whatsappHref:
+        "https://wa.me/919313888465?text=Hello%20Pratiksha%20Enterprises,%20I%20would%20like%20to%20inquire%20about%20your%20earthing%20solutions.",
       whatsappText: "Chat on WhatsApp",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -29,7 +36,13 @@ export default function ContactChannels() {
       primaryHref: "mailto:pratikshaenterprises.sales@gmail.com",
       actionText: "Send Email",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -41,12 +54,19 @@ export default function ContactChannels() {
     {
       title: "Manufacturing & Plant",
       badge: "Rajkot Hub",
-      subtitle: "305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002",
+      subtitle:
+        "305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002",
       primaryText: "Visit Our Facilities",
       primaryHref: "#map-section",
       actionText: "View on Map",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -67,7 +87,13 @@ export default function ContactChannels() {
       primaryText: "9:00 AM – 7:30 PM",
       secondaryText: "Sunday: Closed (Emergency dispatch available)",
       icon: (
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+        <svg
+          className="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          strokeWidth="2"
+        >
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -111,10 +137,14 @@ export default function ContactChannels() {
               {channel.primaryHref ? (
                 <a
                   href={channel.primaryHref}
-                  className="inline-flex items-center justify-between text-sm font-semibold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors"
+                  className="inline-flex items-center justify-between text-sm font-semibold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-md px-1"
                 >
-                  <span className="truncate">{channel.actionText || channel.primaryText}</span>
-                  <span className="text-xs transition-transform duration-200 group-hover:translate-x-1">→</span>
+                  <span className="truncate">
+                    {channel.actionText || channel.primaryText}
+                  </span>
+                  <span className="text-xs transition-transform duration-200 group-hover:translate-x-1">
+                    →
+                  </span>
                 </a>
               ) : (
                 <div className="text-sm font-semibold text-[#0f172a]">
@@ -127,7 +157,7 @@ export default function ContactChannels() {
                   href={channel.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors border border-emerald-200/80"
+                  className="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors border border-emerald-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
                 >
                   <span>💬</span>
                   <span>{channel.whatsappText}</span>

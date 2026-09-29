@@ -41,6 +41,22 @@ export default function AboutPratiksha() {
               electrodes, IS 3043-compliant compounds, and ESE lightning arresters
               backed by 1000-hour salt-spray testing.
             </p>
+            {/* Paragraphs */}
+            <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8">
+              <p>
+                Pratiksha Earthing Solutions is focused on providing dependable
+                earthing products and solutions that support electrical safety,
+                system reliability, and long-term performance across demanding
+                power networks.
+              </p>
+              <p>
+                Based in Rajkot, Gujarat — one of India’s premier engineering
+                and foundry hubs — we combine precision manufacturing with
+                rigorous electrical engineering standards to protect lives,
+                machinery, and sensitive infrastructure from hazardous fault
+                currents and lightning surges.
+              </p>
+            </div>
 
             {/* 2x2 Stats Grid with primary-color vertical indicator bars */}
             <div className="grid grid-cols-2 gap-y-7 gap-x-8 sm:gap-x-12 mb-9 sm:mb-11">
@@ -63,7 +79,7 @@ export default function AboutPratiksha() {
             <div>
               <Link
                 href="/about-us"
-                className="inline-flex items-center gap-2.5 text-xs sm:text-[13px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] uppercase tracking-[0.18em] transition-all duration-300"
+                className="inline-flex items-center text-[15px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
               >
                 <span>LEARN MORE ABOUT US</span>
                 <span

@@ -130,7 +130,7 @@ export default function HomeHeroSection() {
           <div className="mt-4 sm:mt-5 md:mt-5 flex items-center justify-center sm:justify-start">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3 text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30"
+              className="inline-flex items-center justify-center px-6 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3 text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
             >
               Get a Quote
             </Link>

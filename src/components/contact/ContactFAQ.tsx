@@ -47,7 +47,8 @@ export default function ContactFAQ() {
             Frequently Asked Questions
           </h2>
           <p className="mt-3 text-sm sm:text-base text-[var(--gray-color)] max-w-xl mx-auto">
-            Everything you need to know about our products, direct supply contracts, and engineering assistance.
+            Everything you need to know about our products, direct supply
+            contracts, and engineering assistance.
           </p>
         </div>
 
@@ -63,7 +64,8 @@ export default function ContactFAQ() {
                 <button
                   type="button"
                   onClick={() => toggle(idx)}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none cursor-pointer hover:bg-slate-50/75 transition-colors"
+                  aria-expanded={isOpen}
+                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-inset cursor-pointer hover:bg-slate-50/75 transition-colors"
                 >
                   <span className="text-sm sm:text-base font-bold text-[#0f172a]">
                     {faq.q}

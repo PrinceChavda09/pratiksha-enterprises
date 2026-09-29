@@ -101,7 +101,9 @@ export default function WhyChoosePratiksha() {
                     onMouseEnter={() => setActiveIndex(index)}
                     onFocus={() => setActiveIndex(index)}
                     tabIndex={0}
-                    className={`py-5 transition-all duration-200 cursor-pointer outline-none ${
+                    role="button"
+                    aria-pressed={isActive}
+                    className={`py-5 transition-all duration-200 cursor-pointer outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 ${
                       isActive
                         ? "border-l-4 border-[var(--primary-color)] pl-5 bg-white/70 rounded-r-xl shadow-sm"
                         : "border-l-4 border-transparent pl-5 opacity-70 hover:opacity-100 hover:bg-white/40 rounded-r-xl"

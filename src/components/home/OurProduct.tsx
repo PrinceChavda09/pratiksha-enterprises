@@ -101,7 +101,7 @@ export default function OurProduct() {
           <div className="shrink-0 pb-1">
             <Link
               href="/products"
-              className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] transition-all duration-300 shadow-sm hover:shadow gap-2.5 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:ring-offset-2 group"
+              className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] transition-all duration-300 shadow-sm hover:shadow gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 group"
             >
               <span>Explore More</span>
               <Icon

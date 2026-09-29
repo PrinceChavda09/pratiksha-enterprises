@@ -39,7 +39,7 @@ export default function ProductsHero() {
               <li>
                 <Link
                   href="/"
-                  className="hover:text-[var(--primary-color)] transition-colors focus:outline-none"
+                  className="hover:text-[var(--primary-color)] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                 >
                   Home
                 </Link>
@@ -154,7 +154,7 @@ export default function ProductsHero() {
           <div>
             <a
               href="#catalogue"
-              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group"
+              className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
             >
               <span>Explore Our Products</span>
               <svg
@@ -207,7 +207,10 @@ export default function ProductsHero() {
               </span>
             </div>
 
-            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
+            <span
+              className="text-slate-300 hidden sm:inline"
+              aria-hidden="true"
+            >
               |
             </span>
 
@@ -231,7 +234,10 @@ export default function ProductsHero() {
               </span>
             </div>
 
-            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
+            <span
+              className="text-slate-300 hidden sm:inline"
+              aria-hidden="true"
+            >
               |
             </span>
 
@@ -255,7 +261,10 @@ export default function ProductsHero() {
               </span>
             </div>
 
-            <span className="text-slate-300 hidden sm:inline" aria-hidden="true">
+            <span
+              className="text-slate-300 hidden sm:inline"
+              aria-hidden="true"
+            >
               |
             </span>
 
