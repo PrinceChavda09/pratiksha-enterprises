@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WhyPratiksha() {
   return (
-    <section className="w-full bg-[#F8FAFC] py-16 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="w-full bg-[#F8FAFC] py-12 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
       {/* Decorative Subtle Background Grid */}
       <div
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
@@ -16,14 +16,14 @@ export default function WhyPratiksha() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 mb-4">
-            <span className="w-8 h-[2px] bg-[var(--primary-color)]" />
+        <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
+          <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
+            <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
             <span className="text-xs sm:text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
               WHY PRATIKSHA ENTERPRISES
             </span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight leading-[1.2] mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[#0f172a] tracking-tight leading-[1.2] mb-3 sm:mb-4">
             Engineered for Dependability. Built for Complete Electrical Safety.
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed">
@@ -35,9 +35,9 @@ export default function WhyPratiksha() {
         </div>
 
         {/* Bento Grid Architecture */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 lg:gap-8">
           {/* Bento Card 1: Quality-Focused Metallurgy (Span 7) */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -107,7 +107,7 @@ export default function WhyPratiksha() {
           </div>
 
           {/* Bento Card 2: Complete Grounding Solutions (Span 5) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -186,7 +186,7 @@ export default function WhyPratiksha() {
           </div>
 
           {/* Bento Card 3: Application-Focused Approach (Span 5) */}
-          <div className="lg:col-span-5 bg-white rounded-2xl p-6 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
+          <div className="lg:col-span-5 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group">
             <div>
               <div className="flex items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
@@ -253,7 +253,7 @@ export default function WhyPratiksha() {
           </div>
 
           {/* Bento Card 4: Rajkot Hub & Direct Contact CTA (Span 7) - USER HIGHLIGHT REQUEST */}
-          <div className="lg:col-span-7 bg-gradient-to-br from-white via-white to-teal-50/50 rounded-2xl p-6 sm:p-8 lg:p-10 border-2 border-[var(--primary-color)]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
+          <div className="lg:col-span-7 bg-gradient-to-br from-white via-white to-teal-50/50 rounded-2xl p-5 sm:p-8 lg:p-10 border-2 border-[var(--primary-color)]/30 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group relative overflow-hidden">
             {/* Top Right Decorative Background Accent */}
             <div className="absolute top-0 right-0 translate-x-8 -translate-y-8 w-48 h-48 bg-[var(--primary-color)]/5 rounded-full pointer-events-none" />
 
@@ -363,7 +363,7 @@ export default function WhyPratiksha() {
         </div>
 
         {/* Bottom Trust & Metric Strip */}
-        <div className="mt-12 sm:mt-16 pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           <div className="flex flex-col">
             <span className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">
               14+ Years

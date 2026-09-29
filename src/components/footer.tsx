@@ -23,7 +23,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-[#F4FAFC] border-t border-slate-200/90 text-[var(--gray-color)]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. TOP COMPACT CTA STRIP */}
         <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
           <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6">

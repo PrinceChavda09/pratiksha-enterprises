@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import LenisProvider from "@/components/LenisProvider";
 import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
@@ -24,9 +25,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppins.variable}>
       <body className={`${poppins.className} min-h-screen text-white antialiased`}>
-        <Navbar />
-        {children}
-        <Footer />
+        <LenisProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </LenisProvider>
       </body>
     </html>
   );
