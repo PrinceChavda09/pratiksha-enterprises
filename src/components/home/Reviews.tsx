@@ -94,7 +94,7 @@ export default function Reviews() {
               {/* Heading */}
               <h2
                 id="reviews-heading"
-                className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-[var(--text-heading)] leading-[1.2] mb-4"
+                className="text-xl sm:text-4xl lg:text-[42px] font-bold text-[var(--text-heading)] leading-[1.2] mb-4"
               >
                 What Our Customers Say
               </h2>
@@ -125,7 +125,7 @@ export default function Reviews() {
                   {/* Rating Badge */}
                   <div className="text-right">
                     <div className="flex items-center gap-1.5 justify-end">
-                      <span className="text-2xl font-black text-[var(--text-heading)] leading-none">
+                      <span className="text-xl font-black text-[var(--text-heading)] leading-none">
                         {googleReviewSummary.rating.toFixed(1)}
                       </span>
                       <span className="text-xs font-bold text-slate-400">

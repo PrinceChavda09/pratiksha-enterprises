@@ -392,7 +392,7 @@ export default function WhyPratiksha() {
           className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
           <StaggerItem index={0} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               14+ Years
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
@@ -400,7 +400,7 @@ export default function WhyPratiksha() {
             </span>
           </StaggerItem>
           <StaggerItem index={1} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               100% Tested
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
@@ -408,7 +408,7 @@ export default function WhyPratiksha() {
             </span>
           </StaggerItem>
           <StaggerItem index={2} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               India
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
@@ -416,7 +416,7 @@ export default function WhyPratiksha() {
             </span>
           </StaggerItem>
           <StaggerItem index={3} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
-            <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
+            <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               Custom Sizing
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">

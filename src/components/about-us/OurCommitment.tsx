@@ -19,7 +19,7 @@ export default function OurCommitment() {
         <Reveal direction="up" delay={0.1} duration={0.6}>
           <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
             <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
-            <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <span className="text-xs sm:text-sm md:text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
               OUR COMMITMENT
             </span>
           </div>

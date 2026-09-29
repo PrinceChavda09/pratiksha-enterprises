@@ -31,7 +31,7 @@ export default function AboutPratiksha() {
               </div>
 
               {/* Main Headline (All caps, bold industrial typography) */}
-              <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-extrabold text-[var(--text-heading)] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6 text-center md:text-left">
+              <h2 className="text-xl sm:text-4xl lg:text-[44px] font-extrabold text-[var(--text-heading)] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6 text-center md:text-left">
                 SETTING THE STANDARD IN ELECTRICAL SAFETY.
               </h2>
             </Reveal>

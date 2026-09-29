@@ -58,7 +58,7 @@ export default function WhyChoosePratiksha() {
             <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3 text-center md:text-left">
               WHY CHOOSE PRATIKSHA
             </span>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-[1.15] mb-4 text-center md:text-left">
+            <h2 className="text-xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-[1.15] mb-4 text-center md:text-left">
               Engineering You Can Trust. Protection That Lasts.
             </h2>
             <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed text-center md:text-left max-w-2xl mx-auto md:mx-0">
@@ -151,7 +151,7 @@ export default function WhyChoosePratiksha() {
         <Reveal direction="up" delay={0.25}>
           <div className="mt-16 lg:mt-20 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
             <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
-              <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
+              <span className="text-xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 14+ Years
               </span>
               <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
@@ -160,7 +160,7 @@ export default function WhyChoosePratiksha() {
             </div>
 
             <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
-              <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
+              <span className="text-xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 CPRI & NABL Tested
               </span>
               <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
@@ -169,7 +169,7 @@ export default function WhyChoosePratiksha() {
             </div>
 
             <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
-              <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
+              <span className="text-xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 Rajkot Engineering Hub
               </span>
               <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">

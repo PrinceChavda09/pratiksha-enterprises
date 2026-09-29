@@ -27,7 +27,7 @@ export default function OurApproach() {
           <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16 text-center md:text-left mx-auto md:mx-0">
             <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-2 sm:mb-3">
               <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
-              <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <span className="text-xs sm:text-sm md:text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 OUR APPROACH
               </span>
             </div>

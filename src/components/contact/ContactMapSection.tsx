@@ -26,11 +26,11 @@ export default function ContactMapSection() {
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
                 <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-                <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   HEADQUARTERS & MANUFACTURING
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)] tracking-tight">
+              <h2 className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)] tracking-tight">
                 Visit Our Rajkot Facility
               </h2>
               <p className="mt-3 text-sm text-[var(--gray-color)] leading-relaxed max-w-lg mx-auto lg:mx-0">

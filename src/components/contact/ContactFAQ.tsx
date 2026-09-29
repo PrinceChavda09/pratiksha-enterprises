@@ -40,12 +40,12 @@ export default function ContactFAQ() {
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 mb-3">
               <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 GOT QUESTIONS?
               </span>
               <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
               Frequently Asked Questions
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[var(--gray-color)] max-w-xl mx-auto">
@@ -74,7 +74,7 @@ export default function ContactFAQ() {
                   type="button"
                   onClick={() => toggle(idx)}
                   aria-expanded={isOpen}
-                  className="w-full px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-inset cursor-pointer hover:bg-slate-50/75 transition-colors"
+                  className="w-full px-4 py-5 text-left flex items-center justify-between gap-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-inset cursor-pointer hover:bg-slate-50/75 transition-colors"
                 >
                   <span className="text-sm sm:text-base font-bold text-[var(--text-heading)]">
                     {faq.q}

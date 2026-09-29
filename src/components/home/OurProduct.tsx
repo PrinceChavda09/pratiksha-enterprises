@@ -90,7 +90,7 @@ export default function OurProduct() {
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
+              <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
                 Complete Earthing Solutions <br className="hidden sm:inline" />
                 for{" "}
                 <span className="text-[var(--primary-color)]">

@@ -122,13 +122,13 @@ export default function ProductsGrid() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="mb-12 sm:mb-16 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
+              <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                 OUR PRODUCTS
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
-              Complete Earthing Solutions <br className="hidden sm:inline" />
+            <h2 className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
+              Complete Earthing Solutions
               for{" "}
               <span className="text-[var(--primary-color)]">
                 Every Requirement

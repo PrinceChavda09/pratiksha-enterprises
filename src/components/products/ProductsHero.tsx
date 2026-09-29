@@ -63,7 +63,7 @@ export default function ProductsHero() {
           <Reveal direction="up" delay={0.08} duration={0.55}>
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
               <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 OUR PRODUCTS
               </span>
             </div>
@@ -71,7 +71,7 @@ export default function ProductsHero() {
 
           {/* Main Hero Headline */}
           <Reveal direction="up" delay={0.14} duration={0.65}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] mb-2 sm:mb-2.5 text-center sm:text-left">
+            <h1 className="text-xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] mb-2 sm:mb-2.5 text-center sm:text-left">
               Complete Earthing Solutions for a{" "}
               <span className="text-[var(--primary-color)]">Safer Tomorrow</span>
             </h1>

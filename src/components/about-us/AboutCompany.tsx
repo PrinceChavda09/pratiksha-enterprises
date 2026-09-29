@@ -16,7 +16,7 @@ export default function AboutCompany() {
                   </span>
                 </div>
 
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-3 sm:mb-5 text-center lg:text-left">
+                <h2 className="text-xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-3 sm:mb-5 text-center lg:text-left">
                   About Pratiksha
                 </h2>
 
@@ -43,7 +43,7 @@ export default function AboutCompany() {
             <Reveal direction="up" delay={0.2} duration={0.65}>
               <div className="border-t border-slate-200">
                 <div className="py-5 sm:py-8 border-b border-slate-200">
-                  <p className="text-xl sm:text-2xl font-medium text-[var(--text-heading)] leading-relaxed text-center lg:text-left">
+                  <p className="text-[14px] sm:text-2xl font-medium text-[var(--text-heading)] leading-relaxed text-center lg:text-left">
                     Pratiksha Earthing Solutions is a Rajkot based business focused
                     on earthing and electrical safety products designed for
                     residential, commercial and industrial applications.

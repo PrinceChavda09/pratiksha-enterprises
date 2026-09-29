@@ -39,14 +39,14 @@ export default function ContactFormSection() {
           <div className="max-w-3xl mb-12 sm:mb-16 text-center lg:text-left mx-auto lg:mx-0">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
               <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-              <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 TECHNICAL INQUIRY & QUOTES
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
+            <h2 className="text-xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
               Send Us Your Project Requirements
             </h2>
-            <p className="mt-3 text-base text-[var(--gray-color)] max-w-2xl mx-auto lg:mx-0">
+            <p className="mt-3 text-[14px] text-[var(--gray-color)] max-w-2xl mx-auto lg:mx-0">
               Whether you need bulk earthing electrodes for a solar park,
               substation grounding design, or custom copper bonded rods, our
               engineering team responds within 2 business hours.
@@ -57,219 +57,228 @@ export default function ContactFormSection() {
         {/* Form & Assurance Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
           {/* LEFT: INTERACTIVE FORM (7 Cols) */}
-          <Reveal direction="up" delay={0.15} duration={0.65} className="lg:col-span-7">
+          <Reveal
+            direction="up"
+            delay={0.15}
+            duration={0.65}
+            className="lg:col-span-7"
+          >
             <div className="bg-[#F8FAFC] border border-slate-200/90 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-sm relative">
-            {submitted ? (
-              <div className="py-12 text-center">
-                <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-8 h-8"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2.5"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 12.75l6 6 9-13.5"
-                    />
-                  </svg>
-                </div>
-                <h3 className="text-2xl font-bold text-[var(--text-heading)] mb-2">
-                  Thank You for Reaching Out!
-                </h3>
-                <p className="text-[var(--gray-color)] max-w-md mx-auto mb-6 text-sm sm:text-base">
-                  Your inquiry has been received by our technical sales
-                  engineering team. We will review your requirements and send a
-                  customized quote shortly.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setSubmitted(false);
-                    setFormData({
-                      name: "",
-                      company: "",
-                      email: "",
-                      phone: "",
-                      product: "Pure Copper Earthing Electrodes",
-                      quantity: "",
-                      message: "",
-                    });
-                  }}
-                  className="px-6 py-2.5 bg-[var(--primary-color)] text-white text-sm font-semibold rounded-xl hover:bg-[#065e6f] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-                >
-                  Submit Another Inquiry
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {/* Full Name */}
-                  <div>
-                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Full Name <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      placeholder="e.g. Rajesh Patel"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
-                    />
-                  </div>
-
-                  {/* Company Name */}
-                  <div>
-                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Company / Organization
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. Sterling Infrastructure"
-                      value={formData.company}
-                      onChange={(e) =>
-                        setFormData({ ...formData, company: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {/* Email */}
-                  <div>
-                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Email Address <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      placeholder="name@company.com"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
-                    />
-                  </div>
-
-                  {/* Phone Number */}
-                  <div>
-                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Phone / WhatsApp Number{" "}
-                      <span className="text-red-500">*</span>
-                    </label>
-                    <input
-                      type="tel"
-                      required
-                      placeholder="+91 98765 43210"
-                      value={formData.phone}
-                      onChange={(e) =>
-                        setFormData({ ...formData, phone: e.target.value })
-                      }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                  {/* Product of Interest */}
-                  <div>
-                    <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Product / Solution
-                    </label>
-                    <select
-                      value={formData.product}
-                      onChange={(e) =>
-                        setFormData({ ...formData, product: e.target.value })
-                      }
-                      className="w-full px-2 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+              {submitted ? (
+                <div className="py-12 text-center">
+                  <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg
+                      className="w-8 h-8"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="2.5"
                     >
-                      <option>Pure Copper Earthing Electrodes</option>
-                      <option>SRIP Advanced Backfill Compound</option>
-                      <option>Copper Bonded Chemical Earthing Rods</option>
-                      <option>High-Voltage Substation Grounding</option>
-                      <option>Heavy-Duty Earth Busbars & Clamps</option>
-                      <option>Turnkey Industrial Grounding Solution</option>
-                    </select>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M4.5 12.75l6 6 9-13.5"
+                      />
+                    </svg>
+                  </div>
+                  <h3 className="text-2xl font-bold text-[var(--text-heading)] mb-2">
+                    Thank You for Reaching Out!
+                  </h3>
+                  <p className="text-[var(--gray-color)] max-w-md mx-auto mb-6 text-sm sm:text-base">
+                    Your inquiry has been received by our technical sales
+                    engineering team. We will review your requirements and send
+                    a customized quote shortly.
+                  </p>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSubmitted(false);
+                      setFormData({
+                        name: "",
+                        company: "",
+                        email: "",
+                        phone: "",
+                        product: "Pure Copper Earthing Electrodes",
+                        quantity: "",
+                        message: "",
+                      });
+                    }}
+                    className="px-6 py-2.5 bg-[var(--primary-color)] text-white text-sm font-semibold rounded-xl hover:bg-[#065e6f] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                  >
+                    Submit Another Inquiry
+                  </button>
+                </div>
+              ) : (
+                <form
+                  onSubmit={handleSubmit}
+                  className="space-y-5 sm:space-y-6"
+                >
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* Full Name */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Full Name <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        placeholder="e.g. Rajesh Patel"
+                        value={formData.name}
+                        onChange={(e) =>
+                          setFormData({ ...formData, name: e.target.value })
+                        }
+                        className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    {/* Company Name */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Company / Organization
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. Sterling Infrastructure"
+                        value={formData.company}
+                        onChange={(e) =>
+                          setFormData({ ...formData, company: e.target.value })
+                        }
+                        className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      />
+                    </div>
                   </div>
 
-                  {/* Estimated Quantity */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* Email */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="name@company.com"
+                        value={formData.email}
+                        onChange={(e) =>
+                          setFormData({ ...formData, email: e.target.value })
+                        }
+                        className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      />
+                    </div>
+
+                    {/* Phone Number */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Phone / WhatsApp Number{" "}
+                        <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        placeholder="+91 98765 43210"
+                        value={formData.phone}
+                        onChange={(e) =>
+                          setFormData({ ...formData, phone: e.target.value })
+                        }
+                        className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    {/* Product of Interest */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Product / Solution
+                      </label>
+                      <select
+                        value={formData.product}
+                        onChange={(e) =>
+                          setFormData({ ...formData, product: e.target.value })
+                        }
+                        className="w-full px-2 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      >
+                        <option>Pure Copper Earthing Electrodes</option>
+                        <option>SRIP Advanced Backfill Compound</option>
+                        <option>Copper Bonded Chemical Earthing Rods</option>
+                        <option>High-Voltage Substation Grounding</option>
+                        <option>Heavy-Duty Earth Busbars & Clamps</option>
+                        <option>Turnkey Industrial Grounding Solution</option>
+                      </select>
+                    </div>
+
+                    {/* Estimated Quantity */}
+                    <div>
+                      <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
+                        Approximate Quantity
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. 50 rods / 100 bags"
+                        value={formData.quantity}
+                        onChange={(e) =>
+                          setFormData({ ...formData, quantity: e.target.value })
+                        }
+                        className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Message */}
                   <div>
                     <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                      Approximate Quantity
+                      Project Requirements / Specifications
                     </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. 50 rods / 100 bags"
-                      value={formData.quantity}
+                    <textarea
+                      rows={4}
+                      placeholder="Provide details about soil conditions, target earth resistance (&lt; 1 Ohm), site location, or delivery timeline..."
+                      value={formData.message}
                       onChange={(e) =>
-                        setFormData({ ...formData, quantity: e.target.value })
+                        setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all resize-none"
                     />
                   </div>
-                </div>
 
-                {/* Message */}
-                <div>
-                  <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
-                    Project Requirements / Specifications
-                  </label>
-                  <textarea
-                    rows={4}
-                    placeholder="Provide details about soil conditions, target earth resistance (&lt; 1 Ohm), site location, or delivery timeline..."
-                    value={formData.message}
-                    onChange={(e) =>
-                      setFormData({ ...formData, message: e.target.value })
-                    }
-                    className="w-full px-4 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all resize-none"
-                  />
-                </div>
-
-                {/* Submit CTA */}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-[var(--primary-color)] hover:bg-[#065e6f] text-white font-semibold rounded-xl shadow-[0_4px_16px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--primary-color)_45%,transparent)] transition-all duration-200 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <svg
-                        className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                      >
-                        <circle
-                          className="opacity-25"
-                          cx="12"
-                          cy="12"
-                          r="10"
-                          stroke="currentColor"
-                          strokeWidth="4"
-                        />
-                        <path
-                          className="opacity-75"
-                          fill="currentColor"
-                          d="M4 12a8 8 0 018-8v8H4z"
-                        />
-                      </svg>
-                      <span>Processing Inquiry...</span>
-                    </>
-                  ) : (
-                    <>
-                      <span>Submit Inquiry & Get Quote</span>
-                      <span>→</span>
-                    </>
-                  )}
-                </button>
-              </form>
-            )}
+                  {/* Submit CTA */}
+                  <div className="flex sm:justify-start pt-1">
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-auto gap-2 px-7 sm:px-8 py-3 sm:py-3.5 bg-[var(--primary-color)] hover:bg-[#065e6f] text-white text-sm sm:text-base font-semibold rounded-xl shadow-[0_4px_16px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_8px_24px_color-mix(in_srgb,var(--primary-color)_45%,transparent)] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <svg
+                            className="animate-spin -ml-1 mr-2 h-4 w-4 text-white"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                          >
+                            <circle
+                              className="opacity-25"
+                              cx="12"
+                              cy="12"
+                              r="10"
+                              stroke="currentColor"
+                              strokeWidth="4"
+                            />
+                            <path
+                              className="opacity-75"
+                              fill="currentColor"
+                              d="M4 12a8 8 0 018-8v8H4z"
+                            />
+                          </svg>
+                          <span>Processing Inquiry...</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Submit Inquiry</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
           </Reveal>
 
@@ -290,8 +299,8 @@ export default function ContactFormSection() {
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
                   Avoid middleman markups and delayed lead times. We engineer,
-                  test, and ship directly from our Rajkot manufacturing facilities
-                  with full compliance certificates.
+                  test, and ship directly from our Rajkot manufacturing
+                  facilities with full compliance certificates.
                 </p>
 
                 <div className="space-y-4">
@@ -318,8 +327,8 @@ export default function ContactFormSection() {
                         Direct-From-Plant Pricing
                       </h4>
                       <p className="text-xs text-slate-400">
-                        Competitive bulk rates for contractors and infrastructure
-                        projects.
+                        Competitive bulk rates for contractors and
+                        infrastructure projects.
                       </p>
                     </div>
                   </div>
@@ -333,7 +342,8 @@ export default function ContactFormSection() {
                         Pan-India Freight Logistics
                       </h4>
                       <p className="text-xs text-slate-400">
-                        Dependable transit tie-ups ensuring timely site delivery.
+                        Dependable transit tie-ups ensuring timely site
+                        delivery.
                       </p>
                     </div>
                   </div>
