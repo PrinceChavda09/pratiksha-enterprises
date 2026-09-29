@@ -76,21 +76,21 @@ export default function OurProduct() {
   return (
     <section
       id="products"
-      className="w-full py-16 md:py-20 scroll-mt-20 border-b border-slate-100"
+      className="w-full pb-10 md:py-20 scroll-mt-20 border-b border-slate-100"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header: Left-Aligned Text & Right-Aligned Explore More Button */}
+        {/* Section Header: Centered on mobile, Left-Aligned on desktop */}
         <Reveal direction="up" delay={0.1}>
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12 sm:mb-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between items-center md:items-start gap-6 mb-12 sm:mb-16">
             {/* Left Side: Eyebrow + Heading */}
-            <div className="max-w-2xl">
-              <div className="flex items-center gap-3 mb-3">
-                <span className="text-base font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
+            <div className="max-w-2xl text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                   OUR PRODUCTS
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
                 Complete Earthing Solutions <br className="hidden sm:inline" />
                 for{" "}
                 <span className="text-[var(--primary-color)]">
@@ -100,7 +100,7 @@ export default function OurProduct() {
             </div>
 
             {/* Right Side: Explore More Button */}
-            <div className="shrink-0 pb-1">
+            <div className="shrink-0 pb-1 flex justify-center md:justify-start">
               <Link
                 href="/products"
                 className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] transition-all duration-300 shadow-sm hover:shadow gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 group hover:scale-[1.02] active:scale-[0.98]"

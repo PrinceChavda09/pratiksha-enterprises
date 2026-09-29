@@ -31,13 +31,13 @@ export default function ContactFormSection() {
   return (
     <section
       id="contact-form"
-      className="py-16 sm:py-20 lg:py-24 bg-white relative scroll-mt-20 overflow-hidden"
+      className="py-10 sm:py-20 lg:py-24 bg-white relative scroll-mt-20 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
-          <div className="max-w-3xl mb-12 sm:mb-16">
-            <div className="flex items-center gap-2 mb-3">
+          <div className="max-w-3xl mb-12 sm:mb-16 text-center lg:text-left mx-auto lg:mx-0">
+            <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
               <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
               <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 TECHNICAL INQUIRY & QUOTES
@@ -46,7 +46,7 @@ export default function ContactFormSection() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
               Send Us Your Project Requirements
             </h2>
-            <p className="mt-3 text-base text-[var(--gray-color)]">
+            <p className="mt-3 text-base text-[var(--gray-color)] max-w-2xl mx-auto lg:mx-0">
               Whether you need bulk earthing electrodes for a solar park,
               substation grounding design, or custom copper bonded rods, our
               engineering team responds within 2 business hours.

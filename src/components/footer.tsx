@@ -27,23 +27,23 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* 1. TOP COMPACT CTA STRIP */}
         <Reveal direction="up" delay={0.1}>
-          <div className="pt-12 sm:pt-16 pb-10 sm:pb-12 border-b border-slate-200/80">
-            <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6 transition-all duration-300 hover:shadow-md">
+          <div className="py-10 sm:pt-16 sm:pb-12 border-b border-slate-200/80">
+            <div className="bg-white border border-[color-mix(in_srgb,var(--primary-color)_20%,transparent)] border-l-4 border-l-[var(--primary-color)] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-sm flex flex-col md:flex-row md:items-center md:justify-between gap-6 transition-all duration-300 hover:shadow-md text-center md:text-left items-center md:items-start">
               <div>
-                <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2">
+                <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-2 text-center md:text-left">
                   READY TO GET STARTED?
                 </span>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[var(--text-heading)] leading-tight mb-2">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[var(--text-heading)] leading-tight mb-2 text-center md:text-left">
                   Let&apos;s Build a Safer Electrical Foundation.
                 </h3>
-                <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed">
+                <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed text-center md:text-left mx-auto md:mx-0">
                   Talk to our engineering team about your earthing and electrical
                   safety requirements.
                 </p>
               </div>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow gap-2 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
+                className="inline-flex items-center justify-center px-7 py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[8px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow gap-2 shrink-0 group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 mx-auto md:mx-0"
               >
                 <span>Get a Quote</span>
                 <span
@@ -60,10 +60,10 @@ export default function Footer() {
         {/* 2. MAIN FOOTER CONTENT (4 COLUMNS) */}
         <StaggerContainer
           staggerDelay={0.08}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-12 sm:py-16"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-8 sm:py-16"
         >
           {/* COLUMN 1 — BRAND */}
-          <StaggerItem index={0} direction="up" className="lg:col-span-4">
+          <StaggerItem index={0} direction="up" className="lg:col-span-4 text-center md:text-left">
             <Link
               href="/"
               className="inline-block mb-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
@@ -73,15 +73,15 @@ export default function Footer() {
                 alt="Pratiksha Earthing Solutions"
                 width={190}
                 height={95}
-                className="h-11 sm:h-12 w-auto object-contain"
+                className="h-11 sm:h-12 w-auto object-contain mx-auto md:mx-0"
               />
             </Link>
-            <p className="text-sm text-[var(--gray-color)] leading-relaxed mb-4 max-w-sm">
+            <p className="text-sm text-[var(--gray-color)] leading-relaxed mb-4 max-w-sm mx-auto md:mx-0">
               Pratiksha Earthing Solutions delivers dependable earthing products
               and engineered electrical safety solutions for demanding
               industrial applications.
             </p>
-            <div className="flex items-center gap-2 pt-1">
+            <div className="flex items-center justify-center md:justify-start gap-2 pt-1">
               <span className="text-xs font-semibold text-[var(--primary-color)] tracking-wider uppercase">
                 Engineering safety. Protecting what matters.
               </span>

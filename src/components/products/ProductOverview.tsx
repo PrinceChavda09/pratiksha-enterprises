@@ -7,8 +7,8 @@ export default function ProductOverview() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-12 items-baseline">
             {/* Left Column: Small Label */}
-            <div className="lg:col-span-3">
-              <div className="flex items-center gap-2.5">
+            <div className="lg:col-span-3 text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-2.5">
                 <span className="text-xs font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   PRODUCT RANGE
                 </span>
@@ -16,8 +16,8 @@ export default function ProductOverview() {
             </div>
 
             {/* Right Column: Editorial Overview */}
-            <div className="lg:col-span-9">
-              <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed max-w-4xl font-normal">
+            <div className="lg:col-span-9 text-center lg:text-left">
+              <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed max-w-4xl font-normal text-center lg:text-left mx-auto lg:mx-0">
                 Our catalogue encompasses precision-engineered earthing solutions
                 designed for dependable ground fault dissipation, system protection,
                 and low soil resistivity across demanding industrial, commercial,

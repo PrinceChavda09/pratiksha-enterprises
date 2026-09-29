@@ -7,7 +7,7 @@ export default function WhatWeOffer() {
     {
       number: "01",
       title: "Copper & Copper-Bonded Earthing",
-      desc: "Copper earthing rods and copper-bonded electrodes designed for reliable grounding applications.",
+      desc: "Copper earthing rods and copper bonded electrodes designed for reliable grounding applications.",
       image: "/home/Copper_Earthing_Electrode.jpeg",
     },
     {
@@ -19,7 +19,7 @@ export default function WhatWeOffer() {
     {
       number: "03",
       title: "Chemical Earthing Solutions",
-      desc: "Chemical earthing electrodes and backfill-related products designed to support stable grounding performance.",
+      desc: "Chemical earthing electrodes and backfill related products designed to support stable grounding performance.",
       image: "/home/Earthing_Compound.jpeg",
     },
     {
@@ -31,20 +31,20 @@ export default function WhatWeOffer() {
   ];
 
   return (
-    <section className="w-full bg-white py-12 sm:py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
+    <section className="w-full bg-white py-10 sm:py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
+          <div className="flex flex-col md:flex-row md:items-end justify-between items-center md:items-start text-center md:text-left mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
             <div>
-              <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+              <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-2 sm:mb-3">
                 <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
                 <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   WHAT WE OFFER
                 </span>
               </div>
             </div>
-            <p className="text-xs sm:text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-1 md:mt-0">
+            <p className="text-xs sm:text-sm font-medium text-[var(--gray-color)] uppercase tracking-wider mt-1 md:mt-0 text-center md:text-left">
               Engineering Catalogue Index
             </p>
           </div>

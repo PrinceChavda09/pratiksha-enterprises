@@ -31,7 +31,7 @@ export default function ContactHero() {
       <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
         {/* TOP BAR: BREADCRUMB */}
         <Reveal direction="fade" delay={0.05} duration={0.5}>
-          <div className="flex items-center justify-between w-full">
+          <div className="flex items-center justify-center sm:justify-start w-full">
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
@@ -55,10 +55,10 @@ export default function ContactHero() {
         </Reveal>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, CTA, AND PILLARS */}
-        <div className="max-w-xl lg:max-w-2xl py-2 sm:py-4">
+        <div className="max-w-xl lg:max-w-2xl py-2 sm:py-4 mx-auto sm:mx-0 text-center sm:text-left">
           {/* Eyebrow / Tagline */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
-            <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-2.5">
               <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
               <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 GET IN TOUCH
@@ -68,7 +68,7 @@ export default function ContactHero() {
 
           {/* Main Title */}
           <Reveal direction="up" delay={0.14} duration={0.65}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[48px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1]">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[44px] xl:text-[48px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] text-center sm:text-left">
               Let&apos;s Build
               <span className="text-[var(--primary-color)]"> A Safer</span>{" "}
               Tomorrow
@@ -77,7 +77,7 @@ export default function ContactHero() {
 
           {/* Description */}
           <Reveal direction="up" delay={0.2} duration={0.65}>
-            <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed max-w-lg">
+            <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm md:text-base text-slate-600 font-normal leading-relaxed max-w-lg mx-auto sm:mx-0 text-center sm:text-left">
               Have a question or need a quote? Our team is here to help. Get in
               touch with Pratiksha Earthing Solutions.
             </p>
@@ -85,7 +85,7 @@ export default function ContactHero() {
 
           {/* Action CTA Button */}
           <Reveal direction="up" delay={0.28} duration={0.6}>
-            <div className="mt-4 sm:mt-5">
+            <div className="mt-4 sm:mt-5 flex justify-center sm:justify-start">
               <a
                 href="#contact-form"
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-7 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-full transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
@@ -112,7 +112,7 @@ export default function ContactHero() {
           <StaggerContainer
             staggerDelay={0.08}
             delay={0.3}
-            className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[var(--border-dark)] grid grid-cols-3 gap-2 sm:gap-4 max-w-lg"
+            className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[var(--border-dark)] grid grid-cols-2 gap-2 sm:gap-4 max-w-lg mx-auto sm:mx-0"
           >
             {/* Pillar 1: Quick Response */}
             <StaggerItem index={0} direction="up" className="flex items-center gap-2">
@@ -136,7 +136,7 @@ export default function ContactHero() {
                   />
                 </svg>
               </div>
-              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
+              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight text-left">
                 Quick Response
               </span>
             </StaggerItem>
@@ -158,7 +158,7 @@ export default function ContactHero() {
                   />
                 </svg>
               </div>
-              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
+              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight text-left">
                 Expert Support
               </span>
             </StaggerItem>
@@ -180,7 +180,7 @@ export default function ContactHero() {
                   />
                 </svg>
               </div>
-              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight">
+              <span className="text-[11px] sm:text-xs font-bold text-[var(--text-heading)] leading-tight text-left">
                 Trusted Partnership
               </span>
             </StaggerItem>
@@ -189,14 +189,14 @@ export default function ContactHero() {
 
         {/* BOTTOM: SUBTLE LOCATION & SLOGAN ACCENT STRIP */}
         <Reveal direction="fade" delay={0.35} duration={0.6}>
-          <div className="pt-3 border-t border-[var(--border-dark)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-[11px] font-semibold text-[var(--gray-color)] tracking-wider">
-            <div className="flex items-center gap-2">
+          <div className="pt-3 border-t border-[var(--border-dark)] flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-[10px] sm:text-[11px] font-semibold text-[var(--gray-color)] tracking-wider text-center sm:text-left">
+            <div className="flex items-center justify-center sm:justify-start gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
               <span className="uppercase text-[var(--gray-color)]">
                 RAJKOT, GUJARAT
               </span>
             </div>
-            <div className="uppercase tracking-widest text-white">
+            <div className="uppercase tracking-widest text-white text-center sm:text-right">
               CONNECT <span className="mx-1 text-[var(--gray-color)]/900">/</span>{" "}
               COLLABORATE{" "}
               <span className="mx-1 text-[var(--gray-color)]/900">/</span> GROW

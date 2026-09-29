@@ -17,14 +17,14 @@ export default function ContactMapSection() {
   return (
     <section
       id="map-section"
-      className="py-16 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20 overflow-hidden"
+      className="py-10 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           {/* LEFT: LOCATION DETAILS & DIRECTIONS (5 Cols) */}
           <Reveal direction="up" delay={0.1} duration={0.65} className="lg:col-span-5 space-y-6">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
+            <div className="text-center lg:text-left">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
                 <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
                 <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   HEADQUARTERS & MANUFACTURING
@@ -33,7 +33,7 @@ export default function ContactMapSection() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)] tracking-tight">
                 Visit Our Rajkot Facility
               </h2>
-              <p className="mt-3 text-sm text-[var(--gray-color)] leading-relaxed">
+              <p className="mt-3 text-sm text-[var(--gray-color)] leading-relaxed max-w-lg mx-auto lg:mx-0">
                 Located in the heart of Gujarat&apos;s industrial manufacturing
                 capital, our central warehouse and corporate office coordinate
                 dispatches nationwide.
@@ -88,7 +88,7 @@ export default function ContactMapSection() {
             </div>
 
             {/* Action Buttons */}
-            <div>
+            <div className="flex justify-center lg:justify-start">
               <a
                 href={directionsUrl}
                 target="_blank"

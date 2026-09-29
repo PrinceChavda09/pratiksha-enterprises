@@ -11,7 +11,7 @@ export default function ContactFAQ() {
     },
     {
       q: "Do you supply customized electrode lengths or copper micron thickness?",
-      a: "Yes. In addition to standard 250-micron molecularly bonded rods, we manufacture custom diameters, lengths (up to 3 meters or extendable threaded couplings), and higher micron coatings to meet specific project tenders.",
+      a: "Yes. In addition to standard 250 micron molecularly bonded rods, we manufacture custom diameters, lengths (up to 3 meters or extendable threaded couplings), and higher micron coatings to meet specific project tenders.",
     },
     {
       q: "What test certificates and compliance reports accompany shipments?",
@@ -19,7 +19,7 @@ export default function ContactFAQ() {
     },
     {
       q: "Can your team assist with soil resistivity and earth pit calculation?",
-      a: "Yes. Our technical team provides consultation for soil resistivity analysis (Wenner 4-pin method interpretation) and helps determine the optimal pit design to achieve target resistance under 1 Ohm or 0.5 Ohm.",
+      a: "Yes. Our technical team provides consultation for soil resistivity analysis (Wenner 4 pin method interpretation) and helps determine the optimal pit design to achieve target resistance under 1 Ohm or 0.5 Ohm.",
     },
     {
       q: "How does the SRIP carbon compound perform in rocky or dry terrain?",
@@ -34,7 +34,7 @@ export default function ContactFAQ() {
   };
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80 overflow-hidden">
+    <section className="py-10 sm:py-20 lg:py-24 bg-white border-t border-slate-200/80 overflow-hidden">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="text-center mb-12 sm:mb-16">

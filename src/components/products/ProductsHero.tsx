@@ -58,10 +58,10 @@ export default function ProductsHero() {
         </Reveal>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
-        <div className="max-w-xl lg:max-w-2xl py-2 sm:py-3">
+        <div className="max-w-xl lg:max-w-2xl py-2 sm:py-3 text-center sm:text-left mx-auto sm:mx-0 flex flex-col items-center sm:items-start">
           {/* Eyebrow / Category Tag */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
               <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
               <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 OUR PRODUCTS
@@ -71,7 +71,7 @@ export default function ProductsHero() {
 
           {/* Main Hero Headline */}
           <Reveal direction="up" delay={0.14} duration={0.65}>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] mb-2 sm:mb-2.5">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.1] mb-2 sm:mb-2.5 text-center sm:text-left">
               Complete Earthing Solutions for a{" "}
               <span className="text-[var(--primary-color)]">Safer Tomorrow</span>
             </h1>
@@ -79,8 +79,8 @@ export default function ProductsHero() {
 
           {/* Subtitle */}
           <Reveal direction="up" delay={0.2} duration={0.65}>
-            <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
-              High-quality earthing and electrical safety products designed for
+            <p className="text-xs sm:text-sm md:text-base text-[var(--gray-color)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4 text-center sm:text-left mx-auto sm:mx-0">
+              High quality earthing and electrical safety products designed for
               reliable protection in every environment.
             </p>
           </Reveal>
@@ -89,7 +89,7 @@ export default function ProductsHero() {
           <StaggerContainer
             staggerDelay={0.08}
             delay={0.25}
-            className="flex flex-wrap items-center gap-3.5 sm:gap-5 lg:gap-6 mb-3.5 sm:mb-4"
+            className="flex flex-wrap items-center justify-center sm:justify-start gap-3.5 sm:gap-5 lg:gap-6 mb-3.5 sm:mb-4"
           >
             {/* Feature 1: Trusted Quality */}
             <StaggerItem index={0} direction="up" className="flex items-center gap-2">
@@ -165,7 +165,7 @@ export default function ProductsHero() {
 
           {/* Action CTA Button */}
           <Reveal direction="up" delay={0.32} duration={0.6}>
-            <div>
+            <div className="flex justify-center sm:justify-start">
               <a
                 href="#catalogue"
                 className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
@@ -193,16 +193,16 @@ export default function ProductsHero() {
         <Reveal direction="fade" delay={0.35} duration={0.6}>
           <div className="pt-2.5 sm:pt-3 border-t border-slate-200/80 sm:border-slate-300/60 flex flex-col md:flex-row md:items-center justify-between gap-3">
           {/* Bottom Left Motto matching reference */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center justify-center md:justify-start gap-2">
             <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full" />
-            <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider">
+            <div className="text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider text-center md:text-left">
               GROUNDING TODAY
               <span className="text-[var(--text-heading)]"> FOR A SAFER TOMORROW</span>
             </div>
           </div>
 
           {/* Bottom Right Sectors Bar (Residential | Commercial | Industrial | Utilities) */}
-          <div className="flex flex-wrap items-center gap-2.5 sm:gap-3.5 lg:gap-5 bg-white/85 backdrop-blur-md border border-slate-200/90 rounded-xl px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-sm">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-3.5 lg:gap-5 bg-white/85 backdrop-blur-md border border-slate-200/90 rounded-xl px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-sm">
             {/* Sector 1: Residential */}
             <div className="flex items-center gap-1.5">
               <svg

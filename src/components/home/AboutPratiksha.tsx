@@ -18,12 +18,12 @@ export default function AboutPratiksha() {
   return (
     <section className="w-full py-16 sm:py-20 lg:py-24 overflow-hidden relative border-b border-slate-100">
       <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 items-center">
           {/* LEFT COLUMN: EDITORIAL HEADLINE & STATS */}
           <div className="lg:col-span-7 flex flex-col justify-center">
             {/* Primary accent eyebrow & Headline */}
             <Reveal direction="up" delay={0.1}>
-              <div className="flex items-center gap-3 mb-4 sm:mb-5">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-4 sm:mb-5">
                 <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
                 <span className="text-xs sm:text-[13px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                   ABOUT US
@@ -31,22 +31,22 @@ export default function AboutPratiksha() {
               </div>
 
               {/* Main Headline (All caps, bold industrial typography) */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-extrabold text-[var(--text-heading)] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6">
+              <h2 className="text-2xl sm:text-4xl lg:text-[44px] font-extrabold text-[var(--text-heading)] tracking-tight uppercase leading-[1.12] mb-5 sm:mb-6 text-center md:text-left">
                 SETTING THE STANDARD IN ELECTRICAL SAFETY.
               </h2>
             </Reveal>
 
             {/* Overview Paragraph using --gray-color */}
             <Reveal direction="up" delay={0.2}>
-              <p className="text-[var(--gray-color)] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-2xl">
+              <p className="text-[var(--gray-color)] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-2xl text-center md:text-left mx-auto md:mx-0">
                 Since 2008, Pratiksha Earthing has manufactured and installed over
                 500+ earthing systems for substations, data centres, railways, and
-                industrial plants. Our manufacturing facilities produce CPRI-certified
-                electrodes, IS 3043-compliant compounds, and ESE lightning arresters
-                backed by 1000-hour salt-spray testing.
+                industrial plants. Our manufacturing facilities produce CPRI certified
+                electrodes, IS 3043 compliant compounds, and ESE lightning arresters
+                backed by 1000 hour salt-spray testing.
               </p>
               {/* Paragraphs */}
-              <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8">
+              <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8 text-center md:text-left">
                 <p>
                   Pratiksha Earthing Solutions is focused on providing dependable
                   earthing products and solutions that support electrical safety,
@@ -54,8 +54,8 @@ export default function AboutPratiksha() {
                   power networks.
                 </p>
                 <p>
-                  Based in Rajkot, Gujarat — one of India’s premier engineering
-                  and foundry hubs — we combine precision manufacturing with
+                  Based in Rajkot, Gujarat one of India’s premier engineering
+                  and foundry hubs we combine precision manufacturing with
                   rigorous electrical engineering standards to protect lives,
                   machinery, and sensitive infrastructure from hazardous fault
                   currents and lightning surges.
@@ -75,7 +75,7 @@ export default function AboutPratiksha() {
                   direction="up"
                   className="border-l-2 border-[var(--primary-color)] pl-3.5 sm:pl-4 transition-transform duration-200"
                 >
-                  <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-none">
+                  <div className="text-xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-none">
                     {stat.value}
                   </div>
                   <div className="text-[11px] sm:text-xs font-semibold text-[var(--gray-color)] tracking-wider uppercase mt-1.5">
@@ -87,10 +87,10 @@ export default function AboutPratiksha() {
 
             {/* CTA Button / Link */}
             <Reveal direction="up" delay={0.35}>
-              <div>
+              <div className="text-center md:text-left">
                 <Link
                   href="/about-us"
-                  className="inline-flex items-center text-[15px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
+                  className="inline-flex items-center text-[14px] font-bold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
                 >
                   <span>LEARN MORE ABOUT US</span>
                   <span
@@ -152,7 +152,7 @@ export default function AboutPratiksha() {
                 </div>
                 <p className="text-xs text-[var(--gray-color)] leading-relaxed font-normal">
                   IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant. Every batch
-                  salt-spray tested for 1000+ hours.
+                  salt spray tested for 1000+ hours.
                 </p>
               </div>
             </Reveal>

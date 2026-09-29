@@ -3,7 +3,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function WhyPratiksha() {
   return (
-    <section className="w-full bg-[#F8FAFC] py-12 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="w-full bg-[#F8FAFC] py-10 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
       {/* Decorative Subtle Background Grid */}
       <div
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
@@ -18,17 +18,17 @@ export default function WhyPratiksha() {
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
-          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
-            <div className="inline-flex items-center gap-2 mb-3 sm:mb-4">
+          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
+            <div className="inline-flex items-center justify-center lg:justify-start gap-2 mb-3 sm:mb-4">
               <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
               <span className="text-xs sm:text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 WHY PRATIKSHA ENTERPRISES
               </span>
             </div>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-[1.2] mb-3 sm:mb-4">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-[1.2] mb-3 sm:mb-4 text-center lg:text-left">
               Engineered for Dependability. Built for Complete Electrical Safety.
             </h2>
-            <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed text-center lg:text-left">
               From precision metallurgical selection to direct Rajkot
               manufacturing support, here is why contractors, utilities, and
               industrial facilities partner with us for reliable grounding
@@ -90,7 +90,7 @@ export default function WhyPratiksha() {
               <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed mb-6">
                 We focus on materials and products intended for dependable
                 electrical grounding applications. High-grade electrolytic
-                copper and certified hot-dip galvanized steel ensure maximum
+                copper and certified hot dip galvanized steel ensure maximum
                 fault current dissipation, high tensile strength, and durable
                 corrosion resistance.
               </p>
@@ -104,11 +104,11 @@ export default function WhyPratiksha() {
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
-                Hot-Dip Galvanized Steel
+                Hot Dip Galvanized Steel
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
-                Corrosion-Resistant Bonding
+                Corrosion Resistant Bonding
               </span>
               <span className="inline-flex items-center gap-1.5 text-xs font-medium text-[var(--text-dark)] bg-slate-100 px-3 py-1.5 rounded-lg">
                 <span className="w-1.5 h-1.5 rounded-full bg-[var(--primary-color)]" />
@@ -245,7 +245,7 @@ export default function WhyPratiksha() {
 
               <p className="text-sm sm:text-base text-[var(--gray-color)] leading-relaxed mb-6">
                 Products are tailored for demanding installations including
-                heavy industrial units, commercial complexes, high-voltage
+                heavy industrial units, commercial complexes, high voltage
                 substations, solar projects, and sensitive communication grids.
               </p>
             </div>
@@ -334,11 +334,11 @@ export default function WhyPratiksha() {
                     </span>
                     <p className="text-xs sm:text-sm font-bold text-[var(--text-heading)] leading-snug">
                       305, Royal Complex, Bhutkhana Chowk, South Dhebar Road,
-                      Rajkot – 360002, Gujarat, India.
+                      Rajkot 360002, Gujarat, India.
                     </p>
                     <p className="text-xs text-[var(--gray-color)] mt-1.5 leading-relaxed">
                       Strategically located in Gujarat’s manufacturing corridor
-                      for fast turnaround times, on-demand electrode
+                      for fast turnaround times, on demand electrode
                       fabrication, and rapid freight dispatch nationwide.
                     </p>
                   </div>
@@ -391,7 +391,7 @@ export default function WhyPratiksha() {
           delay={0.2}
           className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
-          <StaggerItem index={0} direction="up" className="flex flex-col">
+          <StaggerItem index={0} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
             <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               14+ Years
             </span>
@@ -399,7 +399,7 @@ export default function WhyPratiksha() {
               Earthing & Safety Experience
             </span>
           </StaggerItem>
-          <StaggerItem index={1} direction="up" className="flex flex-col">
+          <StaggerItem index={1} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
             <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               100% Tested
             </span>
@@ -407,7 +407,7 @@ export default function WhyPratiksha() {
               Conductivity & Soil Durability
             </span>
           </StaggerItem>
-          <StaggerItem index={2} direction="up" className="flex flex-col">
+          <StaggerItem index={2} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
             <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               India
             </span>
@@ -415,12 +415,12 @@ export default function WhyPratiksha() {
               Direct Supply & Freight Network
             </span>
           </StaggerItem>
-          <StaggerItem index={3} direction="up" className="flex flex-col">
+          <StaggerItem index={3} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
             <span className="text-2xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               Custom Sizing
             </span>
             <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
-              Project-Specific Engineering
+              Project Specific Engineering
             </span>
           </StaggerItem>
         </StaggerContainer>

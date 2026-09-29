@@ -53,12 +53,12 @@ export default function ProductCatalogueItem({
           direction="up"
           delay={0.18}
           duration={0.65}
-          className={`lg:col-span-6 flex flex-col justify-center ${
+          className={`lg:col-span-6 flex flex-col justify-center text-center lg:text-left items-center lg:items-start ${
             isEven ? "lg:order-1" : "lg:order-2"
           }`}
         >
           {/* Large Subtle Catalogue Number */}
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center justify-center lg:justify-start gap-3 mb-4">
             <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-300 group-hover:text-[var(--primary-color)] transition-colors duration-300">
               {formattedIndex}
             </span>
@@ -66,22 +66,22 @@ export default function ProductCatalogueItem({
           </div>
 
           {/* Category Tag */}
-          <span className="text-xs font-bold text-[var(--primary-color)] tracking-wider uppercase block mb-2.5">
+          <span className="text-xs font-bold text-[var(--primary-color)] tracking-wider uppercase block mb-2.5 text-center lg:text-left">
             {product.category}
           </span>
 
           {/* Product Name */}
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-4 group-hover:text-[var(--primary-color)] transition-colors duration-300">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-4 group-hover:text-[var(--primary-color)] transition-colors duration-300 text-center lg:text-left">
             {product.title}
           </h2>
 
           {/* Product Description */}
-          <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed mb-8 max-w-xl">
+          <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed mb-8 max-w-xl text-center lg:text-left mx-auto lg:mx-0">
             {product.description}
           </p>
 
           {/* Product Action */}
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center lg:justify-start">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3.5 text-sm sm:text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[10px] sm:rounded-xl transition-all duration-300 shadow-sm hover:shadow-md gap-2.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 hover:scale-[1.02] active:scale-[0.98] group/btn"

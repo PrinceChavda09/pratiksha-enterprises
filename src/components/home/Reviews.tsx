@@ -79,13 +79,13 @@ export default function Reviews() {
       id="customer-reviews"
       ref={sectionRef}
       aria-labelledby="reviews-heading"
-      className="w-full bg-[#f8fbfd] py-16 sm:py-20 lg:py-24 border-t border-slate-200/80 overflow-hidden scroll-mt-24"
+      className="w-full bg-[#f8fbfd] py-10 sm:py-20 lg:py-24 border-t border-slate-200/80 overflow-hidden scroll-mt-24"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 xl:gap-16 items-start">
           {/* ================= LEFT COLUMN: EDITORIAL HEADER & GOOGLE RATING ================= */}
           <Reveal direction="up" delay={0.1} className="lg:col-span-5 flex flex-col justify-between">
-            <div>
+            <div className="text-center lg:text-left">
               {/* Eyebrow */}
               <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
                 CUSTOMER REVIEWS
@@ -94,13 +94,13 @@ export default function Reviews() {
               {/* Heading */}
               <h2
                 id="reviews-heading"
-                className="text-3xl sm:text-4xl lg:text-[42px] font-bold text-[var(--text-heading)] leading-[1.2] mb-4"
+                className="text-2xl sm:text-4xl lg:text-[42px] font-bold text-[var(--text-heading)] leading-[1.2] mb-4"
               >
                 What Our Customers Say
               </h2>
 
               {/* Supporting Text */}
-              <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed mb-8 max-w-xl">
+              <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
                 Real experiences from customers who have worked with Pratiksha
                 Enterprise.
               </p>

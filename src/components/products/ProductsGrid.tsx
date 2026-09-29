@@ -1,6 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import { Icon, productIcons } from "@/components/icon";
+import { Icon, ArrowRightIcon, productIcons } from "@/components/icon";
 import { products } from "@/components/products/productData";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
@@ -113,19 +115,19 @@ export default function ProductsGrid() {
   return (
     <section
       id="product-grid"
-      className="w-full bg-[#FAFCFD] py-14 sm:py-16 md:py-20 lg:py-24 border-b border-slate-100 overflow-hidden"
+      className="w-full bg-[#FAFCFD] py-10 sm:py-16 md:py-20 lg:py-24 border-b border-slate-100 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
-          <div className="mb-12 sm:mb-16">
-            <div className="flex items-center gap-3 mb-3">
+          <div className="mb-12 sm:mb-16 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
               <span className="text-base font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                 OUR PRODUCTS
               </span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] leading-tight tracking-tight text-center md:text-left">
               Complete Earthing Solutions <br className="hidden sm:inline" />
               for{" "}
               <span className="text-[var(--primary-color)]">
@@ -222,10 +224,7 @@ export default function ProductsGrid() {
                       className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full border ${theme.arrowBorder} ${theme.arrowColor} flex items-center justify-center shrink-0 transition-all duration-300 shadow-sm`}
                       aria-hidden="true"
                     >
-                      <Icon
-                        icon={productIcons.arrowRight}
-                        className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5"
-                      />
+                      <ArrowRightIcon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </div>
                   </div>
                 </Link>

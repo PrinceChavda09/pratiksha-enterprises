@@ -13,15 +13,15 @@ interface Reason {
 const reasons: Reason[] = [
   {
     number: "01",
-    title: "Quality-Focused Products",
+    title: "Quality Focused Products",
     description:
-      "Manufactured using high-grade electrolytic copper and certified hot-dip galvanized steel.",
+      "Manufactured using high grade electrolytic copper and certified hot dip galvanized steel.",
   },
   {
     number: "02",
     title: "Reliable Earthing Solutions",
     description:
-      "Engineered for dependable fault dissipation, electrical safety and long-term performance.",
+      "Engineered for dependable fault dissipation, electrical safety and long term performance.",
   },
   {
     number: "03",
@@ -31,15 +31,15 @@ const reasons: Reason[] = [
   },
   {
     number: "04",
-    title: "Customer-Centric Approach",
+    title: "Customer Centric Approach",
     description:
       "Responsive support, custom fabrication and practical solutions tailored to each project.",
   },
   {
     number: "05",
-    title: "Long-Term Reliability",
+    title: "Long Term Reliability",
     description:
-      "Maintenance-free solutions designed to provide dependable protection and extended service life.",
+      "Maintenance free solutions designed to provide dependable protection and extended service life.",
   },
 ];
 
@@ -49,19 +49,19 @@ export default function WhyChoosePratiksha() {
   return (
     <section
       id="why-choose"
-      className="w-full bg-[#EAF7FB] py-20 md:py-24 lg:py-28 overflow-hidden"
+      className="w-full bg-[#EAF7FB] py-10 md:py-24 lg:py-28 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1}>
-          <div className="max-w-3xl mb-12 lg:mb-16">
-            <span className="text-base font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
+          <div className="max-w-3xl mb-12 lg:mb-16 text-center md:text-left mx-auto md:mx-0">
+            <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3 text-center md:text-left">
               WHY CHOOSE PRATIKSHA
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-[1.15] mb-4">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-[1.15] mb-4 text-center md:text-left">
               Engineering You Can Trust. Protection That Lasts.
             </h2>
-            <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed">
+            <p className="text-base sm:text-lg text-[var(--gray-color)] leading-relaxed text-center md:text-left max-w-2xl mx-auto md:mx-0">
               Precision manufacturing, dependable earthing technology and
               dedicated engineering support come together to deliver reliable
               protection for demanding electrical environments.
@@ -149,8 +149,8 @@ export default function WhyChoosePratiksha() {
 
         {/* Bottom Trust Strip */}
         <Reveal direction="up" delay={0.25}>
-          <div className="mt-16 lg:mt-20 pt-10 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
-            <div className="flex flex-col">
+          <div className="mt-16 lg:mt-20 border-t border-slate-200/80 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+            <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
               <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 14+ Years
               </span>
@@ -159,7 +159,7 @@ export default function WhyChoosePratiksha() {
               </span>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
               <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 CPRI & NABL Tested
               </span>
@@ -168,7 +168,7 @@ export default function WhyChoosePratiksha() {
               </span>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
               <span className="text-2xl sm:text-3xl font-bold text-[var(--text-heading)]">
                 Rajkot Engineering Hub
               </span>

@@ -20,18 +20,18 @@ export default function OurApproach() {
   ];
 
   return (
-    <section className="w-full bg-[#F8FAFC] py-12 sm:py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
+    <section className="w-full bg-[#F8FAFC] py-10 sm:py-16 lg:py-24 border-b border-slate-200/80 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
-          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16">
-            <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+          <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16 text-center md:text-left mx-auto md:mx-0">
+            <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-2 sm:mb-3">
               <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
               <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 OUR APPROACH
               </span>
             </div>
-            <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed">
+            <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed text-center md:text-left">
               We believe effective earthing is an important part of electrical
               safety. Our solutions are focused on providing reliable grounding
               performance, suitable material selection and practical solutions for

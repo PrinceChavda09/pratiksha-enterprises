@@ -52,10 +52,10 @@ export default function AboutUsHero() {
         </Reveal>
 
         {/* MIDDLE: MAIN HEADLINE, SUBTITLE, 3 FEATURE BADGES, CTA BUTTON */}
-        <div className="max-w-xl lg:max-w-2xl py-1 sm:py-3">
+        <div className="max-w-xl lg:max-w-2xl py-1 sm:py-3 text-center sm:text-left mx-auto sm:mx-0 flex flex-col items-center sm:items-start">
           {/* Eyebrow with Brand Accent Bar */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
-            <div className="flex items-center gap-2 mb-2 sm:mb-2.5">
+            <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-2.5">
               <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-xs sm:text-sm md:text-base font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 ABOUT PRATIKSHA
@@ -65,7 +65,7 @@ export default function AboutUsHero() {
 
           {/* Main Heading */}
           <Reveal direction="up" delay={0.14} duration={0.65}>
-            <h1 className="text-[22px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-2.5 sm:mb-3">
+            <h1 className="text-[22px] xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-black text-[var(--text-heading)] tracking-tight leading-[1.2] sm:leading-[1.15] lg:leading-[1.1] mb-2.5 sm:mb-3 text-center sm:text-left">
               Reliable Earthing Solutions{" "}
               <span className="text-[var(--primary-color)] block sm:inline mt-0.5 sm:mt-0">
                 For Safer Systems
@@ -75,8 +75,8 @@ export default function AboutUsHero() {
 
           {/* Supporting Content */}
           <Reveal direction="up" delay={0.2} duration={0.65}>
-            <p className="text-xs sm:text-sm md:text-base text-[var(--text-secondary)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4">
-              Pratiksha Earthing Solutions is a Rajkot-based business focused on
+            <p className="text-xs sm:text-sm md:text-base text-[var(--text-secondary)] font-normal leading-relaxed max-w-lg mb-3.5 sm:mb-4 text-center sm:text-left mx-auto sm:mx-0">
+              Pratiksha Earthing Solutions is a Rajkot based business focused on
               earthing and electrical safety products designed for residential,
               commercial and industrial applications.
             </p>
@@ -86,7 +86,7 @@ export default function AboutUsHero() {
           <StaggerContainer
             staggerDelay={0.08}
             delay={0.25}
-            className="flex flex-wrap items-center gap-2.5 sm:gap-4 lg:gap-6 mb-4 sm:mb-5"
+            className="flex flex-wrap items-center justify-center sm:justify-start gap-2.5 sm:gap-4 lg:gap-6 mb-4 sm:mb-5"
           >
             {/* Feature 1: Quality Certified */}
             <StaggerItem index={0} direction="up" className="flex items-center gap-2 shrink-0">
@@ -165,7 +165,7 @@ export default function AboutUsHero() {
 
           {/* Action CTA Button */}
           <Reveal direction="up" delay={0.32} duration={0.6}>
-            <div>
+            <div className="flex justify-center sm:justify-start">
               <a
                 href="/contact"
                 className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group w-auto max-w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
@@ -192,9 +192,9 @@ export default function AboutUsHero() {
 
         {/* BOTTOM ROW: LEFT MOTTO & RAJKOT GUJARAT ACCENT STRIP */}
         <Reveal direction="fade" delay={0.35} duration={0.6}>
-          <div className="pt-2 sm:pt-3 flex items-start sm:items-center gap-2">
-            <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0 mt-1 sm:mt-0" />
-            <div className="text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider leading-relaxed flex flex-wrap items-center gap-x-1.5">
+          <div className="pt-2 sm:pt-3 flex items-center justify-center sm:justify-start gap-2">
+            <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+            <div className="text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-[var(--gray-color)] uppercase tracking-wider leading-relaxed flex flex-wrap items-center justify-center sm:justify-start gap-x-1.5">
               <span>ENGINEERING PRECISION</span>
               <span className="text-slate-300" aria-hidden="true">/</span>
               <span className="text-[var(--text-heading)]">GROUNDING & SAFETY</span>
