@@ -24,9 +24,9 @@ export default function ContactMapSection() {
           {/* LEFT: LOCATION DETAILS & DIRECTIONS (5 Cols) */}
           <Reveal direction="up" delay={0.1} duration={0.65} className="lg:col-span-5 space-y-6">
             <div className="text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
-                <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-                <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
+              <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mb-2">
+                <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+                <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[var(--primary-color)] tracking-wider sm:tracking-widest uppercase">
                   HEADQUARTERS & MANUFACTURING
                 </span>
               </div>

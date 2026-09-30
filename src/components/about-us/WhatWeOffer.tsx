@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
+import { ArrowRightIcon } from "@/components/icon";
 
 export default function WhatWeOffer() {
   const categories = [
@@ -104,12 +105,7 @@ export default function WhatWeOffer() {
                     aria-label={`View ${item.title}`}
                   >
                     <span>View Category</span>
-                    <span
-                      className="transition-transform duration-200 group-hover:translate-x-1"
-                      aria-hidden="true"
-                    >
-                      →
-                    </span>
+                    <ArrowRightIcon className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1 shrink-0" />
                   </Link>
                 </div>
               </div>

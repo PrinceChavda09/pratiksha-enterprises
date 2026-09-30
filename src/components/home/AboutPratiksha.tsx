@@ -16,7 +16,7 @@ const stats: StatItem[] = [
 
 export default function AboutPratiksha() {
   return (
-    <section className="w-full py-16 sm:py-20 lg:py-24 overflow-hidden relative border-b border-slate-100">
+    <section className="w-full py-10 sm:py-20 lg:py-24 overflow-hidden relative border-b border-slate-100">
       <div className="container w-full mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-16 items-center">
           {/* LEFT COLUMN: EDITORIAL HEADLINE & STATS */}

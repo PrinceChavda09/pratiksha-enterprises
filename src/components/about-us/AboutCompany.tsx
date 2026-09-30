@@ -11,7 +11,7 @@ export default function AboutCompany() {
               <div className="max-w-lg text-center lg:text-left mx-auto lg:mx-0">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3 sm:mb-5">
                   <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-                  <span className="text-sm sm:text-base font-bold text-[var(--primary-color)] tracking-[0.18em] uppercase">
+                  <span className="text-sx sm:text-base font-bold text-[var(--primary-color)] tracking-[0.18em] uppercase">
                     COMPANY OVERVIEW
                   </span>
                 </div>

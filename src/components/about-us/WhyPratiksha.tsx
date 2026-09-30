@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
+import { ArrowRightIcon } from "@/components/icon";
 
 export default function WhyPratiksha() {
   return (
@@ -26,7 +27,8 @@ export default function WhyPratiksha() {
               </span>
             </div>
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight leading-[1.2] mb-3 sm:mb-4 text-center lg:text-left">
-              Engineered for Dependability. Built for Complete Electrical Safety.
+              Engineered for Dependability. Built for Complete Electrical
+              Safety.
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-[var(--gray-color)] leading-relaxed text-center lg:text-left">
               From precision metallurgical selection to direct Rajkot
@@ -50,7 +52,7 @@ export default function WhyPratiksha() {
             className="lg:col-span-7 bg-white rounded-2xl p-5 sm:p-8 lg:p-10 border border-slate-200/90 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between group"
           >
             <div>
-              <div className="flex items-center justify-between gap-4 mb-6">
+              <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
                 <span className="text-xs font-bold uppercase tracking-wider text-[var(--primary-color)] bg-[var(--primary-color)]/10 px-3 py-1 rounded-md">
                   01 / Metallurgical Standard
                 </span>
@@ -175,27 +177,21 @@ export default function WhyPratiksha() {
                 className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>Copper-Bonded Electrodes & Rods</span>
-                <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
-                  →
-                </span>
+                <ArrowRightIcon className="w-4 h-4 text-[var(--primary-color)] transition-transform duration-200 group-hover/item:translate-x-1 shrink-0" />
               </Link>
               <Link
                 href="/products"
                 className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>Chemical Earthing & Compound</span>
-                <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
-                  →
-                </span>
+                <ArrowRightIcon className="w-4 h-4 text-[var(--primary-color)] transition-transform duration-200 group-hover/item:translate-x-1 shrink-0" />
               </Link>
               <Link
                 href="/products"
                 className="flex items-center justify-between text-xs sm:text-sm font-semibold text-[var(--text-heading)] bg-slate-50 hover:bg-[var(--primary-color)]/10 px-3.5 py-2.5 rounded-lg transition-colors group/item"
               >
                 <span>GI Earthing Solutions & Clamps</span>
-                <span className="text-[var(--primary-color)] group-hover/item:translate-x-1 transition-transform">
-                  →
-                </span>
+                <ArrowRightIcon className="w-4 h-4 text-[var(--primary-color)] transition-transform duration-200 group-hover/item:translate-x-1 shrink-0" />
               </Link>
             </div>
           </StaggerItem>
@@ -353,12 +349,7 @@ export default function WhyPratiksha() {
                 className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-[var(--primary-color)] hover:bg-[#065e6f] text-white text-sm font-bold rounded-lg shadow-sm hover:shadow transition-all group/btn focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
               >
                 <span>Connect With Rajkot Office</span>
-                <span
-                  className="transition-transform group-hover/btn:translate-x-1"
-                  aria-hidden="true"
-                >
-                  →
-                </span>
+                <ArrowRightIcon className="w-4 h-4 transition-transform group-hover/btn:translate-x-1 shrink-0" />
               </Link>
 
               <a
@@ -391,7 +382,11 @@ export default function WhyPratiksha() {
           delay={0.2}
           className="mt-8 sm:mt-12 lg:mt-16 pt-6 sm:pt-8 border-t border-slate-200 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         >
-          <StaggerItem index={0} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
+          <StaggerItem
+            index={0}
+            direction="up"
+            className="flex flex-col text-center sm:text-left items-center sm:items-start"
+          >
             <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               14+ Years
             </span>
@@ -399,7 +394,11 @@ export default function WhyPratiksha() {
               Earthing & Safety Experience
             </span>
           </StaggerItem>
-          <StaggerItem index={1} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
+          <StaggerItem
+            index={1}
+            direction="up"
+            className="flex flex-col text-center sm:text-left items-center sm:items-start"
+          >
             <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               100% Tested
             </span>
@@ -407,7 +406,11 @@ export default function WhyPratiksha() {
               Conductivity & Soil Durability
             </span>
           </StaggerItem>
-          <StaggerItem index={2} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
+          <StaggerItem
+            index={2}
+            direction="up"
+            className="flex flex-col text-center sm:text-left items-center sm:items-start"
+          >
             <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               India
             </span>
@@ -415,7 +418,11 @@ export default function WhyPratiksha() {
               Direct Supply & Freight Network
             </span>
           </StaggerItem>
-          <StaggerItem index={3} direction="up" className="flex flex-col text-center sm:text-left items-center sm:items-start">
+          <StaggerItem
+            index={3}
+            direction="up"
+            className="flex flex-col text-center sm:text-left items-center sm:items-start"
+          >
             <span className="text-xl sm:text-3xl font-extrabold text-[var(--text-heading)]">
               Custom Sizing
             </span>

@@ -31,7 +31,7 @@ export default function ContactHero() {
       <div className="container relative z-10 w-full mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-7 flex flex-col justify-between min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] xl:min-h-[490px]">
         {/* TOP BAR: BREADCRUMB */}
         <Reveal direction="fade" delay={0.05} duration={0.5}>
-          <div className="flex items-center justify-center sm:justify-start w-full">
+          <div className="flex sm:justify-start w-full">
             {/* Breadcrumb Navigation */}
             <nav aria-label="Breadcrumb">
               <ol className="flex items-center space-x-2 text-xs text-[var(--gray-color)] font-medium">
@@ -46,7 +46,10 @@ export default function ContactHero() {
                 <li className="text-[var(--gray-color)]/60" aria-hidden="true">
                   /
                 </li>
-                <li className="text-[var(--text-heading)] font-semibold" aria-current="page">
+                <li
+                  className="text-[var(--text-heading)] font-semibold"
+                  aria-current="page"
+                >
                   Contact Us
                 </li>
               </ol>
@@ -115,7 +118,11 @@ export default function ContactHero() {
             className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[var(--border-dark)] grid grid-cols-2 gap-2 sm:gap-4 max-w-lg mx-auto sm:mx-0"
           >
             {/* Pillar 1: Quick Response */}
-            <StaggerItem index={0} direction="up" className="flex items-center gap-2">
+            <StaggerItem
+              index={0}
+              direction="up"
+              className="flex items-center gap-2"
+            >
               <div className="w-8 h-8 rounded-full bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] flex items-center justify-center shrink-0 text-[var(--primary-color)]">
                 <svg
                   className="w-4 h-4"
@@ -142,7 +149,11 @@ export default function ContactHero() {
             </StaggerItem>
 
             {/* Pillar 2: Expert Support */}
-            <StaggerItem index={1} direction="up" className="flex items-center gap-2 border-l border-[var(--border-dark)] pl-2 sm:pl-4">
+            <StaggerItem
+              index={1}
+              direction="up"
+              className="flex items-center gap-2 border-l border-[var(--border-dark)] pl-2 sm:pl-4"
+            >
               <div className="w-8 h-8 rounded-full bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] flex items-center justify-center shrink-0 text-[var(--primary-color)]">
                 <svg
                   className="w-4 h-4"
@@ -164,7 +175,11 @@ export default function ContactHero() {
             </StaggerItem>
 
             {/* Pillar 3: Trusted Partnership */}
-            <StaggerItem index={2} direction="up" className="flex items-center gap-2 border-l border-[var(--border-dark)] pl-2 sm:pl-4">
+            <StaggerItem
+              index={2}
+              direction="up"
+              className="flex items-center gap-2 border-l border-[var(--border-dark)] pl-2 sm:pl-4"
+            >
               <div className="w-8 h-8 rounded-full bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] flex items-center justify-center shrink-0 text-[var(--primary-color)]">
                 <svg
                   className="w-4 h-4"
@@ -197,7 +212,8 @@ export default function ContactHero() {
               </span>
             </div>
             <div className="uppercase tracking-widest text-white text-center sm:text-right">
-              CONNECT <span className="mx-1 text-[var(--gray-color)]/900">/</span>{" "}
+              CONNECT{" "}
+              <span className="mx-1 text-[var(--gray-color)]/900">/</span>{" "}
               COLLABORATE{" "}
               <span className="mx-1 text-[var(--gray-color)]/900">/</span> GROW
             </div>

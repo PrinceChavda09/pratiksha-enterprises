@@ -84,7 +84,8 @@ export default function OurProduct() {
           <div className="flex flex-col md:flex-row md:items-end justify-between items-center md:items-start gap-6 mb-12 sm:mb-16">
             {/* Left Side: Eyebrow + Heading */}
             <div className="max-w-2xl text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <div className="flex items-center py-3 justify-center md:justify-start gap-3 mb-3">
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
                 <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                   OUR PRODUCTS
                 </span>

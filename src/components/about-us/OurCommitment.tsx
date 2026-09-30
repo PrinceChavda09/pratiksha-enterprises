@@ -2,7 +2,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function OurCommitment() {
   return (
-    <section className="w-full bg-white py-12 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="w-full bg-white py-10 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
       {/* Subtle Engineering Blueprint Grid */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"

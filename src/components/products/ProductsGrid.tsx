@@ -122,6 +122,7 @@ export default function ProductsGrid() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="mb-12 sm:mb-16 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
               <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                 OUR PRODUCTS
               </span>

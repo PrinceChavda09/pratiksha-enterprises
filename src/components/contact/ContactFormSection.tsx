@@ -37,9 +37,9 @@ export default function ContactFormSection() {
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="max-w-3xl mb-12 sm:mb-16 text-center lg:text-left mx-auto lg:mx-0">
-            <div className="flex items-center justify-center lg:justify-start gap-2 mb-3">
-              <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
-              <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
+            <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mb-3">
+              <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+              <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[var(--primary-color)] tracking-wider sm:tracking-widest uppercase">
                 TECHNICAL INQUIRY & QUOTES
               </span>
             </div>

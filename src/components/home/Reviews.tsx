@@ -15,6 +15,83 @@ import {
 } from "@/components/home/reviewData";
 import { Reveal } from "@/components/animations";
 
+interface NavigationControlsProps {
+  currentIndex: number;
+  totalReviews: number;
+  onPrev: () => void;
+  onNext: () => void;
+  onSelect: (index: number) => void;
+  reviews: typeof reviews;
+  onKeyDown: (e: React.KeyboardEvent) => void;
+  className?: string;
+}
+
+function NavigationControls({
+  currentIndex,
+  totalReviews,
+  onPrev,
+  onNext,
+  onSelect,
+  reviews,
+  onKeyDown,
+  className = "",
+}: NavigationControlsProps) {
+  return (
+    <div
+      className={`items-center justify-between ${className}`}
+      onKeyDown={onKeyDown}
+    >
+      {/* Counter / Pagination Indicators */}
+      <div className="flex items-center gap-3">
+        <span className="text-xs font-bold text-slate-400 tracking-wider">
+          {String(currentIndex + 1).padStart(2, "0")} /{" "}
+          {String(totalReviews).padStart(2, "0")}
+        </span>
+        <div
+          className="flex items-center gap-1.5"
+          role="tablist"
+          aria-label="Review selection tabs"
+        >
+          {reviews.map((r, idx) => (
+            <button
+              key={r.id}
+              onClick={() => onSelect(idx)}
+              role="tab"
+              aria-selected={currentIndex === idx}
+              aria-label={`Go to review ${idx + 1} by ${r.name}`}
+              className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
+                currentIndex === idx
+                  ? "w-7 bg-[var(--primary-color)]"
+                  : "w-2 bg-slate-300 hover:bg-slate-400"
+              }`}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Prev / Next Buttons */}
+      <div className="flex items-center gap-2">
+        <button
+          type="button"
+          onClick={onPrev}
+          aria-label="Previous customer review"
+          className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 text-slate-700 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]/40 hover:bg-slate-50 transition-all duration-200 flex items-center justify-center shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 active:scale-95"
+        >
+          <ChevronLeftIcon className="w-5 h-5" />
+        </button>
+        <button
+          type="button"
+          onClick={onNext}
+          aria-label="Next customer review"
+          className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 text-slate-700 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]/40 hover:bg-slate-50 transition-all duration-200 flex items-center justify-center shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 active:scale-95"
+        >
+          <ChevronRightIcon className="w-5 h-5" />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState<number | null>(null);
@@ -87,9 +164,12 @@ export default function Reviews() {
           <Reveal direction="up" delay={0.1} className="lg:col-span-5 flex flex-col justify-between">
             <div className="text-center lg:text-left">
               {/* Eyebrow */}
-              <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase block mb-3">
-                CUSTOMER REVIEWS
-              </span>
+              <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
+                <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+                <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
+                  CUSTOMER REVIEWS
+                </span>
+              </div>
 
               {/* Heading */}
               <h2
@@ -106,7 +186,7 @@ export default function Reviews() {
               </p>
 
               {/* Google Rating Summary Card */}
-              <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm mb-8 transition-all hover:border-[var(--primary-color)]/30">
+              <div className="bg-white border border-slate-200/90 rounded-2xl p-5 sm:p-6 shadow-sm mb-0 lg:mb-8 transition-all hover:border-[var(--primary-color)]/30">
                 <div className="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-100">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-center shrink-0">
@@ -160,59 +240,17 @@ export default function Reviews() {
               </div>
             </div>
 
-            {/* Navigation Controls on Desktop / Tablet */}
-            <div
-              className="flex items-center justify-between pt-2 border-t border-slate-200/60"
+            {/* Navigation Controls on Desktop (Hidden on mobile) */}
+            <NavigationControls
+              currentIndex={currentIndex}
+              totalReviews={totalReviews}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              onSelect={handleSelect}
+              reviews={reviews}
               onKeyDown={handleKeyDown}
-            >
-              {/* Counter / Pagination Indicators */}
-              <div className="flex items-center gap-3">
-                <span className="text-xs font-bold text-slate-400 tracking-wider">
-                  {String(currentIndex + 1).padStart(2, "0")} /{" "}
-                  {String(totalReviews).padStart(2, "0")}
-                </span>
-                <div
-                  className="flex items-center gap-1.5"
-                  role="tablist"
-                  aria-label="Review selection tabs"
-                >
-                  {reviews.map((r, idx) => (
-                    <button
-                      key={r.id}
-                      onClick={() => handleSelect(idx)}
-                      role="tab"
-                      aria-selected={currentIndex === idx}
-                      aria-label={`Go to review ${idx + 1} by ${r.name}`}
-                      className={`h-2 rounded-full transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] ${
-                        currentIndex === idx
-                          ? "w-7 bg-[var(--primary-color)]"
-                          : "w-2 bg-slate-300 hover:bg-slate-400"
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Prev / Next Buttons */}
-              <div className="flex items-center gap-2">
-                <button
-                  type="button"
-                  onClick={handlePrev}
-                  aria-label="Previous customer review"
-                  className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 text-slate-700 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]/40 hover:bg-slate-50 transition-all duration-200 flex items-center justify-center shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 active:scale-95"
-                >
-                  <ChevronLeftIcon className="w-5 h-5" />
-                </button>
-                <button
-                  type="button"
-                  onClick={handleNext}
-                  aria-label="Next customer review"
-                  className="w-11 h-11 rounded-xl bg-white border border-slate-200/90 text-slate-700 hover:text-[var(--primary-color)] hover:border-[var(--primary-color)]/40 hover:bg-slate-50 transition-all duration-200 flex items-center justify-center shadow-xs focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 active:scale-95"
-                >
-                  <ChevronRightIcon className="w-5 h-5" />
-                </button>
-              </div>
-            </div>
+              className="hidden lg:flex pt-4 border-t border-slate-200/60 mt-auto"
+            />
           </Reveal>
 
           {/* ================= RIGHT COLUMN: PREMIUM EDITORIAL REVIEW CARD ================= */}
@@ -290,6 +328,18 @@ export default function Reviews() {
                 </div>
               </div>
             </div>
+
+            {/* Mobile / Tablet Navigation Controls (Placed Below Review Card) */}
+            <NavigationControls
+              currentIndex={currentIndex}
+              totalReviews={totalReviews}
+              onPrev={handlePrev}
+              onNext={handleNext}
+              onSelect={handleSelect}
+              reviews={reviews}
+              onKeyDown={handleKeyDown}
+              className="flex lg:hidden pt-4 sm:pt-5 px-1"
+            />
 
             {/* Quick Preview Thumbnail Strip (Desktop & Tablet) */}
             <div className="hidden md:grid grid-cols-5 gap-3 mt-4">
