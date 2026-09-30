@@ -115,7 +115,7 @@ export default function ContactHero() {
           <StaggerContainer
             staggerDelay={0.08}
             delay={0.3}
-            className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[var(--border-dark)] grid grid-cols-2 gap-2 sm:gap-4 max-w-lg mx-auto sm:mx-0"
+            className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-[var(--border-dark)] grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-4 mx-auto sm:mx-0"
           >
             {/* Pillar 1: Quick Response */}
             <StaggerItem

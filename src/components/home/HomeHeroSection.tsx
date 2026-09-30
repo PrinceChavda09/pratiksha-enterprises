@@ -37,12 +37,12 @@ export default function HomeHeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden select-none"
+      className="relative w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden"
     >
       {/* 1. PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/home/homeHeroSection-Background.png"
+          src="/home/Hero-Backgrond.png"
           alt="Transmission towers and power grid background with earthing soil cutaway"
           fill
           priority
@@ -50,15 +50,15 @@ export default function HomeHeroSection() {
           className="object-cover object-center w-full h-full"
         />
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/25 via-[var(--bg-dark)]/35 to-transparent z-1 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/2 via-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
         {/* Sky atmospheric gradient */}
-        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[var(--bg-dark)]/15 to-transparent z-1 pointer-events-none" />
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
       </div>
 
       {/* 2. SUBTERRANEAN LAYER: GIF ANIMATION + COPPER ELECTRODE (COMBINED IN ONE DIV) */}
-      <div className="absolute inset-0 z-20 pointer-events-none select-none">
+      <div className="absolute inset-0 z-20 pointer-events-none">
         {/* Subterranean Electricity Animation: Hidden on mobile view (< 640px) */}
-        <div className="hidden sm:block absolute inset-0 w-full h-full translate-y-1 sm:translate-y-2 lg:translate-y-2.5 xl:translate-y-4 2xl:translate-y-10 transition-transform duration-300">
+        <div className="hidden sm:block absolute inset-0 w-full h-full translate-y-1 sm:translate-y-2 lg:translate-y-2.5 xl:translate-y-4 2xl:translate-y-10 transition-transform duration-200">
           <Image
             src="/electron-pass.gif"
             alt="Underground Subterranean Electricity Earthing Animation"
@@ -68,10 +68,11 @@ export default function HomeHeroSection() {
             sizes="100vw"
             className="w-full h-full object-cover object-[center_85%] pointer-events-none"
           />
+          
         </div>
 
         {/* Copper Earthing Electrode */}
-        <div
+          <div
           className="hidden sm:block absolute pointer-events-auto group top-[52%] sm:top-[53%] lg:top-[53%] xl:top-[57%] -translate-x-1/2 transition-[left] duration-150"
           style={{ left: rodPosition.left }}
         >
@@ -100,7 +101,7 @@ export default function HomeHeroSection() {
             <div className="absolute -bottom-2 inset-x-4 h-6 bg-[var(--bg-dark)]/75 blur-md rounded-full transform scale-y-50" />
 
             {/* Product Lineup Image */}
-            <div className="relative w-[380px] sm:w-[380px] md:w-[430px] lg:w-[540px] xl:w-[720px] 2xl:w-[860px] h-[245px] sm:h-[270px] md:h-[300px] lg:h-[385px] xl:h-[430px] 2xl:h-[470px] transition-transform duration-500 ease-out group-hover:scale-[1.01]">
+            {/* <div className="relative w-[380px] sm:w-[380px] md:w-[430px] lg:w-[540px] xl:w-[720px] 2xl:w-[860px] h-[245px] sm:h-[270px] md:h-[300px] lg:h-[385px] xl:h-[430px] 2xl:h-[470px] transition-transform duration-500 ease-out group-hover:scale-[1.01]">
               <Image
                 src="/home/pratiksha-enterprises-product.png"
                 alt="Pratiksha Enterprise SRIP Compound Bags, Copper Bonded Rods, Chemical Earthing Electrodes"
@@ -109,7 +110,7 @@ export default function HomeHeroSection() {
                 sizes="(max-width: 640px) 340px, (max-width: 768px) 430px, (max-width: 1200px) 540px, 860px"
                 className="object-contain object-bottom drop-shadow-[0_12px_28px_rgba(0,0,0,0.65)]"
               />
-            </div>
+            </div> */}
           </div>
         </Reveal>
       </div>
@@ -119,7 +120,7 @@ export default function HomeHeroSection() {
         <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-center sm:text-left flex flex-col items-center sm:items-start">
           {/* Main Hero Headline */}
           <Reveal direction="up" delay={0.1} duration={0.7}>
-            <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-white">
+            <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-black/80">
               Make Your Premises{" "}
               <span className="text-[var(--primary-color)]">Secure</span>
             </h1>
@@ -127,7 +128,7 @@ export default function HomeHeroSection() {
 
           {/* Subtitle */}
           <Reveal direction="up" delay={0.25} duration={0.7}>
-            <p className="mt-3 sm:mt-3.5 md:mt-3.5 text-xs sm:text-sm md:text-sm lg:text-base xl:text-xl text-gray-200/95 font-normal leading-relaxed max-w-[300px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-lg drop-shadow-md">
+            <p className="mt-3 sm:mt-3.5 md:mt-3.5 text-xs sm:text-sm md:text-sm lg:text-base xl:text-xl text-black/40 font-normal leading-relaxed max-w-[300px] sm:max-w-[320px] md:max-w-[350px] lg:max-w-[380px] xl:max-w-lg">
               Safeguard your industrial infrastructure, transmission grids, and
               commercial assets.
             </p>
