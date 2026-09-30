@@ -62,7 +62,7 @@ export default function ProductsHero() {
           {/* Eyebrow / Category Tag */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-2">
-              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 OUR PRODUCTS
               </span>
@@ -162,31 +162,6 @@ export default function ProductsHero() {
               </div>
             </StaggerItem>
           </StaggerContainer>
-
-          {/* Action CTA Button */}
-          <Reveal direction="up" delay={0.32} duration={0.6}>
-            <div className="flex justify-center sm:justify-start">
-              <a
-                href="#catalogue"
-                className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-lg sm:rounded-xl transition-all duration-200 shadow-[0_4px_14px_color-mix(in_srgb,var(--primary-color)_30%,transparent)] hover:shadow-[0_6px_20px_color-mix(in_srgb,var(--primary-color)_40%,transparent)] hover:scale-[1.02] active:scale-[0.98] group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-              >
-                <span>Explore Our Products</span>
-                <svg
-                  className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2.5"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </a>
-            </div>
-          </Reveal>
         </div>
 
         {/* BOTTOM ROW: LEFT TAGLINE & RIGHT SECTOR CATEGORIES STRIP */}

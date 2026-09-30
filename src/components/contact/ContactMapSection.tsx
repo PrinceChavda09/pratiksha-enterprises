@@ -17,7 +17,7 @@ export default function ContactMapSection() {
   return (
     <section
       id="map-section"
-      className="py-10 sm:py-20 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20 overflow-hidden"
+      className="py-10 sm:py-24 bg-[#F8FAFC] border-t border-slate-200/80 scroll-mt-20 overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -25,7 +25,7 @@ export default function ContactMapSection() {
           <Reveal direction="up" delay={0.1} duration={0.65} className="lg:col-span-5 space-y-6">
             <div className="text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mb-2">
-                <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                 <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[var(--primary-color)] tracking-wider sm:tracking-widest uppercase">
                   HEADQUARTERS & MANUFACTURING
                 </span>

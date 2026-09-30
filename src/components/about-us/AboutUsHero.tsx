@@ -56,7 +56,7 @@ export default function AboutUsHero() {
           {/* Eyebrow with Brand Accent Bar */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-2.5">
-              <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-xs sm:text-sm md:text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 ABOUT PRATIKSHA
               </span>

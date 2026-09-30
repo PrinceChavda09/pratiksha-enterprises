@@ -3,7 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { products } from "@/components/products/productData";
-import { ArrowRightIcon } from "@/components/icon";
+import {
+  ArrowRightIcon,
+  ShieldCheckIcon,
+  ZapIcon,
+  FactoryIcon,
+  TruckIcon,
+  PhoneIcon,
+} from "@/components/icon";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 interface PageProps {
@@ -105,7 +112,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   />
 
                   {/* Badge on Top Left */}
-                  <span className="absolute top-4 left-4 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 border border-teal-200/80 text-[var(--primary-color)] shadow-xs">
+                  <span className="absolute top-4 left-4 z-10 px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 border border-teal-200/80 text-[var(--primary-color)] shadow-xs">
                     {product.badge || product.category}
                   </span>
 
@@ -125,25 +132,25 @@ export default async function ProductDetailPage({ params }: PageProps) {
                 {/* 4 Trust & Dispatch Badges */}
                 <div className="grid grid-cols-2 gap-3 text-xs">
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
-                    <span className="text-base">🛡️</span>
+                    <ShieldCheckIcon className="w-4 h-4 text-emerald-600 shrink-0" />
                     <span className="font-semibold text-[var(--text-dark)]">
                       IS 3043:2018 Certified
                     </span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
-                    <span className="text-base">⚡</span>
+                    <ZapIcon className="w-4 h-4 text-amber-500 shrink-0" />
                     <span className="font-semibold text-[var(--text-dark)]">
                       250+ Micron Copper
                     </span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
-                    <span className="text-base">🏭</span>
+                    <FactoryIcon className="w-4 h-4 text-[var(--primary-color)] shrink-0" />
                     <span className="font-semibold text-[var(--text-dark)]">
                       Direct Plant Dispatch
                     </span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
-                    <span className="text-base">🚚</span>
+                    <TruckIcon className="w-4 h-4 text-blue-600 shrink-0" />
                     <span className="font-semibold text-[var(--text-dark)]">
                       Pan-India Delivery
                     </span>
@@ -211,7 +218,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
                     href="tel:+919313888465"
                     className="inline-flex items-center justify-center px-6 py-4 text-sm sm:text-base font-semibold text-[var(--text-heading)] bg-slate-100 hover:bg-slate-200 rounded-xl transition-all duration-200 gap-2 text-center hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    <span>📞 Call: +91 93138 88465</span>
+                    <PhoneIcon className="w-4 h-4 text-[var(--primary-color)] shrink-0" />
+                    <span>Call: +91 93138 88465</span>
                   </a>
                 </div>
               </div>
@@ -228,8 +236,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
           {/* Left: Engineering Features */}
           {product.features && product.features.length > 0 && (
             <StaggerItem index={0} direction="up" className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs">
-              <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2">
-                <span>⚡</span>
+              <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2.5">
+                <ZapIcon className="w-5 h-5 text-amber-500 shrink-0" />
                 <span>Engineering Features & Advantages</span>
               </h3>
               <ul className="space-y-3.5">
@@ -250,8 +258,8 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {/* Applications */}
             {product.applications && product.applications.length > 0 && (
               <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs flex-1">
-                <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2">
-                  <span>🏭</span>
+                <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2.5">
+                  <FactoryIcon className="w-5 h-5 text-[var(--primary-color)] shrink-0" />
                   <span>Primary Industry Applications</span>
                 </h3>
                 <ul className="space-y-3">
@@ -319,7 +327,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   className="group h-full bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>
-                    <span className="text-[10px] font-bold text-[var(--primary-color)] uppercase tracking-wider block mb-2">
+                    <span className="inline-block px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase bg-teal-50 border border-teal-200/80 text-[var(--primary-color)] mb-2.5">
                       {rel.badge || rel.category}
                     </span>
                     <div className="relative w-full h-40 mb-3 flex items-center justify-center bg-slate-50 rounded-xl p-2 overflow-hidden">

@@ -2,7 +2,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function OurCommitment() {
   return (
-    <section className="w-full bg-white py-10 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="w-full bg-white py-10 sm:py-24 border-b border-slate-200/80 relative overflow-hidden">
       {/* Subtle Engineering Blueprint Grid */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -18,7 +18,7 @@ export default function OurCommitment() {
         {/* Eyebrow */}
         <Reveal direction="up" delay={0.1} duration={0.6}>
           <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-4 sm:mb-6">
-            <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
+            <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
             <span className="text-xs sm:text-sm md:text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
               OUR COMMITMENT
             </span>

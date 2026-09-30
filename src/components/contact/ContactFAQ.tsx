@@ -39,11 +39,11 @@ export default function ContactFAQ() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="text-center mb-12 sm:mb-16">
             <div className="inline-flex items-center gap-2 mb-3">
-              <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 GOT QUESTIONS?
               </span>
-              <span className="w-5 h-[2px] bg-[var(--primary-color)]" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
             </div>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-[var(--text-heading)] tracking-tight">
               Frequently Asked Questions

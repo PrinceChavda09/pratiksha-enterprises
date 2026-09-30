@@ -4,7 +4,7 @@ import { ArrowRightIcon } from "@/components/icon";
 
 export default function WhyPratiksha() {
   return (
-    <section className="w-full bg-[#F8FAFC] py-10 sm:py-20 lg:py-28 border-b border-slate-200/80 relative overflow-hidden">
+    <section className="w-full bg-[#F8FAFC] py-10 sm:py-24 border-b border-slate-200/80 relative overflow-hidden">
       {/* Decorative Subtle Background Grid */}
       <div
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
@@ -21,7 +21,7 @@ export default function WhyPratiksha() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="max-w-3xl mb-8 sm:mb-12 lg:mb-16 text-center lg:text-left mx-auto lg:mx-0">
             <div className="inline-flex items-center justify-center lg:justify-start gap-2 mb-3 sm:mb-4">
-              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] shrink-0" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-xs sm:text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 WHY PRATIKSHA ENTERPRISES
               </span>

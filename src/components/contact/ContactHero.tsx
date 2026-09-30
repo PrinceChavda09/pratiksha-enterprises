@@ -62,7 +62,7 @@ export default function ContactHero() {
           {/* Eyebrow / Tagline */}
           <Reveal direction="up" delay={0.08} duration={0.55}>
             <div className="flex items-center justify-center sm:justify-start gap-2 mb-2 sm:mb-2.5">
-              <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                 GET IN TOUCH
               </span>
@@ -211,7 +211,7 @@ export default function ContactHero() {
                 RAJKOT, GUJARAT
               </span>
             </div>
-            <div className="uppercase tracking-widest text-white text-center sm:text-right">
+            <div className="hidden sm:block uppercase tracking-widest text-white text-center sm:text-right">
               CONNECT{" "}
               <span className="mx-1 text-[var(--gray-color)]/900">/</span>{" "}
               COLLABORATE{" "}

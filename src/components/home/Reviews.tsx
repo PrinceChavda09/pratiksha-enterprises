@@ -165,7 +165,7 @@ export default function Reviews() {
             <div className="text-center lg:text-left">
               {/* Eyebrow */}
               <div className="flex items-center justify-center lg:justify-start gap-3 mb-3">
-                <span className="w-6 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                 <span className="text-sm font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   CUSTOMER REVIEWS
                 </span>

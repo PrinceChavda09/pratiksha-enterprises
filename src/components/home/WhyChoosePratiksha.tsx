@@ -49,14 +49,14 @@ export default function WhyChoosePratiksha() {
   return (
     <section
       id="why-choose"
-      className="w-full bg-[#EAF7FB] py-10 md:py-24 lg:py-28 overflow-hidden"
+      className="w-full bg-[#EAF7FB] py-10 md:py-24 overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1}>
           <div className="max-w-3xl mb-12 lg:mb-16 text-center md:text-left mx-auto md:mx-0">
             <div className="flex items-center justify-center md:justify-start gap-2.5 sm:gap-3 mb-3">
-              <span className="w-5 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-xs sm:text-[14px] font-bold text-[var(--primary-color)] tracking-wider sm:tracking-widest uppercase">
                 WHY CHOOSE PRATIKSHA
               </span>

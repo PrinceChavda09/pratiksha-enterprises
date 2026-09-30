@@ -39,7 +39,7 @@ export default function WhatWeOffer() {
           <div className="flex flex-col md:flex-row md:items-end justify-between items-center md:items-start text-center md:text-left mb-8 sm:mb-12 lg:mb-16 pb-4 sm:pb-6 border-b border-slate-200">
             <div>
               <div className="flex items-center justify-center md:justify-start gap-2 sm:gap-3 mb-2 sm:mb-3">
-                <span className="w-5 sm:w-6 h-[2px] bg-[var(--primary-color)] shrink-0" />
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                 <span className="text-xs sm:text-sm md:text-[14px] font-bold text-[var(--primary-color)] tracking-widest uppercase">
                   WHAT WE OFFER
                 </span>

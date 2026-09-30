@@ -24,7 +24,7 @@ export default function AboutPratiksha() {
             {/* Primary accent eyebrow & Headline */}
             <Reveal direction="up" delay={0.1}>
               <div className="flex items-center justify-center md:justify-start gap-3 mb-4 sm:mb-5">
-                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                 <span className="text-xs sm:text-[13px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                   ABOUT US
                 </span>

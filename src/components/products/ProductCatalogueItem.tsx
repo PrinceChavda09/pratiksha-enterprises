@@ -31,7 +31,7 @@ export default function ProductCatalogueItem({
         >
           <div className="relative w-full aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/3] bg-slate-50 border border-slate-200/90 rounded-2xl p-6 sm:p-8 lg:p-10 flex items-center justify-center overflow-hidden transition-all duration-300 group-hover:border-[var(--primary-color)] group-hover:shadow-sm">
             {/* Corner Subtle Category Stamp */}
-            <span className="absolute top-4 left-4 sm:top-5 sm:left-5 text-[11px] font-bold text-[var(--gray-color)] tracking-wider uppercase">
+            <span className="absolute top-4 left-4 sm:top-5 sm:left-5 z-10 text-[11px] font-bold text-[var(--gray-color)] tracking-wider uppercase">
               {product.category}
             </span>
 

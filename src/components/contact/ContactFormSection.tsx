@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
+import { WhatsAppIcon, PhoneIcon } from "@/components/icon";
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -38,7 +39,7 @@ export default function ContactFormSection() {
         <Reveal direction="up" delay={0.1} duration={0.65}>
           <div className="max-w-3xl mb-12 sm:mb-16 text-center lg:text-left mx-auto lg:mx-0">
             <div className="flex items-center justify-center lg:justify-start gap-2 sm:gap-2.5 mb-3">
-              <span className="w-4 sm:w-6 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
+              <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
               <span className="text-[11px] sm:text-xs md:text-sm font-bold text-[var(--primary-color)] tracking-wider sm:tracking-widest uppercase">
                 TECHNICAL INQUIRY & QUOTES
               </span>
@@ -368,7 +369,7 @@ export default function ContactFormSection() {
                     href="tel:+919313888465"
                     className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
                   >
-                    <span>📞</span>
+                    <PhoneIcon className="w-4 h-4 shrink-0" />
                     <span>Call +91 93138 88465</span>
                   </a>
                   <a
@@ -377,7 +378,7 @@ export default function ContactFormSection() {
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs font-semibold text-emerald-800 bg-emerald-100 hover:bg-emerald-200 rounded-xl transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
                   >
-                    <span>💬</span>
+                    <WhatsAppIcon className="w-4 h-4 text-emerald-700 shrink-0" />
                     <span>WhatsApp Priority</span>
                   </a>
                 </div>

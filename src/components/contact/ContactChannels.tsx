@@ -1,4 +1,5 @@
 import React from "react";
+import { WhatsAppIcon } from "@/components/icon";
 
 export default function ContactChannels() {
   const channels = [
@@ -82,9 +83,9 @@ export default function ContactChannels() {
     },
     {
       title: "Operating Hours",
-      badge: "Mon – Sat",
+      badge: "Mon - Sat",
       subtitle: "Fast response during active factory hours",
-      primaryText: "9:00 AM – 7:30 PM",
+      primaryText: "9:00 AM - 7:30 PM",
       secondaryText: "Sunday: Closed (Emergency dispatch available)",
       icon: (
         <svg
@@ -159,7 +160,7 @@ export default function ContactChannels() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-1.5 w-full py-2 px-3 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 rounded-lg transition-colors border border-emerald-200/80 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
                 >
-                  <span>💬</span>
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-600 shrink-0" />
                   <span>{channel.whatsappText}</span>
                 </a>
               )}

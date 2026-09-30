@@ -10,13 +10,13 @@ export default function AboutCompany() {
             <Reveal direction="up" delay={0.1} duration={0.65}>
               <div className="max-w-lg text-center lg:text-left mx-auto lg:mx-0">
                 <div className="flex items-center justify-center lg:justify-start gap-3 mb-3 sm:mb-5">
-                  <span className="w-6 h-[2px] bg-[var(--primary-color)]" />
+                  <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                   <span className="text-sx sm:text-base font-bold text-[var(--primary-color)] tracking-[0.18em] uppercase">
                     COMPANY OVERVIEW
                   </span>
                 </div>
 
-                <h2 className="text-xl sm:text-4xl lg:text-5xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-3 sm:mb-5 text-center lg:text-left">
+                <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-[var(--text-heading)] leading-tight tracking-tight mb-3 sm:mb-5 text-center lg:text-left">
                   About Pratiksha
                 </h2>
 
@@ -43,7 +43,7 @@ export default function AboutCompany() {
             <Reveal direction="up" delay={0.2} duration={0.65}>
               <div className="border-t border-slate-200">
                 <div className="py-5 sm:py-8 border-b border-slate-200">
-                  <p className="text-[14px] sm:text-2xl font-medium text-[var(--text-heading)] leading-relaxed text-center lg:text-left">
+                  <p className="text-[14px] sm:text-xl font-medium text-[var(--text-heading)] leading-relaxed text-center lg:text-left">
                     Pratiksha Earthing Solutions is a Rajkot based business focused
                     on earthing and electrical safety products designed for
                     residential, commercial and industrial applications.

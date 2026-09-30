@@ -76,7 +76,7 @@ export default function OurProduct() {
   return (
     <section
       id="products"
-      className="w-full pb-10 md:py-20 scroll-mt-20 border-b border-slate-100"
+      className="w-full pb-10 md:py-20 lg:py-24 scroll-mt-20 border-b border-slate-100"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header: Centered on mobile, Left-Aligned on desktop */}
@@ -85,7 +85,7 @@ export default function OurProduct() {
             {/* Left Side: Eyebrow + Heading */}
             <div className="max-w-2xl text-center md:text-left">
               <div className="flex items-center py-3 justify-center md:justify-start gap-3 mb-3">
-                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full" />
+                <span className="w-7 sm:w-8 h-[2px] bg-[var(--primary-color)] rounded-full shrink-0" />
                 <span className="text-[14px] font-bold text-[var(--primary-color)] tracking-[0.2em] uppercase">
                   OUR PRODUCTS
                 </span>
