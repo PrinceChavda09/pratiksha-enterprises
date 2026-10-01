@@ -62,43 +62,40 @@ export default function HomeHeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full max-w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden overflow-x-hidden"
+      className="relative w-full max-w-full flex flex-col md:block h-auto md:h-[calc(100vh-80px)] overflow-hidden overflow-x-hidden bg-white"
     >
-      {/* 1. PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS */}
-      <div className="absolute inset-0 z-0 overflow-hidden w-full max-w-full">
-        {/* Mobile Background Image (< 768px): Dedicated vertical portrait mobile asset */}
-        <div className="block md:hidden absolute inset-0 w-full h-full">
-          <Image
-            src="/home/Hero-Backgrond-mobile.png"
-            alt="Transmission towers and industrial factory power grid background with earthing soil cutaway"
-            fill
-            priority
-            sizes="100vw"
-            className="object-contain object-center w-full max-w-full"
-          />
-        </div>
+      {/* 1. MOBILE IMAGE ON TOP (< md) */}
+      <div className="block md:hidden relative w-full h-[360px] sm:h-[390px] shrink-0 overflow-hidden">
+        <Image
+          src="/home/Hero-Backgrond-mobile.png"
+          alt="Transmission towers and industrial factory power grid background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[16%_68%] w-full h-full scale-150 origin-bottom -translate-x-20"
+        />
+      </div>
 
-        {/* Desktop & Tablet Background Image (>= 768px): Original widescreen asset */}
-        <div className="hidden md:block absolute inset-0 w-full h-full">
-          <Image
-            src="/home/Hero-Backgrond.png"
-            alt="Transmission towers and power grid background with earthing soil cutaway"
-            fill
-            priority
-            sizes="100vw"
-            className="hero-bg-responsive w-full h-full object-cover md:object-[58%_bottom] lg:object-[center_bottom] xl:object-center"
-          />
-        </div>
+      {/* 2. DESKTOP & TABLET PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS (>= md) */}
+      <div className="hidden md:block absolute inset-0 z-0 overflow-hidden w-full h-full">
+        <Image
+          src="/home/Hero-Backgrond.png"
+          alt="Transmission towers and power grid background with earthing soil cutaway"
+          fill
+          priority
+          sizes="100vw"
+          className="hero-bg-responsive w-full h-full object-cover md:object-[58%_bottom] lg:object-[center_bottom] xl:object-center"
+        />
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/2 via-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
         {/* Sky atmospheric gradient */}
         <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
       </div>
 
-      {/* 2. SUBTERRANEAN LAYER: GIF ANIMATION + COPPER ELECTRODE (COMBINED IN ONE DIV) */}
-      <div className="absolute inset-0 z-20 pointer-events-none overflow-hidden w-full max-w-full">
-        {/* Subterranean Electricity Animation: Fits cleanly on mobile view (< 640px) matching background contain */}
-        <div className="hidden sm:block absolute inset-0 w-full max-w-full h-full translate-y-0 sm:translate-y-[-40px] lg:translate-y-[-30px] xl:translate-y-4 2xl:translate-y-10 transition-transform duration-200 overflow-hidden">
+      {/* 3. SUBTERRANEAN LAYER: GIF ANIMATION + COPPER ELECTRODE (DESKTOP/TABLET >= sm) */}
+      <div className="hidden sm:block absolute inset-0 z-20 pointer-events-none overflow-hidden w-full max-w-full">
+        {/* Subterranean Electricity Animation */}
+        <div className="absolute inset-0 w-full max-w-full h-full translate-y-0 sm:translate-y-2 lg:translate-y-3 xl:translate-y-4 2xl:translate-y-10 transition-transform duration-200 overflow-hidden">
           <Image
             src="/electron-pass.gif"
             alt="Underground Subterranean Electricity Earthing Animation"
@@ -112,16 +109,16 @@ export default function HomeHeroSection() {
 
         {/* Copper Earthing Electrode */}
         <div
-          className="hidden sm:block absolute pointer-events-auto group top-[51%] sm:top-[53%] lg:top-[53%] xl:top-[57%] -translate-x-1/2 transition-[left] duration-150"
+          className="absolute pointer-events-auto group top-[51%] sm:top-[60%] lg:top-[57%] xl:top-[57%] -translate-x-1/2 transition-[left] duration-150"
           style={{
             left: rodPosition.left,
             ...(rodPosition.top ? { top: rodPosition.top } : {}),
           }}
         >
           {/* Rod Assembly Container */}
-          <div className="relative flex flex-col items-center origin-top scale-100 sm:scale-110 md:scale-115 lg:scale-115 xl:scale-120 transition-transform duration-300">
+          <div className="relative flex flex-col items-center origin-top scale-100 sm:scale-110 md:scale-110 lg:scale-115 xl:scale-120 transition-transform duration-300">
             {/* Real Copper Earthing Electrode Product Image */}
-            <div className="relative w-15 sm:w-30 md:w-25 lg:w-35 xl:w-40 2xl:w-44 h-[100px] sm:h-[290px] md:h-[300px] lg:h-[360px] xl:h-[200px] 2xl:h-[400px]">
+            <div className="relative w-12 sm:w-24 md:w-30 lg:w-35 xl:w-32 2xl:w-40 h-[90px] sm:h-[230px] md:h-[260px] lg:h-[280px] xl:h-[350px] 2xl:h-[400px]">
               <Image
                 src="/home/herosection-road.png"
                 alt="Copper Earthing Electrode"
@@ -135,9 +132,9 @@ export default function HomeHeroSection() {
         </div>
       </div>
 
-      {/* 4. MAIN HERO CONTENT (CENTERED ON MOBILE, LEFT-ALIGNED ON TABLET/DESKTOP) */}
-      <div className="relative z-30 h-auto container w-full max-w-full overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col items-center sm:items-start justify-start pt-8 sm:pt-10 md:pt-12 lg:pt-12 xl:pt-14 2xl:pt-30 pointer-events-none">
-        <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-center sm:text-left flex flex-col items-center sm:items-start">
+      {/* 4. MAIN HERO CONTENT (BELOW IMAGE ON MOBILE, LEFT-ALIGNED ON TABLET/DESKTOP) */}
+      <div className="relative z-30 container w-full max-w-full overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col items-center md:items-start justify-start pt-3 pb-8 md:pt-12 lg:pt-12 xl:pt-14 2xl:pt-30 pointer-events-none">
+        <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-center md:text-left flex flex-col items-center md:items-start">
           {/* Main Hero Headline */}
           <Reveal direction="up" delay={0.1} duration={0.7}>
             <h1 className="text-3xl sm:text-[34px] md:text-[38px] lg:text-[46px] xl:text-[72px] 2xl:text-[80px] font-extrabold tracking-tight leading-[1.08] text-black/80">
@@ -156,7 +153,7 @@ export default function HomeHeroSection() {
 
           {/* Action CTA Button */}
           <Reveal direction="up" delay={0.4} duration={0.7}>
-            <div className="mt-4 sm:mt-5 md:mt-5 flex items-center justify-center sm:justify-start">
+            <div className="mt-4 sm:mt-5 md:mt-5 flex items-center justify-center md:justify-start">
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-6 sm:px-6 md:px-7 py-2.5 sm:py-3 md:py-3 text-xs sm:text-sm md:text-sm lg:text-base font-semibold text-white bg-[var(--primary-color)] rounded-xl transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-teal-900/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 hover:shadow-xl"
