@@ -136,7 +136,7 @@ export default function HomeHeroSection() {
       </div>
 
       {/* 4. MAIN HERO CONTENT (LEFT-ALIGNED ON MOBILE & DESKTOP) */}
-      <div className="relative z-30 h-auto container w-full max-w-full overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-start pt-20 sm:pt-10 md:pt-12 lg:pt-12 xl:pt-14 2xl:pt-30 pointer-events-none">
+      <div className="relative z-30 h-auto container w-full max-w-full overflow-hidden px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-start pt-20 sm:pt-10 md:pt-12 lg:pt-12 xl:pt-14 pointer-events-none">
         <div className="max-w-[340px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[440px] xl:max-w-2xl 2xl:max-w-3xl pointer-events-auto text-left flex flex-col items-start">
           {/* Main Hero Headline */}
           <Reveal direction="up" delay={0.1} duration={0.7}>
