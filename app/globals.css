@@ -61,3 +61,35 @@ body {
     scroll-behavior: auto !important;
   }
 }
+
+/* Home Hero Background Image Responsiveness */
+
+/* Mobile view (< 768px): Focus primarily on the INDUSTRIAL FACTORY on the right side */
+.hero-bg-responsive {
+  object-fit: cover !important;
+  object-position: 78% center !important;
+}
+
+@media (min-width: 640px) {
+  .hero-bg-responsive {
+    object-position: 72% center !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-bg-responsive {
+    object-position: 58% bottom !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg-responsive {
+    object-position: center bottom !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-bg-responsive {
+    object-position: center center !important;
+  }
+}

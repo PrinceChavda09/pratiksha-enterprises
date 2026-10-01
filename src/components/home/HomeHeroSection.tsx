@@ -37,7 +37,7 @@ export default function HomeHeroSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-[calc(100vh-80px)] min-h-[640px] max-h-[1050px] overflow-hidden"
+      className="relative w-full h-[calc(100vh-80px)] min-h-[480px] sm:min-h-[560px] md:min-h-[640px] max-h-[1050px] overflow-hidden"
     >
       {/* 1. PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS */}
       <div className="absolute inset-0 z-0">
@@ -46,8 +46,8 @@ export default function HomeHeroSection() {
           alt="Transmission towers and power grid background with earthing soil cutaway"
           fill
           priority
-          sizes="100vw"
-          className="object-cover object-center w-full h-full"
+          sizes="(max-width: 768px) 200vw, (max-width: 1024px) 200vw, 100vw"
+          className="hero-bg-responsive w-full h-full object-cover object-[78%_center] sm:object-[72%_center] md:object-[58%_bottom] lg:object-[center_bottom] xl:object-center"
         />
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/2 via-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
@@ -68,11 +68,10 @@ export default function HomeHeroSection() {
             sizes="100vw"
             className="w-full h-full object-cover object-[center_85%] pointer-events-none"
           />
-          
         </div>
 
         {/* Copper Earthing Electrode */}
-          <div
+        <div
           className="hidden sm:block absolute pointer-events-auto group top-[52%] sm:top-[53%] lg:top-[53%] xl:top-[57%] -translate-x-1/2 transition-[left] duration-150"
           style={{ left: rodPosition.left }}
         >
