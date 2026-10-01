@@ -66,14 +66,29 @@ export default function HomeHeroSection() {
     >
       {/* 1. PHOTOREALISTIC BACKGROUND IMAGE & GRADIENTS */}
       <div className="absolute inset-0 z-0 overflow-hidden w-full max-w-full">
-        <Image
-          src="/home/Hero-Backgrond.png"
-          alt="Transmission towers and power grid background with earthing soil cutaway"
-          fill
-          priority
-          sizes="(max-width: 640px) 100vw, 100vw"
-          className="object-contain sm:object-contain sm:object-center w-full h-full max-w-full"
-        />
+        {/* Mobile Background Image (< 768px): Dedicated vertical portrait mobile asset */}
+        <div className="block md:hidden absolute inset-0 w-full h-full">
+          <Image
+            src="/home/Hero-Backgrond-mobile.png"
+            alt="Transmission towers and industrial factory power grid background with earthing soil cutaway"
+            fill
+            priority
+            sizes="100vw"
+            className="object-contain object-center w-full max-w-full"
+          />
+        </div>
+
+        {/* Desktop & Tablet Background Image (>= 768px): Original widescreen asset */}
+        <div className="hidden md:block absolute inset-0 w-full h-full">
+          <Image
+            src="/home/Hero-Backgrond.png"
+            alt="Transmission towers and power grid background with earthing soil cutaway"
+            fill
+            priority
+            sizes="100vw"
+            className="hero-bg-responsive w-full h-full object-cover md:object-[58%_bottom] lg:object-[center_bottom] xl:object-center"
+          />
+        </div>
         {/* Subtle dark vignette on left side to guarantee crisp text legibility */}
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-dark)]/2 via-[var(--bg-dark)]/0 to-transparent z-1 pointer-events-none" />
         {/* Sky atmospheric gradient */}
