@@ -80,16 +80,6 @@ export default function Navbar() {
               })}
             </nav>
 
-            {/* 3. DESKTOP GET A QUOTE BUTTON */}
-            <div className="hidden md:flex items-center">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] shadow-sm hover:shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-              >
-                Get a Quote
-              </Link>
-            </div>
-
             {/* 4. MOBILE HAMBURGER BUTTON */}
             <div className="flex md:hidden items-center">
               <button
@@ -156,15 +146,6 @@ export default function Navbar() {
                   </Link>
                 );
               })}
-            </div>
-            <div className="pt-3 border-t border-gray-100">
-              <Link
-                href="/contact"
-                onClick={closeMenu}
-                className="flex items-center justify-center w-full px-5 py-3 text-base font-semibold text-white bg-[var(--primary-color)] hover:bg-[#065e6f] rounded-[7px] transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2"
-              >
-                Get a Quote
-              </Link>
             </div>
           </div>
         )}
