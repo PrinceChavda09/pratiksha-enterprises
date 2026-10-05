@@ -15,11 +15,17 @@ export default function Footer() {
 
   const solutions = [
     { name: "Earthing Electrodes", href: "/products/earthing-electrodes" },
-    { name: "Copper & GI Accessories", href: "/products/copper-gi-accessories" },
+    {
+      name: "Copper & GI Accessories",
+      href: "/products/copper-gi-accessories",
+    },
     { name: "Substation Grounding", href: "/products/substation-grounding" },
     { name: "Earth Busbars", href: "/products/earth-busbars" },
     { name: "Solar PV Grounding", href: "/products/solar-pv-grounding" },
-    { name: "Maintenance-Free Backfill", href: "/products/maintenance-free-backfill" },
+    {
+      name: "Maintenance-Free Backfill",
+      href: "/products/maintenance-free-backfill",
+    },
   ];
 
   return (
@@ -108,7 +114,7 @@ export default function Footer() {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] hover:translate-x-1 transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                     >
                       {link.name}
                     </Link>
@@ -127,7 +133,7 @@ export default function Footer() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                      className="text-[var(--gray-color)] hover:text-[var(--primary-color)] hover:translate-x-1 transition-colors duration-200 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                     >
                       {item.name}
                     </Link>
@@ -220,7 +226,7 @@ export default function Footer() {
                 <div>
                   <a
                     href="mailto:pratikshaenterprises.sales@gmail.com"
-                    className="font-semibold text-[var(--text-heading)] hover:text-[var(--primary-color)] transition-colors break-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                    className="font-semibold text-[var(--text-heading)] hover:text-[var(--primary-color)] hover:translate-x-1 transition-colors break-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                   >
                     pratikshaenterprises.sales@gmail.com
                   </a>
@@ -231,7 +237,7 @@ export default function Footer() {
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center text-sm font-semibold text-[var(--primary-color)] hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
+                  className="inline-flex items-center text-sm font-semibold text-[var(--primary-color)] hover:translate-x-1 hover:text-[#065e6f] transition-colors group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] rounded-sm"
                 >
                   <span>Submit Technical Inquiry</span>
                   <span

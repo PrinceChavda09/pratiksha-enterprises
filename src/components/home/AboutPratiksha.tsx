@@ -39,19 +39,20 @@ export default function AboutPratiksha() {
             {/* Overview Paragraph using --gray-color */}
             <Reveal direction="up" delay={0.2}>
               <p className="text-[var(--gray-color)] text-sm sm:text-base leading-relaxed mb-8 sm:mb-10 max-w-2xl text-center md:text-left mx-auto md:mx-0">
-                Since 2008, Pratiksha Earthing has manufactured and installed over
-                500+ earthing systems for substations, data centres, railways, and
-                industrial plants. Our manufacturing facilities produce CPRI certified
-                electrodes, IS 3043 compliant compounds, and ESE lightning arresters
-                backed by 1000 hour salt-spray testing.
+                Since 2008, Pratiksha Earthing has manufactured and installed
+                over 500+ earthing systems for substations, data centres,
+                railways, and industrial plants. Our manufacturing facilities
+                produce CPRI certified electrodes, IS 3043 compliant compounds,
+                and ESE lightning arresters backed by 1000 hour salt-spray
+                testing.
               </p>
               {/* Paragraphs */}
               <div className="space-y-4 text-[var(--gray-color)] text-[15px] sm:text-base leading-relaxed mb-8 text-center md:text-left">
                 <p>
-                  Pratiksha Earthing Solutions is focused on providing dependable
-                  earthing products and solutions that support electrical safety,
-                  system reliability, and long-term performance across demanding
-                  power networks.
+                  Pratiksha Earthing Solutions is focused on providing
+                  dependable earthing products and solutions that support
+                  electrical safety, system reliability, and long-term
+                  performance across demanding power networks.
                 </p>
                 <p>
                   Based in Rajkot, Gujarat one of India’s premier engineering
@@ -119,6 +120,7 @@ export default function AboutPratiksha() {
                   src="/about-us/hero-section.png"
                   alt="High-voltage electrical substation transformer and gantry towers at sunset"
                   fill
+                  loading="lazy"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 45vw, 550px"
                   className="object-cover object-right sm:object-center transition-transform duration-700 ease-out group-hover:scale-105"
                 />
@@ -126,8 +128,8 @@ export default function AboutPratiksha() {
             </Reveal>
 
             {/* Floating Quality Badge Card on Bottom-Left (Light Theme) */}
-            <Reveal direction="up" delay={0.4} duration={0.65}>
-              <div className="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-7 sm:-left-8 sm:max-w-[340px] lg:-bottom-8 lg:-left-10 lg:max-w-[350px] bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-5 sm:p-5.5 shadow-[0_20px_40px_-10px_rgba(15,23,42,0.12)] z-20 transition-all duration-300 hover:shadow-lg">
+            <Reveal direction="up" delay={0.2} duration={0.65}>
+              <div className="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-7 sm:-left-8 sm:max-w-[340px] lg:-bottom-8 lg:-left-10 lg:max-w-[350px] bg-white/95 border border-slate-200/90 rounded-2xl p-5 sm:p-5.5 z-20 transition-all duration-300">
                 <div className="flex items-center gap-3 mb-2">
                   {/* Shield icon with primary color */}
                   <div className="w-8 h-8 rounded-full bg-[#e8f6f8] flex items-center justify-center text-[var(--primary-color)] shrink-0">
@@ -151,8 +153,8 @@ export default function AboutPratiksha() {
                   </h3>
                 </div>
                 <p className="text-xs text-[var(--gray-color)] leading-relaxed font-normal">
-                  IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant. Every batch
-                  salt spray tested for 1000+ hours.
+                  IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant.
+                  Every batch salt spray tested for 1000+ hours.
                 </p>
               </div>
             </Reveal>
