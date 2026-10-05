@@ -10,7 +10,6 @@ import React, {
   type ElementType,
   type CSSProperties,
 } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
 
 interface StaggerContextType {
   isVisible: boolean;
@@ -51,12 +50,11 @@ export default function StaggerContainer({
   style = {},
   ...rest
 }: StaggerContainerProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined" || prefersReducedMotion) return;
+    if (typeof window === "undefined") return;
 
     const element = ref.current;
     if (!element) return;
@@ -86,7 +84,7 @@ export default function StaggerContainer({
     return () => {
       observer.disconnect();
     };
-  }, [threshold, prefersReducedMotion]);
+  }, [threshold]);
 
   return (
     <StaggerContext.Provider
@@ -94,7 +92,7 @@ export default function StaggerContainer({
         isVisible,
         staggerDelay,
         baseDelay: delay,
-        prefersReducedMotion,
+        prefersReducedMotion: false,
       }}
     >
       <Component ref={ref} className={className} style={style} {...rest}>

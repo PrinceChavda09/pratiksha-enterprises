@@ -3,7 +3,6 @@
 import { useEffect, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { ReactLenis, useLenis } from "lenis/react";
-import { usePrefersReducedMotion } from "@/components/animations/usePrefersReducedMotion";
 import "lenis/dist/lenis.css";
 
 // Re-export useLenis for centralized usage across the application
@@ -46,14 +45,11 @@ function LenisRouteHandler() {
 }
 
 export default function LenisProvider({ children }: LenisProviderProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
-
   return (
     <ReactLenis
       root
       options={{
-        // Smooth mouse wheel on desktop; disabled if reduced motion preferred
-        smoothWheel: !prefersReducedMotion,
+        smoothWheel: true,
         // Crucial: preserve native touch and momentum scrolling on mobile devices
         syncTouch: false,
         touchMultiplier: 1,

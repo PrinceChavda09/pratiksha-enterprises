@@ -1,8 +1,17 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 import { WhatsAppIcon, PhoneIcon } from "@/components/icon";
+
+const productOptions = [
+  "Pure Copper Earthing Electrodes",
+  "SRIP Advanced Backfill Compound",
+  "Copper Bonded Chemical Earthing Rods",
+  "High-Voltage Substation Grounding",
+  "Heavy-Duty Earth Busbars & Clamps",
+  "Turnkey Industrial Grounding Solution",
+];
 
 export default function ContactFormSection() {
   const [formData, setFormData] = useState({
@@ -14,6 +23,24 @@ export default function ContactFormSection() {
     quantity: "",
     message: "",
   });
+
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsProductDropdownOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -188,24 +215,91 @@ export default function ContactFormSection() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Product of Interest */}
-                    <div>
+                    <div
+                      ref={dropdownRef}
+                      className={`relative ${isProductDropdownOpen ? "z-30" : "z-10"}`}
+                    >
                       <label className="block text-xs font-semibold text-[var(--text-heading)] uppercase tracking-wider mb-2">
                         Product / Solution
                       </label>
-                      <select
-                        value={formData.product}
-                        onChange={(e) =>
-                          setFormData({ ...formData, product: e.target.value })
-                        }
-                        className="w-full px-2 py-3 bg-white rounded-xl border border-slate-200 text-sm text-[var(--text-dark)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent transition-all"
+                      <button
+                        type="button"
+                        onClick={() => setIsProductDropdownOpen((prev) => !prev)}
+                        className={`w-full px-4 py-3 bg-white rounded-xl border text-sm text-left flex items-center justify-between cursor-pointer transition-all ${
+                          isProductDropdownOpen
+                            ? "border-[var(--primary-color)] ring-2 ring-[var(--primary-color)]/20 shadow-sm"
+                            : "border-slate-200 hover:border-slate-300"
+                        }`}
+                        aria-haspopup="listbox"
+                        aria-expanded={isProductDropdownOpen}
                       >
-                        <option>Pure Copper Earthing Electrodes</option>
-                        <option>SRIP Advanced Backfill Compound</option>
-                        <option>Copper Bonded Chemical Earthing Rods</option>
-                        <option>High-Voltage Substation Grounding</option>
-                        <option>Heavy-Duty Earth Busbars & Clamps</option>
-                        <option>Turnkey Industrial Grounding Solution</option>
-                      </select>
+                        <span className="truncate text-[var(--text-dark)] font-medium">
+                          {formData.product}
+                        </span>
+                        <svg
+                          className={`w-4 h-4 ml-2 text-[var(--gray-color)] shrink-0 transition-transform duration-200 ${
+                            isProductDropdownOpen
+                              ? "rotate-180 text-[var(--primary-color)]"
+                              : ""
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          strokeWidth="2.5"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </button>
+
+                      {/* Simple Custom Site-Related Dropdown Menu */}
+                      {isProductDropdownOpen && (
+                        <div className="absolute top-full left-0 right-0 mt-1.5 bg-white rounded-xl border border-slate-200 shadow-xl py-1 z-50">
+                          <div className="max-h-60 overflow-y-auto">
+                            {productOptions.map((option) => {
+                              const isSelected = formData.product === option;
+                              return (
+                                <button
+                                  key={option}
+                                  type="button"
+                                  onClick={() => {
+                                    setFormData({
+                                      ...formData,
+                                      product: option,
+                                    });
+                                    setIsProductDropdownOpen(false);
+                                  }}
+                                  className={`w-full text-left px-4 py-2.5 text-sm cursor-pointer transition-colors flex items-center justify-between ${
+                                    isSelected
+                                      ? "bg-[color-mix(in_srgb,var(--primary-color)_10%,transparent)] text-[var(--primary-color)] font-semibold"
+                                      : "text-[var(--text-dark)] hover:bg-slate-50 hover:text-[var(--primary-color)]"
+                                  }`}
+                                >
+                                  <span className="truncate">{option}</span>
+                                  {isSelected && (
+                                    <svg
+                                      className="w-4 h-4 text-[var(--primary-color)] shrink-0 ml-2"
+                                      fill="none"
+                                      stroke="currentColor"
+                                      viewBox="0 0 24 24"
+                                      strokeWidth="2.5"
+                                    >
+                                      <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        d="M5 13l4 4L19 7"
+                                      />
+                                    </svg>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
                     </div>
 
                     {/* Estimated Quantity */}

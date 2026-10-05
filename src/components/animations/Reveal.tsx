@@ -8,7 +8,6 @@ import React, {
   type ReactNode,
   type CSSProperties,
 } from "react";
-import { usePrefersReducedMotion } from "./usePrefersReducedMotion";
 
 export type RevealDirection =
   | "up"
@@ -50,12 +49,11 @@ export default function Reveal({
   style = {},
   ...rest
 }: RevealProps) {
-  const prefersReducedMotion = usePrefersReducedMotion();
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    if (typeof window === "undefined" || prefersReducedMotion) return;
+    if (typeof window === "undefined") return;
 
     const element = ref.current;
     if (!element) return;
@@ -90,16 +88,7 @@ export default function Reveal({
     return () => {
       observer.disconnect();
     };
-  }, [once, threshold, prefersReducedMotion]);
-
-  // If user prefers reduced motion, render without movement/opacity transition
-  if (prefersReducedMotion) {
-    return (
-      <Component ref={ref} id={id} className={className} style={style}>
-        {children}
-      </Component>
-    );
-  }
+  }, [once, threshold]);
 
   // Calculate initial transform offsets based on direction
   const getTransform = () => {
