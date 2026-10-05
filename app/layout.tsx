@@ -15,6 +15,11 @@ export const metadata = {
   title: "Pratiksha Enterprises | Advanced Earthing & Grounding Solutions",
   description:
     "Safeguard your industrial infrastructure, transmission grids, and commercial assets with high-performance chemical earthing solutions.",
+  icons: {
+    icon: "/images/pratiksha-logo.png",
+    shortcut: "/images/pratiksha-logo.png",
+    apple: "/images/pratiksha-logo.png",
+  },
 };
 
 export default function RootLayout({
