@@ -29,7 +29,7 @@ export default function NotFound() {
       {/* 2. CENTER: 404 CARD */}
       <div className="max-w-lg w-full my-auto py-8 px-4 flex flex-col items-center">
         <span className="inline-block px-4 py-1.5 rounded-full text-xs font-bold tracking-wider uppercase bg-teal-50 border border-teal-200/80 text-[var(--primary-color)] mb-5 shadow-xs">
-          404 Error • Page Not Found
+          404 Error / Page Not Found
         </span>
 
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[var(--text-heading)] leading-tight tracking-tight mb-4">
