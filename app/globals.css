@@ -93,3 +93,10 @@ body {
     object-position: center center !important;
   }
 }
+
+/* Hide Navbar and Footer on 404 / Not Found page */
+body:has([data-not-found="true"]) header,
+body:has([data-not-found="true"]) footer,
+body:has([data-not-found="true"]) .navbar-spacer {
+  display: none !important;
+}

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { products } from "@/components/products/productData";
+import { products, getProductBySlug } from "@/components/products/productData";
 import {
   ArrowRightIcon,
   ShieldCheckIcon,
@@ -18,16 +18,19 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  return products.map((product) => ({
-    id: product.id,
-  }));
+  const params: { id: string }[] = [];
+  products.forEach((product) => {
+    if (product.slug) params.push({ id: product.slug });
+    if (product.id && product.id !== product.slug) params.push({ id: product.id });
+  });
+  return params;
 }
 
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const { id } = await params;
-  const product = products.find((p) => p.id === id);
+  const { id: slug } = await params;
+  const product = getProductBySlug(slug);
 
   if (!product) {
     return {
@@ -42,8 +45,8 @@ export async function generateMetadata({
 }
 
 export default async function ProductDetailPage({ params }: PageProps) {
-  const { id } = await params;
-  const product = products.find((p) => p.id === id);
+  const { id: slug } = await params;
+  const product = getProductBySlug(slug);
 
   if (!product) {
     notFound();
@@ -323,7 +326,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
             {relatedProducts.map((rel, idx) => (
               <StaggerItem key={rel.id} index={idx} direction="up" className="h-full">
                 <Link
-                  href={`/products/${rel.id}`}
+                  href={`/products/${rel.slug || rel.id}`}
                   className="group h-full bg-white rounded-2xl border border-slate-200/80 p-5 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                 >
                   <div>

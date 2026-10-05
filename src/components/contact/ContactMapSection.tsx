@@ -3,15 +3,15 @@ import { Reveal } from "@/components/animations";
 
 export default function ContactMapSection() {
   const address =
-    "305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002.";
+    "Pratiksha Earthing Solutions, 305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002";
 
   const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
-    "Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002, India",
+    "Pratiksha Earthing Solutions, 305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002, India",
   )}`;
 
   // Precise Google Maps embed query pointing directly to Royal Complex, Dhebar Road, Rajkot
   const mapEmbedUrl = `https://maps.google.com/maps?q=${encodeURIComponent(
-    "Royal Complex, Dhebar Rd, Millpara, Rajkot, Gujarat 360002",
+    "Pratiksha Earthing Solutions, 305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002",
   )}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (

@@ -5,6 +5,7 @@ export interface ProductSpecification {
 
 export interface Product {
   id: string;
+  slug: string;
   category: string;
   badge?: string;
   title: string;
@@ -21,6 +22,7 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "copper-bonded-chemical-earthing-electrodes",
+    slug: "earthing-electrodes",
     category: "IS 3043:2018",
     badge: "EARTHING ELECTRODES",
     title: "Copper Bonded Chemical Earthing Electrodes",
@@ -57,6 +59,7 @@ export const products: Product[] = [
   },
   {
     id: "pure-copper-gi-earthing-accessories",
+    slug: "copper-gi-accessories",
     category: "HARDWARE & WELD",
     badge: "HARDWARE & WELD",
     title: "Pure Copper & GI Earthing Accessories",
@@ -91,6 +94,7 @@ export const products: Product[] = [
   },
   {
     id: "industrial-substation-grounding-grid",
+    slug: "substation-grounding",
     category: "UTILITY GRADE",
     badge: "UTILITY GRADE",
     title: "Industrial Substation Grounding Grid",
@@ -124,6 +128,7 @@ export const products: Product[] = [
   },
   {
     id: "commercial-earth-busbars-distribution",
+    slug: "earth-busbars",
     category: "COMMERCIAL SAFETY",
     badge: "COMMERCIAL SAFETY",
     title: "Commercial Earth Busbars & Distribution",
@@ -157,6 +162,7 @@ export const products: Product[] = [
   },
   {
     id: "solar-pv-plant-grounding-systems",
+    slug: "solar-pv-grounding",
     category: "RENEWABLE SIZING",
     badge: "SOLAR & RENEWABLES",
     title: "Solar PV Plant Grounding Systems",
@@ -189,6 +195,7 @@ export const products: Product[] = [
   },
   {
     id: "advanced-maintenance-free-backfill",
+    slug: "maintenance-free-backfill",
     category: "BACKFILL MATERIAL",
     badge: "BACKFILL COMPOUND",
     title: "Advanced Maintenance-Free Backfill",
@@ -221,3 +228,11 @@ export const products: Product[] = [
     compliance: ["IEC 62561-7 (Earth Enhancement Compounds)", "IS 3043:2018", "RoHS Compliant"],
   },
 ];
+
+export function getProductBySlug(slug: string): Product | undefined {
+  if (!slug) return undefined;
+  const normalized = slug.toLowerCase().trim();
+  return products.find(
+    (p) => p.slug === normalized || p.id === normalized
+  );
+}

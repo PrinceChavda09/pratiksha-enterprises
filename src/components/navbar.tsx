@@ -151,7 +151,7 @@ export default function Navbar() {
         )}
       </header>
       {/* Fixed navbar height placeholder: reserves 80px space in document flow so sections start below */}
-      <div className="h-20 w-full shrink-0" aria-hidden="true" />
+      <div className="h-20 w-full shrink-0 navbar-spacer" aria-hidden="true" />
     </>
   );
 }

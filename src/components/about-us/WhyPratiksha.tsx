@@ -5,17 +5,6 @@ import { ArrowRightIcon } from "@/components/icon";
 export default function WhyPratiksha() {
   return (
     <section className="w-full bg-[#F8FAFC] py-10 sm:py-24 border-b border-slate-200/80 relative overflow-hidden">
-      {/* Decorative Subtle Background Grid */}
-      <div
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #08758a 1px, transparent 1px), linear-gradient(to bottom, #08758a 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-        }}
-        aria-hidden="true"
-      />
-
       <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <Reveal direction="up" delay={0.1} duration={0.65}>
@@ -329,8 +318,8 @@ export default function WhyPratiksha() {
                       Registered Address
                     </span>
                     <p className="text-xs sm:text-sm font-bold text-[var(--text-heading)] leading-snug">
-                      305, Royal Complex, Bhutkhana Chowk, South Dhebar Road,
-                      Rajkot 360002, Gujarat, India.
+                      Pratiksha Earthing Solutions, 305, Royal Complex, Dhebar
+                      Rd, Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002
                     </p>
                     <p className="text-xs text-[var(--gray-color)] mt-1.5 leading-relaxed">
                       Strategically located in Gujarat’s manufacturing corridor

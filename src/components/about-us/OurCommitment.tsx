@@ -3,16 +3,6 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 export default function OurCommitment() {
   return (
     <section className="w-full bg-white py-10 sm:py-24 border-b border-slate-200/80 relative overflow-hidden">
-      {/* Subtle Engineering Blueprint Grid */}
-      <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, var(--text-heading) 1px, transparent 1px), linear-gradient(to bottom, var(--text-heading) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-        aria-hidden="true"
-      />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Eyebrow */}

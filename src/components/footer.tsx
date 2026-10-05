@@ -14,12 +14,12 @@ export default function Footer() {
   ];
 
   const solutions = [
-    { name: "Earthing Electrodes", href: "/products" },
-    { name: "Copper & GI Accessories", href: "/products" },
-    { name: "Substation Grounding", href: "/products" },
-    { name: "Earth Busbars", href: "/products" },
-    { name: "Solar PV Grounding", href: "/products" },
-    { name: "Maintenance-Free Backfill", href: "/products" },
+    { name: "Earthing Electrodes", href: "/products/earthing-electrodes" },
+    { name: "Copper & GI Accessories", href: "/products/copper-gi-accessories" },
+    { name: "Substation Grounding", href: "/products/substation-grounding" },
+    { name: "Earth Busbars", href: "/products/earth-busbars" },
+    { name: "Solar PV Grounding", href: "/products/solar-pv-grounding" },
+    { name: "Maintenance-Free Backfill", href: "/products/maintenance-free-backfill" },
   ];
 
   return (
@@ -37,8 +37,8 @@ export default function Footer() {
                   Let&apos;s Build a Safer Electrical Foundation.
                 </h3>
                 <p className="text-sm sm:text-base text-[var(--gray-color)] max-w-xl leading-relaxed text-center md:text-left mx-auto md:mx-0">
-                  Talk to our engineering team about your earthing and electrical
-                  safety requirements.
+                  Talk to our engineering team about your earthing and
+                  electrical safety requirements.
                 </p>
               </div>
               <Link
@@ -63,7 +63,11 @@ export default function Footer() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12 py-8 sm:py-16"
         >
           {/* COLUMN 1 — BRAND */}
-          <StaggerItem index={0} direction="up" className="lg:col-span-4 text-center md:text-left">
+          <StaggerItem
+            index={0}
+            direction="up"
+            className="lg:col-span-4 text-center md:text-left"
+          >
             <Link
               href="/"
               className="inline-block mb-5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 rounded"
@@ -162,8 +166,8 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[var(--text-heading)]">
-                    305, Royal Complex, Dhebar Rd, Millpara, Bhutkhana Chowk,
-                    Rajkot, Gujarat 360002.
+                    Pratiksha Earthing Solutions, 305, Royal Complex, Dhebar Rd,
+                    Millpara, Bhutkhana Chowk, Rajkot, Gujarat 360002
                   </p>
                   <p className="text-xs text-[var(--gray-color)]">
                     Engineering & Manufacturing Hub

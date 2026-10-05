@@ -140,7 +140,7 @@ export default function OurProduct() {
             return (
               <StaggerItem key={product.id} index={idx} direction="up">
                 <Link
-                  href={`/products#${product.id}`}
+                  href={`/products/${product.slug || product.id}`}
                   aria-label={`View details for ${product.title}`}
                   className={`group relative ${theme.cardBg} rounded-[28px] sm:rounded-[32px] border border-slate-200/70 p-6 sm:p-7 flex flex-col justify-between shadow-[0_4px_24px_-4px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_36px_-6px_rgba(15,23,42,0.08)] hover:border-slate-300 transition-all duration-300 hover:-translate-y-1.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)] focus-visible:ring-offset-2 h-full`}
                 >

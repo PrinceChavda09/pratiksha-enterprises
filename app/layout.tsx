@@ -29,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className={`${poppins.className} min-h-screen text-white antialiased`}>
+      <body
+        className={`${poppins.className} min-h-screen text-white antialiased`}
+      >
         <LenisProvider>
           <Navbar />
           {children}
