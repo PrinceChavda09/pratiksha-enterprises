@@ -51,28 +51,37 @@ export default function Reveal({
 }: RevealProps) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLElement>(null);
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    // If it has already animated once, ensure it stays visible permanently
+    if (once && hasAnimatedRef.current) {
+      setIsVisible(true);
+      return;
+    }
 
     const element = ref.current;
     if (!element) return;
 
     // Check if IntersectionObserver is available
     if (!("IntersectionObserver" in window)) {
-      const timer = setTimeout(() => setIsVisible(true), 0);
-      return () => clearTimeout(timer);
+      hasAnimatedRef.current = true;
+      setIsVisible(true);
+      return;
     }
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            hasAnimatedRef.current = true;
             setIsVisible(true);
             if (once) {
               observer.unobserve(entry.target);
             }
-          } else if (!once) {
+          } else if (!once && !hasAnimatedRef.current) {
             setIsVisible(false);
           }
         });
@@ -90,9 +99,13 @@ export default function Reveal({
     };
   }, [once, threshold]);
 
-  // Calculate initial transform offsets based on direction
+  // Calculate transform offsets based on direction and animation state
   const getTransform = () => {
-    if (isVisible) return "none";
+    if (isVisible) {
+      return scale || direction === "scale"
+        ? "translate3d(0, 0, 0) scale3d(1, 1, 1)"
+        : "translate3d(0, 0, 0)";
+    }
 
     const parts: string[] = [];
 
@@ -112,6 +125,7 @@ export default function Reveal({
       case "scale":
       case "fade":
       case "none":
+        parts.push("translate3d(0, 0, 0)");
         break;
     }
 
@@ -119,7 +133,7 @@ export default function Reveal({
       parts.push("scale3d(0.97, 0.97, 1)");
     }
 
-    return parts.length > 0 ? parts.join(" ") : "none";
+    return parts.length > 0 ? parts.join(" ") : "translate3d(0, 0, 0)";
   };
 
   const animationStyle: CSSProperties = {
@@ -128,6 +142,8 @@ export default function Reveal({
     transform: getTransform(),
     transition: `opacity ${duration}s var(--animation-ease, cubic-bezier(0.16, 1, 0.3, 1)) ${delay}s, transform ${duration}s var(--animation-ease, cubic-bezier(0.16, 1, 0.3, 1)) ${delay}s`,
     willChange: isVisible ? "auto" : "opacity, transform",
+    backfaceVisibility: "hidden",
+    WebkitBackfaceVisibility: "hidden",
   };
 
   return (

@@ -128,35 +128,38 @@ export default function AboutPratiksha() {
             </Reveal>
 
             {/* Floating Quality Badge Card on Bottom-Left (Light Theme) */}
-            <Reveal direction="up" delay={0.2} duration={0.65}>
-              <div className="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-7 sm:-left-8 sm:max-w-[340px] lg:-bottom-8 lg:-left-10 lg:max-w-[350px] bg-white/95 border border-slate-200/90 rounded-2xl p-5 sm:p-5.5 z-20 transition-all duration-300">
-                <div className="flex items-center gap-3 mb-2">
-                  {/* Shield icon with primary color */}
-                  <div className="w-8 h-8 rounded-full bg-[#e8f6f8] flex items-center justify-center text-[var(--primary-color)] shrink-0">
-                    <svg
-                      className="w-4 h-4 text-[var(--primary-color)]"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 3.75c-3.75 0-6.75 1.5-6.75 1.5v6.75c0 5.25 4.5 9 6.75 9.75 2.25-.75 6.75-4.5 6.75-9.75v-6.75s-3-1.5-6.75-1.5z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 className="text-sm sm:text-[15px] font-bold text-[var(--text-heading)] tracking-tight">
-                    Uncompromised Quality
-                  </h3>
+            <Reveal
+              direction="up"
+              delay={0.2}
+              duration={0.65}
+              className="relative mt-4 sm:mt-0 sm:absolute sm:-bottom-7 sm:-left-8 sm:max-w-[340px] lg:-bottom-8 lg:-left-10 lg:max-w-[350px] bg-white/95 border border-slate-200/90 rounded-2xl p-5 sm:p-5.5 z-20"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                {/* Shield icon with primary color */}
+                <div className="w-8 h-8 rounded-full bg-[#e8f6f8] flex items-center justify-center text-[var(--primary-color)] shrink-0">
+                  <svg
+                    className="w-4 h-4 text-[var(--primary-color)]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 3.75c-3.75 0-6.75 1.5-6.75 1.5v6.75c0 5.25 4.5 9 6.75 9.75 2.25-.75 6.75-4.5 6.75-9.75v-6.75s-3-1.5-6.75-1.5z"
+                    />
+                  </svg>
                 </div>
-                <p className="text-xs text-[var(--gray-color)] leading-relaxed font-normal">
-                  IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant.
-                  Every batch salt spray tested for 1000+ hours.
-                </p>
+                <h3 className="text-sm sm:text-[15px] font-bold text-[var(--text-heading)] tracking-tight">
+                  Uncompromised Quality
+                </h3>
               </div>
+              <p className="text-xs text-[var(--gray-color)] leading-relaxed font-normal">
+                IS 3043, CPRI, RDSO, IEC 62305, and NFC 17-102 compliant.
+                Every batch salt spray tested for 1000+ hours.
+              </p>
             </Reveal>
           </div>
         </div>
