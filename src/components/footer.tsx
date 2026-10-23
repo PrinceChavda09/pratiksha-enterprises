@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRightIcon } from "@/components/icon";
+import { ArrowRightIcon, InstagramIcon } from "@/components/icon";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 export default function Footer() {
@@ -16,14 +16,14 @@ export default function Footer() {
   const solutions = [
     { name: "Earthing Electrodes", href: "/products/earthing-electrodes" },
     {
-      name: "Copper & GI Accessories",
+      name: "Copper & GI Strip",
       href: "/products/copper-gi-accessories",
     },
-    { name: "Substation Grounding", href: "/products/substation-grounding" },
-    { name: "Earth Busbars", href: "/products/earth-busbars" },
+    { name: "Lighting Arrester", href: "/products/substation-grounding" },
+    { name: "Earth Accessories", href: "/products/earth-busbars" },
     { name: "Solar PV Grounding", href: "/products/solar-pv-grounding" },
     {
-      name: "Maintenance-Free Backfill",
+      name: "Maintenance-Free Backfill Compounds",
       href: "/products/maintenance-free-backfill",
     },
   ];
@@ -95,6 +95,21 @@ export default function Footer() {
               <span className="text-xs font-semibold text-[var(--primary-color)] tracking-wider uppercase">
                 Engineering safety. Protecting what matters.
               </span>
+            </div>
+
+            {/* Instagram ID Link */}
+            <div className="pt-4 flex items-center justify-center md:justify-start">
+              <a
+                href="https://www.instagram.com/pratiksha_earthing_solutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2.5 px-3 py-2 rounded-full transition-all duration-200 text-xs font-semibold text-[var(--text-heading)] focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--primary-color)]"
+                aria-label="Follow Pratiksha Earthing Solutions on Instagram"
+              >
+                <span className="w-6 h-6 rounded-full flex items-center justify-center bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white shrink-0 shadow-xs group-hover:scale-110 transition-transform duration-200">
+                  <InstagramIcon className="w-4 h-4" />
+                </span>
+              </a>
             </div>
           </StaggerItem>
 
@@ -199,7 +214,7 @@ export default function Footer() {
                 </svg>
                 <div>
                   <p className="font-semibold text-[var(--text-heading)]">
-                    Phone No. : +91 93138 88465.
+                    Phone No. : +91 99099 20314.
                   </p>
                   <p className="text-xs text-[var(--gray-color)]">
                     Direct dispatch across Phone number
