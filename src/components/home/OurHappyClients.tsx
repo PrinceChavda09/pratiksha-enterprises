@@ -126,13 +126,13 @@ export default function OurHappyClients() {
               key={`track-1-${client.id}-${idx}`}
               className="px-2.5 sm:px-3 md:px-3.5 shrink-0"
             >
-              <div className="w-40 sm:w-48 md:w-56 h-20 sm:h-24 md:h-26 rounded-xl sm:rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_8px_rgba(15,23,42,0.03)] hover:shadow-[0_8px_22px_color-mix(in_srgb,var(--primary-color)_14%,transparent)] hover:border-[var(--primary-color)]/40 transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group/card">
+              <div className="w-40 sm:w-48 md:w-56 h-20 sm:h-24 md:h-26 rounded-xl sm:rounded-2xl">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
                     src={client.logo || PLACEHOLDER_CLIENT_LOGO}
                     alt={`${client.name} logo`}
-                    fill
-                    sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, 224px"
+                    height={120}
+                    width={120}
                     className="object-contain object-center transition-transform duration-300 group-hover/card:scale-105"
                   />
                 </div>
@@ -148,7 +148,7 @@ export default function OurHappyClients() {
               key={`track-2-${client.id}-${idx}`}
               className="px-2.5 sm:px-3 md:px-3.5 shrink-0"
             >
-              <div className="w-40 sm:w-48 md:w-56 h-20 sm:h-24 md:h-26 rounded-xl sm:rounded-2xl border border-slate-200/90 bg-white shadow-[0_2px_8px_rgba(15,23,42,0.03)] hover:shadow-[0_8px_22px_color-mix(in_srgb,var(--primary-color)_14%,transparent)] hover:border-[var(--primary-color)]/40 transition-all duration-300 flex items-center justify-center p-3 sm:p-4 group/card">
+              <div className="w-40 sm:w-48 md:w-56 h-20 sm:h-24 md:h-26 rounded-xl sm:rounded-2xl">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <Image
                     src={client.logo || PLACEHOLDER_CLIENT_LOGO}
