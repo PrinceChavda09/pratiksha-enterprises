@@ -25,11 +25,11 @@ export const products: Product[] = [
     slug: "earthing-electrodes",
     category: "IS 3043:2018",
     badge: "EARTHING ELECTRODES",
-    title: "Copper Bonded Chemical Earthing Electrodes",
+    title: "Copper Bonded Solid Earthing Electrodes",
     description:
       "High-tensile steel core with 250+ micron copper coating and crystalline backfill for low soil resistivity.",
     longDescription:
-      "Pratiksha Copper Bonded Chemical Earthing Electrodes are manufactured with molecularly bonded 99.9% pure electrolytic copper over a high-tensile low-carbon steel core. Engineered specifically for demanding industrial substations, telecom towers, and data centers, these electrodes deliver rapid fault-current dissipation, exceptional mechanical driving strength, and zero-maintenance longevity even in highly corrosive soils.",
+      "Pratiksha Copper Bonded solid Earthing Electrodes are manufactured with molecularly bonded 99.9% pure electrolytic copper over a high-tensile low-carbon steel core. Engineered specifically for demanding industrial substations, telecom towers, and data centers, these electrodes deliver rapid fault-current dissipation, exceptional mechanical driving strength, and zero-maintenance longevity even in highly corrosive soils.",
     image: "/home/Copper_Earthing_Electrode.jpeg",
     href: "/contact",
     features: [
@@ -62,7 +62,7 @@ export const products: Product[] = [
     slug: "copper-gi-accessories",
     category: "HARDWARE & WELD",
     badge: "HARDWARE & WELD",
-    title: "Pure Copper & GI Earthing Accessories",
+    title: "Pure Copper & GI Earthing Wire",
     description:
       "Precision-machined earthing clamps, U-bolts, busbars, and exothermic welding graphite moulds.",
     longDescription:
@@ -97,7 +97,7 @@ export const products: Product[] = [
     slug: "substation-grounding",
     category: "UTILITY GRADE",
     badge: "UTILITY GRADE",
-    title: "Industrial Substation Grounding Grid",
+    title: "Industrial Safety Cover (FRP)",
     description:
       "Heavy-duty earthing mats, flat copper strips, and inspection pits engineered for HT/LT substations.",
     longDescription:
