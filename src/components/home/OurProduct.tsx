@@ -6,18 +6,14 @@ import { Icon, productIcons } from "@/components/icon";
 import { products, type Product } from "@/components/products/productData";
 import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
-export { products };
-export type { Product };
-
 /**
  * Visual styling theme per product to replicate the premium reference design
- * while maintaining brand consistency.
+ * while maintaining brand consistency. Contains ONLY presentation-related values.
  */
 const cardThemes: Record<
   string,
   {
     icon: string;
-    categoryBadge: string;
     cardBg: string;
     iconBg: string;
     iconColor: string;
@@ -30,7 +26,6 @@ const cardThemes: Record<
 > = {
   "copper-bonded-chemical-earthing-electrodes": {
     icon: productIcons.copperBonded,
-    categoryBadge: "EARTHING ELECTRODES",
     cardBg: "bg-[#FCF9F6]",
     iconBg: "bg-[#FCEEE6]",
     iconColor: "text-[#C2410C]",
@@ -44,7 +39,6 @@ const cardThemes: Record<
   },
   "pure-copper-gi-earthing-accessories": {
     icon: productIcons.hardwareAccessories,
-    categoryBadge: "HARDWARE & WELD",
     cardBg: "bg-[#F7FAFD]",
     iconBg: "bg-[#E6F3FB]",
     iconColor: "text-[var(--primary-color)]",
@@ -58,7 +52,6 @@ const cardThemes: Record<
   },
   "industrial-substation-grounding-grid": {
     icon: productIcons.substationGrid,
-    categoryBadge: "UTILITY GRADE",
     cardBg: "bg-[#F7FAF8]",
     iconBg: "bg-[#E8F6EE]",
     iconColor: "text-[#15803D]",
@@ -70,9 +63,72 @@ const cardThemes: Record<
       "border-[#C1E8CE] group-hover:border-[#15803D] group-hover:bg-[#15803D]",
     arrowColor: "text-[#15803D] group-hover:text-white",
   },
+  "commercial-earth-busbars-distribution": {
+    icon: "lucide:layout-grid",
+    cardBg: "bg-[#FDFBF7]",
+    iconBg: "bg-[#FEF3C7]",
+    iconColor: "text-[#D97706]",
+    badgeBg: "bg-[#FEF3C7]",
+    badgeColor: "text-[#B45309]",
+    glowBg:
+      "radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(245, 158, 11, 0) 70%)",
+    arrowBorder:
+      "border-[#FDE68A] group-hover:border-[#D97706] group-hover:bg-[#D97706]",
+    arrowColor: "text-[#D97706] group-hover:text-white",
+  },
+  "solar-pv-plant-grounding-systems": {
+    icon: "lucide:sun",
+    cardBg: "bg-[#F8FAFC]",
+    iconBg: "bg-[#EFF6FF]",
+    iconColor: "text-[#2563EB]",
+    badgeBg: "bg-[#DBEAFE]",
+    badgeColor: "text-[#1D4ED8]",
+    glowBg:
+      "radial-gradient(circle, rgba(37, 99, 235, 0.16) 0%, rgba(37, 99, 235, 0) 70%)",
+    arrowBorder:
+      "border-[#BFDBFE] group-hover:border-[#2563EB] group-hover:bg-[#2563EB]",
+    arrowColor: "text-[#2563EB] group-hover:text-white",
+  },
+  "advanced-maintenance-free-backfill": {
+    icon: "lucide:flask-conical",
+    cardBg: "bg-[#FAF7FD]",
+    iconBg: "bg-[#F3E8FF]",
+    iconColor: "text-[#7C3AED]",
+    badgeBg: "bg-[#EDE9FE]",
+    badgeColor: "text-[#6D28D9]",
+    glowBg:
+      "radial-gradient(circle, rgba(124, 58, 237, 0.16) 0%, rgba(124, 58, 237, 0) 70%)",
+    arrowBorder:
+      "border-[#DDD6FE] group-hover:border-[#7C3AED] group-hover:bg-[#7C3AED]",
+    arrowColor: "text-[#7C3AED] group-hover:text-white",
+  },
+  "gi-earthing-electrode": {
+    icon: productIcons.copperBonded,
+    cardBg: "bg-[#F6FAF9]",
+    iconBg: "bg-[#E6F5F1]",
+    iconColor: "text-[#0D9488]",
+    badgeBg: "bg-[#CCFBF1]",
+    badgeColor: "text-[#0F766E]",
+    glowBg:
+      "radial-gradient(circle, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%)",
+    arrowBorder:
+      "border-[#99F6E4] group-hover:border-[#0D9488] group-hover:bg-[#0D9488]",
+    arrowColor: "text-[#0D9488] group-hover:text-white",
+  },
 };
 
+// Target four featured products to display on the Home page in exact requested order
+const HOME_PRODUCT_IDS = [
+  "commercial-earth-busbars-distribution",
+  "solar-pv-plant-grounding-systems",
+  "advanced-maintenance-free-backfill",
+  "gi-earthing-electrode",
+] as const;
+
 export default function OurProduct() {
+  const featuredProducts = HOME_PRODUCT_IDS.map((id) =>
+    products.find((p) => p.id === id || p.slug === id)
+  ).filter((p): p is Product => Boolean(p));
   return (
     <section
       id="products"
@@ -119,12 +175,11 @@ export default function OurProduct() {
         {/* Product Cards Grid: 3 cols desktop, 2 cols tablet, 1 col mobile */}
         <StaggerContainer
           staggerDelay={0.1}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
         >
-          {products.slice(0, 3).map((product, idx) => {
+          {featuredProducts.map((product, idx) => {
             const theme = cardThemes[product.id] || {
               icon: productIcons.copperBonded,
-              categoryBadge: product.category,
               cardBg: "bg-white",
               iconBg: "bg-slate-100",
               iconColor: "text-[var(--primary-color)]",
@@ -153,11 +208,11 @@ export default function OurProduct() {
                       <Icon icon={theme.icon} className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
 
-                    {/* Category Pill Badge */}
+                    {/* Category Pill Badge directly from shared productData */}
                     <span
                       className={`px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-[8px] text-[10px] sm:text-[11px] font-bold tracking-wider uppercase ${theme.badgeBg} ${theme.badgeColor}`}
                     >
-                      {theme.categoryBadge}
+                      {product.badge || product.category}
                     </span>
                   </div>
 

@@ -1,48 +1,166 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function Loader() {
+  const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(true);
   const [isFading, setIsFading] = useState(false);
 
-  useEffect(() => {
-    let fadeTimer: ReturnType<typeof setTimeout>;
-    let removeTimer: ReturnType<typeof setTimeout>;
+  const prevPathRef = useRef(pathname);
+  const fadeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const removeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const safeguardTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-    const handleReady = () => {
-      // Short display time so the loading experience is smooth and intentional
-      fadeTimer = setTimeout(() => {
-        setIsFading(true);
-        // Remove from DOM once fade transition is complete
-        removeTimer = setTimeout(() => {
-          setIsMounted(false);
-        }, 400);
-      }, 500);
+  const clearAllTimers = useCallback(() => {
+    if (fadeTimerRef.current) clearTimeout(fadeTimerRef.current);
+    if (removeTimerRef.current) clearTimeout(removeTimerRef.current);
+    if (safeguardTimerRef.current) clearTimeout(safeguardTimerRef.current);
+  }, []);
+
+  const dismissLoader = useCallback(() => {
+    clearAllTimers();
+
+    // Intentional short display time for a smooth, premium transition
+    fadeTimerRef.current = setTimeout(() => {
+      setIsFading(true);
+      removeTimerRef.current = setTimeout(() => {
+        setIsMounted(false);
+        setIsFading(false);
+      }, 400); // Matches transition-opacity duration-400
+    }, 300);
+  }, [clearAllTimers]);
+
+  const showLoader = useCallback(() => {
+    clearAllTimers();
+    setIsMounted(true);
+    setIsFading(false);
+
+    // Safeguard: guarantee the loader disappears even if a navigation is cancelled or stalls
+    safeguardTimerRef.current = setTimeout(() => {
+      dismissLoader();
+    }, 2500);
+  }, [clearAllTimers, dismissLoader]);
+
+  // 1. Initial Page Load Lifecycle
+  useEffect(() => {
+    let initialTimer: ReturnType<typeof setTimeout>;
+
+    const handleInitialReady = () => {
+      initialTimer = setTimeout(() => {
+        dismissLoader();
+      }, 450);
     };
 
     if (document.readyState === "complete") {
-      handleReady();
+      handleInitialReady();
     } else {
-      window.addEventListener("load", handleReady);
+      window.addEventListener("load", handleInitialReady, { once: true });
     }
 
-    // Fail-safe safeguard: ensure the loader dismisses even under slow/blocked network
-    const safeguardTimer = setTimeout(() => {
-      setIsFading(true);
-      removeTimer = setTimeout(() => {
-        setIsMounted(false);
-      }, 400);
-    }, 2000);
+    return () => {
+      clearTimeout(initialTimer);
+      clearAllTimers();
+    };
+  }, [dismissLoader, clearAllTimers]);
+
+  // 2. Route Change Detection: Dismiss loader when destination route renders
+  useEffect(() => {
+    if (prevPathRef.current !== pathname) {
+      prevPathRef.current = pathname;
+      dismissLoader();
+    }
+  }, [pathname, dismissLoader]);
+
+  // 3. Navigation Click & Popstate Interception: Show loader on internal route transitions
+  useEffect(() => {
+    const normalize = (path: string) => path.replace(/\/+$/, "") || "/";
+
+    const handleClick = (e: MouseEvent) => {
+      // Only process primary left clicks without modifier keys
+      if (
+        e.button !== 0 ||
+        e.metaKey ||
+        e.ctrlKey ||
+        e.shiftKey ||
+        e.altKey
+      ) {
+        return;
+      }
+
+      const target = e.target as HTMLElement | null;
+      if (!target) return;
+
+      const anchor = target.closest("a");
+      if (!anchor) return;
+
+      // Ignore explicit target="_blank", downloads, or role buttons
+      if (
+        anchor.target &&
+        anchor.target !== "_self" &&
+        anchor.target !== ""
+      ) {
+        return;
+      }
+      if (anchor.hasAttribute("download")) return;
+
+      const rawHref = anchor.getAttribute("href");
+      if (
+        !rawHref ||
+        rawHref.startsWith("#") ||
+        rawHref.startsWith("javascript:")
+      ) {
+        return;
+      }
+
+      let url: URL;
+      try {
+        url = new URL(anchor.href, window.location.href);
+      } catch {
+        return;
+      }
+
+      // Ignore non-http/https (tel:, mailto:, etc.)
+      if (url.protocol !== "http:" && url.protocol !== "https:") return;
+
+      // Ignore external domains
+      if (url.origin !== window.location.origin) return;
+
+      // Ignore same-page navigation (e.g. clicking the current page or in-page hash link)
+      const currentPath = normalize(window.location.pathname);
+      const targetPath = normalize(url.pathname);
+
+      if (
+        currentPath === targetPath &&
+        url.search === window.location.search
+      ) {
+        return;
+      }
+
+      // Valid internal route navigation initiated
+      showLoader();
+    };
+
+    const handlePopState = () => {
+      const currentPath = normalize(window.location.pathname);
+      const prevPath = normalize(prevPathRef.current);
+
+      if (currentPath !== prevPath) {
+        showLoader();
+      }
+    };
+
+    // Use capture phase to reliably detect navigation link clicks before bubble
+    document.addEventListener("click", handleClick, { capture: true });
+    window.addEventListener("popstate", handlePopState);
 
     return () => {
-      window.removeEventListener("load", handleReady);
-      clearTimeout(fadeTimer);
-      clearTimeout(removeTimer);
-      clearTimeout(safeguardTimer);
+      document.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("popstate", handlePopState);
     };
-  }, []);
+  }, [showLoader]);
 
   if (!isMounted) {
     return null;

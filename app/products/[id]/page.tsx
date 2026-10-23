@@ -143,7 +143,9 @@ export default async function ProductDetailPage({ params }: PageProps) {
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
                     <ZapIcon className="w-4 h-4 text-amber-500 shrink-0" />
                     <span className="font-semibold text-[var(--text-dark)]">
-                      250+ Micron Copper
+                      {product.id.includes("gi")
+                        ? "Hot-Dip Galvanized"
+                        : "250+ Micron Copper"}
                     </span>
                   </div>
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5">
@@ -231,71 +233,83 @@ export default async function ProductDetailPage({ params }: PageProps) {
         </Reveal>
 
         {/* DETAILED FEATURES & APPLICATIONS GRID */}
-        <StaggerContainer
-          staggerDelay={0.1}
-          delay={0.15}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12"
-        >
-          {/* Left: Engineering Features */}
-          {product.features && product.features.length > 0 && (
-            <StaggerItem index={0} direction="up" className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs">
-              <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2.5">
-                <ZapIcon className="w-5 h-5 text-amber-500 shrink-0" />
-                <span>Engineering Features & Advantages</span>
-              </h3>
-              <ul className="space-y-3.5">
-                {product.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-sm text-[var(--gray-color)]">
-                    <span className="h-5 w-5 rounded-full bg-teal-50 text-[var(--primary-color)] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
-                      ✓
-                    </span>
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
-            </StaggerItem>
-          )}
-
-          {/* Right: Applications & Standards */}
-          <StaggerItem index={1} direction="up" className="flex flex-col gap-6">
-            {/* Applications */}
-            {product.applications && product.applications.length > 0 && (
-              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs flex-1">
+        {(Boolean(product.features?.length) ||
+          Boolean(product.applications?.length) ||
+          Boolean(product.compliance?.length)) && (
+          <StaggerContainer
+            staggerDelay={0.1}
+            delay={0.15}
+            className={`grid grid-cols-1 ${
+              product.features?.length &&
+              (product.applications?.length || product.compliance?.length)
+                ? "lg:grid-cols-2"
+                : "max-w-2xl"
+            } gap-8 mb-12`}
+          >
+            {/* Left: Engineering Features */}
+            {product.features && product.features.length > 0 && (
+              <StaggerItem index={0} direction="up" className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs">
                 <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2.5">
-                  <FactoryIcon className="w-5 h-5 text-[var(--primary-color)] shrink-0" />
-                  <span>Primary Industry Applications</span>
+                  <ZapIcon className="w-5 h-5 text-amber-500 shrink-0" />
+                  <span>Engineering Features & Advantages</span>
                 </h3>
-                <ul className="space-y-3">
-                  {product.applications.map((app, idx) => (
-                    <li key={idx} className="flex items-center gap-2.5 text-sm text-[var(--gray-color)]">
-                      <span className="w-2 h-2 rounded-full bg-[var(--primary-color)]" />
-                      <span>{app}</span>
+                <ul className="space-y-3.5">
+                  {product.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-[var(--gray-color)]">
+                      <span className="h-5 w-5 rounded-full bg-teal-50 text-[var(--primary-color)] flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">
+                        ✓
+                      </span>
+                      <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
+              </StaggerItem>
             )}
 
-            {/* Compliance Standards */}
-            {product.compliance && product.compliance.length > 0 && (
-              <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
-                <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
-                  Tested & Verified Against Standards
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {product.compliance.map((standard, idx) => (
-                    <span
-                      key={idx}
-                      className="px-3 py-1 bg-slate-100 border border-slate-200 text-[var(--text-dark)] rounded-lg text-xs font-bold"
-                    >
-                      {standard}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            {/* Right: Applications & Standards */}
+            {(Boolean(product.applications?.length) ||
+              Boolean(product.compliance?.length)) && (
+              <StaggerItem index={1} direction="up" className="flex flex-col gap-6">
+                {/* Applications */}
+                {product.applications && product.applications.length > 0 && (
+                  <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-xs flex-1">
+                    <h3 className="text-lg font-bold text-[var(--text-heading)] mb-5 flex items-center gap-2.5">
+                      <FactoryIcon className="w-5 h-5 text-[var(--primary-color)] shrink-0" />
+                      <span>Primary Industry Applications</span>
+                    </h3>
+                    <ul className="space-y-3">
+                      {product.applications.map((app, idx) => (
+                        <li key={idx} className="flex items-center gap-2.5 text-sm text-[var(--gray-color)]">
+                          <span className="w-2 h-2 rounded-full bg-[var(--primary-color)]" />
+                          <span>{app}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {/* Compliance Standards */}
+                {product.compliance && product.compliance.length > 0 && (
+                  <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-3">
+                      Tested & Verified Against Standards
+                    </h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.compliance.map((standard, idx) => (
+                        <span
+                          key={idx}
+                          className="px-3 py-1 bg-slate-100 border border-slate-200 text-[var(--text-dark)] rounded-lg text-xs font-bold"
+                        >
+                          {standard}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </StaggerItem>
             )}
-          </StaggerItem>
-        </StaggerContainer>
+          </StaggerContainer>
+        )}
 
         {/* RELATED PRODUCTS SECTION */}
         <div className="mt-16 pt-12 border-t border-slate-200">

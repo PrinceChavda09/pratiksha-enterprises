@@ -14,7 +14,7 @@ export default function ProductsPage() {
       {/* 1. Products Hero */}
       <ProductsHero />
 
-      {/* 2. All 6 Product Cards Grid */}
+      {/* 2. Product Cards Grid */}
       <ProductsGrid />
     </main>
   );

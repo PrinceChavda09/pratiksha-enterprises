@@ -164,10 +164,10 @@ export default function WhyChoosePratiksha() {
 
             <div className="flex flex-col text-center sm:text-left items-center sm:items-start">
               <span className="text-xl sm:text-3xl font-bold text-[var(--text-heading)]">
-                CPRI & NABL Tested
+                ISO Certified
               </span>
               <span className="text-xs sm:text-sm text-[var(--gray-color)] font-medium mt-1">
-                Rigorous Fault Current Verification
+                Quality Management System
               </span>
             </div>
 

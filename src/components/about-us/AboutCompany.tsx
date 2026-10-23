@@ -29,7 +29,7 @@ export default function AboutCompany() {
             <Reveal direction="up" delay={0.2} duration={0.7} className="relative mt-10">
               <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-slate-200 group">
                 <Image
-                  src="/images/installation-substation.webp"
+                  src="/images/installation-substation.png"
                   alt="Industrial substation earthing installation"
                   fill
                   sizes="(max-width: 1024px) 100vw, 500px"

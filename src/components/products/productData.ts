@@ -131,12 +131,12 @@ export const products: Product[] = [
     slug: "earth-busbars",
     category: "COMMERCIAL SAFETY",
     badge: "COMMERCIAL SAFETY",
-    title: "Commercial Earth Busbars & Distribution",
+    title: "Copper Coted",
     description:
       "Architectural earthing distribution panels, clean busbar enclosures, and main earth terminal links.",
     longDescription:
       "Precision-machined electrolytic tinned copper earth busbars, main earthing terminals (MET), and clean earth distribution enclosures designed for commercial complexes, hospitals, data centers, and IT server rooms requiring noise-free, low-impedance grounding paths.",
-    image: "/home/Earthing_Electrode.jpeg",
+    image: "/home/herosection-road.png",
     href: "/contact",
     features: [
       "100% Electrolytic ETP copper bars with 99.9% electrical conductivity",
@@ -165,7 +165,7 @@ export const products: Product[] = [
     slug: "solar-pv-grounding",
     category: "RENEWABLE SIZING",
     badge: "SOLAR & RENEWABLES",
-    title: "Solar PV Plant Grounding Systems",
+    title: "Solar PV Plant Grounding Lightning Arrester",
     description:
       "Corrosion-resistant earthing solutions designed for large-scale utility and rooftop solar tracker arrays.",
     longDescription:
@@ -198,7 +198,7 @@ export const products: Product[] = [
     slug: "maintenance-free-backfill",
     category: "BACKFILL MATERIAL",
     badge: "BACKFILL COMPOUND",
-    title: "Advanced Maintenance-Free Backfill",
+    title: "Advanced Maintenance-Free Backfill Compound",
     description:
       "Eco-safe carbonaceous and bentonite earthing minerals ensuring permanent low soil impedance.",
     longDescription:
@@ -226,6 +226,43 @@ export const products: Product[] = [
       "Highway Toll Plazas & Remote Telecommunication Towers",
     ],
     compliance: ["IEC 62561-7 (Earth Enhancement Compounds)", "IS 3043:2018", "RoHS Compliant"],
+  },
+  {
+    id: "gi-earthing-electrode",
+    slug: "gi-earthing-electrode",
+    category: "EARTHING ELECTRODES",
+    badge: "GI ELECTRODES",
+    title: "GI Chemical Earthing Electrode",
+    description:
+      "High-grade hot-dip galvanized iron earthing electrode engineered for dependable ground fault dissipation and electrical safety.",
+    longDescription:
+      "Pratiksha GI Earthing Electrodes are manufactured from high-grade galvanized iron / steel, engineered specifically for effective electrical grounding and fault dissipation. Designed with robust hot-dip galvanization for enhanced corrosion resistance in diverse soil environments, each electrode features an integrated terminal strip with dual hex bolts to ensure secure, low-resistance connections with earthing conductors.",
+    image: "/home/GI-Earthing.webp",
+    href: "/contact",
+    features: [
+      "Manufactured from high-grade steel with uniform hot-dip galvanization",
+      "Integrated dual-hole terminal strip with galvanized hex bolts for secure conductor connections",
+      "Engineered for rapid ground fault dissipation and low soil impedance",
+      "High corrosion resistance suitable for diverse soil and outdoor environments",
+      "Compatible with standard conductive earth enhancement backfill compounds",
+      "Engineered in accordance with Indian grounding practices as per IS 3043:2018",
+    ],
+    specifications: [
+      { label: "Material Type", value: "High-Grade Galvanized Iron (GI) / Steel" },
+      { label: "Electrode Type", value: "Hot-Dip Galvanized Chemical Earthing Electrode" },
+      { label: "Coating Protection", value: "Hot-Dip Galvanized (Corrosion Resistant)" },
+      { label: "Standard Lengths", value: "1.0m, 2.0m, 3.0m (Custom lengths available on request)" },
+      { label: "Terminal Type", value: "Dual-Bolt Flat Terminal Strip (Includes Fasteners)" },
+      { label: "Backfill Compatibility", value: "Compatible with Carbonaceous / Bentonite Compound" },
+    ],
+    applications: [
+      "Residential & Commercial Building Earthing",
+      "Industrial Equipment & Machinery Grounding",
+      "Power Transmission & Distribution Substations",
+      "Telecommunications & Tower Earth Termination",
+      "Electrical Distribution Boards & Transformer Yards",
+    ],
+    compliance: ["IS 3043:2018", "IS 2629"],
   },
 ];
 

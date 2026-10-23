@@ -8,7 +8,7 @@ import { Reveal, StaggerContainer, StaggerItem } from "@/components/animations";
 
 /**
  * Visual styling theme per product to replicate the premium design
- * across all 6 products.
+ * across all products.
  */
 const cardThemes: Record<
   string,
@@ -109,6 +109,20 @@ const cardThemes: Record<
       "border-[#DDD6FE] group-hover:border-[#7C3AED] group-hover:bg-[#7C3AED]",
     arrowColor: "text-[#7C3AED] group-hover:text-white",
   },
+  "gi-earthing-electrode": {
+    icon: productIcons.copperBonded,
+    categoryBadge: "GI ELECTRODES",
+    cardBg: "bg-[#F6FAF9]",
+    iconBg: "bg-[#E6F5F1]",
+    iconColor: "text-[#0D9488]",
+    badgeBg: "bg-[#CCFBF1]",
+    badgeColor: "text-[#0F766E]",
+    glowBg:
+      "radial-gradient(circle, rgba(13, 148, 136, 0.16) 0%, rgba(13, 148, 136, 0) 70%)",
+    arrowBorder:
+      "border-[#99F6E4] group-hover:border-[#0D9488] group-hover:bg-[#0D9488]",
+    arrowColor: "text-[#0D9488] group-hover:text-white",
+  },
 };
 
 export default function ProductsGrid() {
@@ -138,7 +152,7 @@ export default function ProductsGrid() {
           </div>
         </Reveal>
 
-        {/* 6 Product Cards Grid: 3 cols desktop, 2 cols tablet, 1 col mobile */}
+        {/* Product Cards Grid: 3 cols desktop, 2 cols tablet, 1 col mobile */}
         <StaggerContainer
           staggerDelay={0.08}
           delay={0.15}

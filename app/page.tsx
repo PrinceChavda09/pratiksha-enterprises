@@ -2,6 +2,7 @@ import HomeHeroSection from "@/components/home/HomeHeroSection";
 import AboutPratiksha from "@/components/home/AboutPratiksha";
 import OurProduct from "@/components/home/OurProduct";
 import WhyChoosePratiksha from "@/components/home/WhyChoosePratiksha";
+import OurHappyClients from "@/components/home/OurHappyClients";
 import Reviews from "@/components/home/Reviews";
 
 export default function Home() {
@@ -15,6 +16,9 @@ export default function Home() {
 
       {/* Why Choose Pratiksha Section */}
       <WhyChoosePratiksha />
+
+      {/* Our Happy Clients Section */}
+      <OurHappyClients />
 
       {/* Customer Reviews Section */}
       <Reviews />
